@@ -13,6 +13,39 @@ html, body{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+.product_wrapper {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.product {
+    height: auto;
+    width: 100%;
+}
+.other_products {
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: 130%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.block1 {
+    display: block; 
+    top: 10%;
+    width: 100%; 
+    height: auto; 
+    position: relative;
+}
+.block2 {
+    display: block; 
+    top: 100%;
+    width: 100%; 
+    height: auto; 
+    position: relative;
+}
 .hide {
     display: none!important;
 }
