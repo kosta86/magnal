@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/9479635e2b.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <title></title>
+</head>
+<body>
+    <div class="main_content">
+      <div class="upitnik_wrapper container-fluid">
+        
+          
+            
+
+      </div>
+    </div>
+
+
+<script type="application/javascript">
+
+  window.onload = function() { 
+    var HTML = function () {
+      return {
+        1: `<div id="strana_1" class="row border border-primary">
+            <div class="col-sm text-center border border-primary p-4">
+              <button id="btn_1_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">5-10 godina</button>
+            </div>
+
+            <div class="col-sm text-center border border-primary p-4">
+              <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">10-50 godina</button>
+            </div>
+              
+            <div id="3" class="col-sm text-center border border-primary p-4">
+              <button id="btn_1_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">50+ godina</button>
+            </div>
+        </div>`,
+        
+        2: `<div id="strana_2" class="row border border-primary">
+          <div class="col-sm text-center border border-primary p-4">
+            <button id="btn_2_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">Ne treniram</button>
+          </div>
+        
+          <div class="col-sm text-center border border-primary p-4">
+            <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">Ponekad treniram</button>
+          </div>
+        
+          <div class="col-sm text-center border border-primary p-4">
+            <button id="btn_1_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">Aktivno treniram</button>
+          </div>
+        </div>
+        <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>`,
+
+        3: `<div id="strana_3" class="row border border-primary">
+            <div class="col-sm text-center border border-primary p-4">
+              <button id="btn_3_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">Musko</button>
+            </div>
+          
+            <div class="col-sm text-center border border-primary p-4">
+              <button id="btn_3_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">Zensko</button>
+            </div>
+          
+            <div class="col-sm text-center border border-primary p-4">
+              <button id="btn_3_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">Nesto izmedju :)</button>
+            </div>
+          </div>
+          <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>`,
+
+        4: `<form action="#">
+            <table class="table table-bordered">
+            <tbody>
+
+              <tr class="text-center border-primary">
+                <td class="text-center border-primary">
+                  <i class="fas fa-dumbbell fa-7x"></i>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="za_snagu" data-check="1">
+                    <label class="custom-control-label" for="za_snagu">Check this custom checkbox</label>
+                  </div>
+                </td>
+
+                <td class="text-center border-primary">
+                <i class="far fa-heart fa-7x"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="za_srce" data-check="2">
+                  <label class="custom-control-label" for="za_srce">Check this custom checkbox</label>
+                </div>
+                </td>
+
+                <td class="text-center border-primary">
+                <i class="fas fa-bone fa-7x"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="za_kosti" data-check="3">
+                  <label class="custom-control-label" for="za_kosti">Check this custom checkbox</label>
+                </div>
+                </td>
+              </tr>
+
+              <tr class="text-center border-primary">
+                <td class="text-center border-primary">
+                  <i class="fas fa-dumbbell fa-7x"></i>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="za_snagu2" data-check="4">
+                    <label class="custom-control-label" for="za_snagu2">Check this custom checkbox</label>
+                  </div>
+                </td>
+
+                <td class="text-center border-primary">
+                <i class="far fa-heart fa-7x"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="za_srce2" data-check="5">
+                  <label class="custom-control-label" for="za_srce2">Check this custom checkbox</label>
+                </div>
+                </td>
+
+                <td class="text-center border-primary">
+                <i class="fas fa-bone fa-7x"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="za_kosti2" data-check="6">
+                  <label class="custom-control-label" for="za_kosti2">Check this custom checkbox</label>
+                </div>
+                </td>
+              </tr>
+              
+              <tr class="text-center ">
+                <td class="text-center border-primary">
+                  <i class="fas fa-dumbbell fa-7x"></i>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="za_snagu3" data-check="7">
+                    <label class="custom-control-label" for="za_snagu3">Check this custom checkbox</label>
+                  </div>
+                </td>
+
+                <td class="text-center border-primary">
+                <i class="far fa-heart fa-7x"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="za_srce3" data-check="8">
+                  <label class="custom-control-label" for="za_srce3">Check this custom checkbox</label>
+                </div>
+                </td>
+
+                <td class="text-center border-primary">
+                <i class="fas fa-bone fa-7x"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="za_kosti3" data-check="9">
+                  <label class="custom-control-label" for="za_kosti3">Check this custom checkbox</label>
+                </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+          </br>
+          <div class="text-center">
+          <button id="submit" type="button" class="btn btn-primary" value="submit">Submit</button>
+          </div>
+          </form>`
+      }
+    }
+    var DOM = {
+      upitnik_wrapper : document.querySelector('.upitnik_wrapper'),
+    };
+
+    var page = 1;
+    var answersArr = [];
+    var checkedValues = [];
+    var products = {
+      proizvod_1: ['za_kosti', 'za_srce3', 'za_srce2'],
+      proizvod_2: ['za_kosti2', 'za_srce2', 'za_snagu3'],
+      proizvod_3: ['za_snagu2', 'za_snagu3', 'za_srce2', 'za_kosti', 'za_kosti2'],
+    }
+
+    // on load show first page
+    DOM.upitnik_wrapper.innerHTML = HTML()[page];
+
+    // show next page
+    function showNextPage() {
+        page++;
+        
+        DOM.upitnik_wrapper.innerHTML = HTML()[page];
+    }
+    // show previous page
+    function showPrevPage() {
+        page--;
+        
+        DOM.upitnik_wrapper.innerHTML = HTML()[page];
+    }
+    // save answer on user input
+    function saveAnswer() {
+      var answer = event.target.id.split('_')[2];
+      answersArr.push(answer);
+    }
+    // delete last answer on prev button
+    function deleteAnswer() {
+      answersArr.pop();
+    }
+
+    // adds checked answers to array //for showProduct function
+    function saveCheckedValues() {
+      var form = event.target.form;
+      for (var i = 0; i < form.length; i++) {
+        if (form[i].checked) {
+          var checkedBoxName = form[i].id;
+          checkedValues.push(checkedBoxName);
+        }
+      }
+    }
+
+    
+
+    function showProduct(checkedAnswersArr, proizvod1Arr, proizvod2Arr, proizvod3Arr) {
+      var finalArr = [];
+      var matchingProducts = {
+        proizvod_1 : [],
+        proizvod_2 : [],
+        proizvod_3 : []
+      };
+
+      
+//********************************************************************************************************************************************
+      checkedAnswersArr.forEach( (e1) => proizvod1Arr.forEach( (e2) => proizvod2Arr.forEach((e3) => proizvod3Arr.forEach((e4) => {
+        if(e1 === e2) {
+          matchingProducts.proizvod_1.indexOf(e2) === -1 ? matchingProducts.proizvod_1.push(e2) : '';
+        }
+
+        if(e1 === e3) {
+          matchingProducts.proizvod_2.indexOf(e3) === -1 ? matchingProducts.proizvod_2.push(e3) : '';
+        }
+
+        if(e1 === e4) {
+          matchingProducts.proizvod_3.indexOf(e4) === -1 ? matchingProducts.proizvod_3.push(e4) : '';
+        }
+
+      } ))));
+
+     
+      // treba da proveris da li postoji prazan array u matchingProducts objektu i njega da ne prikazuje u finalnom prikazu proizvoda
+      // treba da se proveri koji je najduzi array u matchingProducts objektu i njega da prikaze u najvecoj slici na prikazu a ove ostale u manjim slikama u prikazu
+
+      
+      
+      
+      console.log();
+      
+//********************************************************************************************************************************************
+
+    }
+
+
+    // user input listener
+    DOM.upitnik_wrapper.addEventListener('click', function() {
+      if (event.target.value == 'next') {
+        showNextPage();
+        saveAnswer();
+        console.log(answersArr);
+      }
+      if (event.target.id == 'prev') {
+        deleteAnswer();
+        showPrevPage();
+      }
+      if(event.target.id == 'submit') {
+        saveCheckedValues();
+        showProduct(checkedValues, products.proizvod_1, products.proizvod_2, products.proizvod_3);
+        
+      }
+
+    });
+    
+    
+    
+
+    
+
+  };
+
+  
+</script>
+</body>
+</html>
