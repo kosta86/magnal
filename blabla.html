@@ -190,8 +190,7 @@
         proizvod_2 : [],
         proizvod_3 : []
       };
-    var sortByLength = [];
-
+      var sortByLength = [];
     // on load show first page
     DOM.upitnik_wrapper.innerHTML = HTML()[page];
 
@@ -230,13 +229,14 @@
 
     
 
-   
+    
+      
 
       
 //********************************************************************************************************************************************
     
     // Push matching answers to matchingProducts
-    function pushMatchingAnswers(checkedAnswersArr, proizvod1Arr, proizvod2Arr, proizvod3Arr) {
+    function pushMatchingAnswers() {
       checkedAnswersArr.forEach( (e1) => proizvod1Arr.forEach( (e2) => proizvod2Arr.forEach((e3) => proizvod3Arr.forEach((e4) => {
         if(e1 === e2) {
           matchingProducts.proizvod_1.indexOf(e2) === -1 ? matchingProducts.proizvod_1.push(e2) : '';
@@ -269,21 +269,10 @@
         var proizvod2Length = matchingProducts.proizvod_2.length;
         var proizvod3Length = matchingProducts.proizvod_3.length;
         
+
         sortByLength.push(proizvod1Length, proizvod2Length, proizvod3Length);
         console.log(sortByLength);
-        
-        var getKeyByValue = (obj, value) => {
-          Object.keys(obj).find(key => obj[key] === value);
-          console.log(Object.keys(obj).find(key => obj[key] === value));
-        }
-        
-        
-        sortByLength.forEach(element => {
-          getKeyByValue(this, 1);
-        });
-        
-
-
+        console.log(matchingProducts);
       }
 
     // user input listener
@@ -299,7 +288,6 @@
       }
       if(event.target.id == 'submit') {
         saveCheckedValues();
-        pushMatchingAnswers(checkedValues, products.proizvod_1, products.proizvod_2, products.proizvod_3);
         showProducts();
         
       }
