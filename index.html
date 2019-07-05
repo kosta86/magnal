@@ -14,23 +14,51 @@
   <title></title>
 </head>
 <body>
-    <div class="main_content">
-      <div class="upitnik_wrapper container-fluid border border-primary">
-        
+    <div class="main_content container">
+
+        <div class="progressWrapper text-center">
+            <div id="progressDiv_1">
+              <div id="progress_1"></div>
+            </div>
+            <div id="progressDiv_2">
+              <div id="progress_2"></div>
+            </div>
+            <div id="progressDiv_3">
+              <div id="progress_3"></div>
+            </div>
+            <div id="progressDiv_4">
+              <div id="progress_4"></div>
+            </div>
+          </div>
+
+      <div class="upitnik_wrapper container-fluid">
+        <div class="pitanjaDiv text-center container"></div>
+
       </div>
-        <div class="block1 row text-center justify-content-center hide">
-          <h1>Preporuceni proizvodi</h1>
+
+      <div class="block1 row text-center hide">
+        <h1>Preporuceni proizvodi</h1>
+      </div>
+
+      <div class="product_wrapper border border-primary hide">
+        <div class="productsDiv">
+          <div class="products justify-content-center">
+
+          </div>
         </div>
-        <div class="product_wrapper container-fluid justify-content-center border border-primary hide">
-            
-          
+        <div class="otherProductsDiv">
+          <div class="other_products justify-content-center border border-primary">
+
+          </div>
         </div>
-      <div class="block2 row text-center justify-content-center hide">
+      </div>
+              
+        
+      <div class="block2 row text-center hide">
         <h1>Ostali proizvodi</h1>
       </div>
-      <div class="other_products container-fluid justify-content-center border border-primary hide">
-        
-      </div>
+      
+
     </div>
 
 
@@ -41,57 +69,63 @@
 //****************************************************************HTML STRINGS***************************************************************************************************
     var HTML = function () {
       return {
-        1: `<div id="strana_1" class="row border border-primary">
-            <div class="col-sm text-center border border-primary p-4">
-              <button id="btn_1_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">5-10 godina</button>
-            </div>
+        1: `<div class="pitanjaDiv">
+              <div id="strana_1" class="row border border-primary">
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_1_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">5-10 godina</button>
+                </div>
 
-            <div class="col-sm text-center border border-primary p-4">
-              <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">10-50 godina</button>
-            </div>
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">10-50 godina</button>
+                </div>
+                  
+                <div id="3" class="col-sm text-center border border-primary p-4">
+                  <button id="btn_1_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">50+ godina</button>
+                </div>
+              </div>
+            </div>`,
+        
+        2: `<div class="pitanjaDiv">
+              <div id="strana_2" class="row border border-primary">
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_2_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">Ne treniram</button>
+                </div>
               
-            <div id="3" class="col-sm text-center border border-primary p-4">
-              <button id="btn_1_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">50+ godina</button>
-            </div>
-        </div>`,
-        
-        2: `<div id="strana_2" class="row border border-primary">
-          <div class="col-sm text-center border border-primary p-4">
-            <button id="btn_2_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">Ne treniram</button>
-          </div>
-        
-          <div class="col-sm text-center border border-primary p-4">
-            <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">Ponekad treniram</button>
-          </div>
-        
-          <div class="col-sm text-center border border-primary p-4">
-            <button id="btn_1_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">Aktivno treniram</button>
-          </div>
-        </div>
-        <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>`,
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_2_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">Ponekad treniram</button>
+                </div>
+              
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_2_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">Aktivno treniram</button>
+                </div>
+              </div>
+              <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
+            </div>`,
 
-        3: `<div id="strana_3" class="row border border-primary">
-            <div class="col-sm text-center border border-primary p-4">
-              <button id="btn_3_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">Musko</button>
-            </div>
-          
-            <div class="col-sm text-center border border-primary p-4">
-              <button id="btn_3_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">Zensko</button>
-            </div>
-          
-            <div class="col-sm text-center border border-primary p-4">
-              <button id="btn_3_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">Nesto izmedju :)</button>
-            </div>
-          </div>
-          <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>`,
+        3: `<div class="pitanjaDiv">
+              <div id="strana_3" class="row border border-primary">
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_3_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">Musko</button>
+                </div>
+              
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_3_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">Zensko</button>
+                </div>
+              
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_3_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">Nesto izmedju :)</button>
+                </div>
+              </div>
+              <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
+            </div>`,
 
-        4: `<form action="#">
+        4: `<form class="checkboxForm" action="#">
             <table class="table table-bordered">
             <tbody>
 
               <tr class="text-center border-primary">
                 <td class="text-center border-primary">
-                  <i class="fas fa-dumbbell fa-7x"></i>
+                  <i class="fas fa-dumbbell fa-5x"></i>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="za_snagu" data-check="1">
@@ -100,7 +134,7 @@
                 </td>
 
                 <td class="text-center border-primary">
-                <i class="far fa-heart fa-7x"></i>
+                <i class="far fa-heart fa-5x"></i>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="za_srce" data-check="2">
@@ -109,7 +143,7 @@
                 </td>
 
                 <td class="text-center border-primary">
-                <i class="fas fa-bone fa-7x"></i>
+                <i class="fas fa-bone fa-5x"></i>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="za_kosti" data-check="3">
@@ -120,7 +154,7 @@
 
               <tr class="text-center border-primary">
                 <td class="text-center border-primary">
-                  <i class="fas fa-dumbbell fa-7x"></i>
+                  <i class="fas fa-dumbbell fa-5x"></i>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="za_snagu2" data-check="4">
@@ -129,7 +163,7 @@
                 </td>
 
                 <td class="text-center border-primary">
-                <i class="far fa-heart fa-7x"></i>
+                <i class="far fa-heart fa-5x"></i>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="za_srce2" data-check="5">
@@ -138,7 +172,7 @@
                 </td>
 
                 <td class="text-center border-primary">
-                <i class="fas fa-bone fa-7x"></i>
+                <i class="fas fa-bone fa-5x"></i>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="za_kosti2" data-check="6">
@@ -149,7 +183,7 @@
               
               <tr class="text-center ">
                 <td class="text-center border-primary">
-                  <i class="fas fa-dumbbell fa-7x"></i>
+                  <i class="fas fa-dumbbell fa-5x"></i>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="za_snagu3" data-check="7">
@@ -158,7 +192,7 @@
                 </td>
 
                 <td class="text-center border-primary">
-                <i class="far fa-heart fa-7x"></i>
+                <i class="far fa-heart fa-5x"></i>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="za_srce3" data-check="8">
@@ -167,7 +201,7 @@
                 </td>
 
                 <td class="text-center border-primary">
-                <i class="fas fa-bone fa-7x"></i>
+                <i class="fas fa-bone fa-5x"></i>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit felis, ac aliquet augue vehicula et. Integer sodales tristique felis, vitae sagittis odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Vestibulum eu mollis metus. </p>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="za_kosti3" data-check="9">
@@ -238,6 +272,7 @@
       product_wrapper : document.querySelector('.product_wrapper'),
       other_products : document.querySelector('.other_products'),
       product : document.querySelector('.product'),
+      products : document.querySelector('.products'),
       block1 : document.querySelector('.block1'),
       block2: document.querySelector('.block2'),
     };
@@ -276,6 +311,54 @@
       page--;
       DOM.upitnik_wrapper.innerHTML = HTML()[page];
     }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    // load progress bar
+   /*  function loadProgress() {
+      var progressDiv = document.getElementById(`progressDiv`); 
+      var width = 1;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+        } else {
+          width++; 
+          progressDiv.style.width = width + '%'; 
+        }
+      }
+    } */
+    function loadProgress() {
+      var progressBar = document.getElementById(`progress_${page - 1}`); 
+      var width = 1;
+      var id = setInterval(bar, 1);
+      function bar() {
+        if (width >= 100) {
+          clearInterval(id);
+        } else {
+          width++; 
+          progressBar.style.width = width + '%'; 
+        }
+      }
+    }
+    function unloadProgress() {
+      var progressBar = document.getElementById(`progress_${page}`);
+      var width = 100;
+      var id = setInterval(bar, 1);
+      function bar() {
+        if (width <= 0) {
+          clearInterval(id);
+        } else {
+          width--; 
+          progressBar.style.width = width + '%'; 
+        }
+      }
+    }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   
+
 
 //********************************
 
@@ -368,12 +451,11 @@
       
       DOM.block2.classList.add("show");
       DOM.block2.classList.remove("hide");
-      DOM.other_products.classList.add("show");
-      DOM.other_products.classList.remove("hide");
+      
       
       if (sortByLength['proizvod_1'] == closest(sortByLength, 10)) {
         //insert into mian wrapper 
-        DOM.product_wrapper.insertAdjacentHTML('beforeend', HTML().proizvod_1);
+        DOM.products.insertAdjacentHTML('beforeend', HTML().proizvod_1);
         
       } else {
         //insert into other products
@@ -381,7 +463,7 @@
       }
       if (sortByLength['proizvod_2'] == closest(sortByLength, 10)) {
         //insert into main wrapper
-        DOM.product_wrapper.insertAdjacentHTML('beforeend', HTML().proizvod_2);
+        DOM.products.insertAdjacentHTML('beforeend', HTML().proizvod_2);
 
       } else {
         //insert into other products
@@ -389,7 +471,7 @@
       }
       if (sortByLength['proizvod_3'] == closest(sortByLength, 10)) {
         //insert into main wrapper 
-        DOM.product_wrapper.insertAdjacentHTML('beforeend', HTML().proizvod_3);
+        DOM.products.insertAdjacentHTML('beforeend', HTML().proizvod_3);
 
       } else {
         //insert into other products
@@ -407,17 +489,20 @@
       if (event.target.value == 'next') {
         showNextPage();
         saveAnswer();
+        loadProgress();
       }
       if (event.target.id == 'prev') {
         deleteAnswer();
         showPrevPage();
+        unloadProgress();
       }
       if(event.target.id == 'submit') {
+        page++;
         saveCheckedValues();
         pushMatchingAnswers(checkedValues, products.proizvod_1, products.proizvod_2, products.proizvod_3);
         sortProducts();
         showProducts();
-        
+        loadProgress();
       }
 
     });

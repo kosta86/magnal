@@ -1,55 +1,96 @@
 html, body{ 
-    height: 100vh;
-    overflow: auto;
-}
-.main_content {
-    position: relative;
     height: 100%;
-}
-.upitnik_wrapper {
+    width: 100%;
+    padding: 0;
     margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    min-height: 100%;
 }
-.product_wrapper {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-.product {
-    height: auto;
+
+.row {
     width: 100%;
 }
-.other_products {
-    height: auto;
-    margin: 0;
+.main_content {
+    display: block;
+    position: relative;
+    height: 150%;
+
+    width: auto;
+}
+.upitnik_wrapper {
+    display: block;
     position: absolute;
-    top: 130%;
+    height: 100%;
+}
+.pitanjaDiv {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 350px;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+.checkboxForm {
+    display: block;
+    position: absolute;
+    height: auto;
+    top: 50px;
+}
+.product_wrapper {
+    display: block!important;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    margin: 0;
+}
+.productsDiv {
+    position: relative;
+    top: 150px;
+}
+.products {
+    display: flex;
+}
+.otherProductsDiv {
+    position: relative;
+    top: 270px;
+}
+.other_products {
+    display: flex;
+}
+/* .product {
+    height: auto;
+    width: 100%;
+} */
 .block1 {
     display: block; 
-    top: 10%;
+    top: 80px;
     width: 100%; 
-    height: auto; 
-    position: relative;
+    position: absolute;
 }
 .block2 {
     display: block; 
-    top: 100%;
+    top: 550px;
     width: 100%; 
-    height: auto; 
-    position: relative;
+    position: absolute;
 }
 .hide {
     display: none!important;
 }
 .show {
-    display: flex!important;
+    display: block!important;
 }
-
+.progressWrapper {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 10px;
+}
+#progressDiv_1, #progressDiv_2, #progressDiv_3, #progressDiv_4 {
+display: inline-block;
+width: 10%;
+background-color: #ddd;
+}
+#progress_1, #progress_2, #progress_3, #progress_4 {
+width: 0%;
+height: 30px;
+background-color: #4CAF50;
+}
