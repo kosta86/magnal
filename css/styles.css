@@ -92,6 +92,9 @@ html, body{
 .show {
     display: block!important;
 }
+.disable {
+    opacity: 0.2;
+}
 .progressWrapper {
     width: 100%;
     display: block;
