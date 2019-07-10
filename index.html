@@ -41,7 +41,7 @@
 
       <div class="product_wrapper border border-primary hide">
         <div class="block1 text-center">
-          <h1>Preporuceni proizvodi</h1>
+          <h1>Izabrani proizvodi (u odnosu na checkbox odgovore)</h1>
         </div>
         <div class="productsDiv">
           <div class="products justify-content-center">
@@ -50,7 +50,7 @@
         </div>
 
         <div class="block2 text-center">
-          <h1>Ostali proizvodi</h1>
+          <h1>Mi vam preporucujemo (u odnosu na odgovore na pitanja)</h1>
         </div>
         <div class="otherProductsDiv">
           <div class="other_products justify-content-center border border-primary">
@@ -77,15 +77,15 @@
               <h1 class="text-center">Pol</h1>
               <div id="strana_1" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_1" type="button" class="btn btn-primary" value="next" data-value="Muški" data-goto="${page}">Muški</button>
+                  <button id="btn_1_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Muški" data-goto="${page}">Muški</button>
                 </div>
 
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-value="Ženski" data-goto="${page}">Ženski</button>
+                  <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-key="" data-value="Ženski" data-goto="${page}">Ženski</button>
                 </div>
                   
                 <div id="3" class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_3" type="button" class="btn btn-primary" value="next" data-value="Ne znam" data-goto="${page}">Ne znam</button>
+                  <button id="btn_1_3" type="button" class="btn btn-primary" value="next" data-key="" data-value="Ne znam" data-goto="${page}">Ne znam</button>
                 </div>
               </div>
             </div>`,
@@ -94,15 +94,15 @@
               <h1 class="text-center">Fizička aktivnost</h1>
               <div id="strana_2" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_1" type="button" class="btn btn-primary" value="next" data-value="Ne treniram" data-goto="${page}">Ne treniram</button>
+                  <button id="btn_2_1" type="button" class="btn btn-primary" value="next" data-key="4" data-value="Ne treniram" data-goto="${page}">Ne treniram</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_2" type="button" class="btn btn-primary" value="next" data-value="Ponekad treniram" data-goto="${page}">Ponekad treniram</button>
+                  <button id="btn_2_2" type="button" class="btn btn-primary" value="next" data-key="0" data-value="Ponekad treniram" data-goto="${page}">Ponekad treniram</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_3" type="button" class="btn btn-primary" value="next" data-value="Redovno treniram" data-goto="${page}">Redovno treniram</button>
+                  <button id="btn_2_3" type="button" class="btn btn-primary" value="next" data-key="3" data-value="Redovno treniram" data-goto="${page}">Redovno treniram</button>
                 </div>
               </div>
               <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
@@ -112,15 +112,15 @@
               <h1 class="text-center">Kakav Vam je san</h1>
               <div id="strana_3" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_1" type="button" class="btn btn-primary" value="next" data-value="Spavam kao beba" data-goto="${page}">Spavam kao beba</button>
+                  <button id="btn_3_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Spavam kao beba" data-goto="${page}">Spavam kao beba</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_2" type="button" class="btn btn-primary" value="next" data-value="Često se budim noću" data-goto="${page}">Često se budim noću</button>
+                  <button id="btn_3_2" type="button" class="btn btn-primary" value="next" data-key="5" data-value="Često se budim noću" data-goto="${page}">Često se budim noću</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_3" type="button" class="btn btn-primary" value="next" data-value="Ne mogu da se uspavam dugo" data-goto="${page}">Ne mogu da se uspavam dugo</button>
+                  <button id="btn_3_3" type="button" class="btn btn-primary" value="next" data-key="5" data-value="Ne mogu da se uspavam dugo" data-goto="${page}">Ne mogu da se uspavam dugo</button>
                 </div>
               </div>
               <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
@@ -130,15 +130,15 @@
               <h1 class="text-center">Kakav Vam je krvni pritisak</h1>
               <div id="strana_4" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_1" type="button" class="btn btn-primary" value="next" data-value="Ne kontrolišem" data-goto="${page}">Ne kontrolišem</button>
+                  <button id="btn_4_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Ne kontrolišem" data-goto="${page}">Ne kontrolišem</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_2" type="button" class="btn btn-primary" value="next" data-value="Normalan ili ponekad povećan kada smo nervozni" data-goto="${page}">Normalan ili ponekad povećan kada smo nervozni</button>
+                  <button id="btn_4_2" type="button" class="btn btn-primary" value="next" data-key="2" data-value="Normalan ili ponekad povećan kada smo nervozni" data-goto="${page}">Normalan ili ponekad povećan kada smo nervozni</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_3" type="button" class="btn btn-primary" value="next" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
+                  <button id="btn_4_3" type="button" class="btn btn-primary" value="next" data-key="1" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
                 </div>
               </div>
               <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
@@ -153,17 +153,17 @@
                   <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
                   <p>kontrola stresa</p>
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="kontrola_stresa" data-check="4">
+                    <input type="checkbox" class="custom-control-input" id="kontrola_stresa" data-check="6">
                     <label class="custom-control-label" for="kontrola_stresa">Check this custom checkbox</label>
                   </div>
                 </td>
 
                 <td class="text-center border-primary">
-                <img src="./img/karakteristike/direct-ikona-kosti1.png">
-                <p>kosti</p>
+                <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
+                <p>srce</p>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="kosti" data-check="3">
-                  <label class="custom-control-label" for="kosti">Check this custom checkbox</label>
+                  <input type="checkbox" class="custom-control-input" id="srce" data-check="5">
+                  <label class="custom-control-label" for="srce">Check this custom checkbox</label>
                 </div>
                 </td>
 
@@ -171,7 +171,7 @@
                 <img src="./img/karakteristike/imuno-ikona-imunitet.png">
                 <p>imunitet </p>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="imunitet" data-check="5">
+                  <input type="checkbox" class="custom-control-input" id="imunitet" data-check="7">
                   <label class="custom-control-label" for="imunitet">Check this custom checkbox</label>
                 </div>
                 </td>
@@ -188,7 +188,12 @@
                 </td>
 
                 <td class="text-center border-primary">
-                <img src="./img/karakteristike/magnal-1.png" style="height: 65px; background-color: blue; top:50%; transform: translateY(50%)">
+                  <img src="./img/karakteristike/relax-ikona-kontrola-stresa.png">
+                  <p>dobar san</p>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="dobar_san" data-check="8">
+                    <label class="custom-control-label" for="dobar_san">Check this custom checkbox</label>
+                  </div>
                 </td>
 
                 <td class="text-center border-primary">
@@ -204,7 +209,7 @@
               <tr class="text-center ">
                 <td class="text-center border-primary">
                   <img src="./img/karakteristike/mineral-ikona-nervni-sistem.png">
-                  <p>nervni sistem </p>
+                  <p>nervni sistem</p>
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="nervni_sistem" data-check="2">
                     <label class="custom-control-label" for="nervni_sistem">Check this custom checkbox</label>
@@ -212,14 +217,19 @@
                 </td>
 
                 <td class="text-center border-primary">
-               
+                  <img src="./img/karakteristike/direct-ikona-laka-upotreba.png">
+                  <p>laka primena</p>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="laka_primena" data-check="3">
+                    <label class="custom-control-label" for="laka_primena">Check this custom checkbox</label>
+                  </div>
                 </td>
 
                 <td class="text-center border-primary">
                 <img src="./img/karakteristike/sleep-ikona-metabolizam.png">
-                <p>metabolizam </p>
+                <p>metabolizam</p>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="metabolizam" data-check="6">
+                  <input type="checkbox" class="custom-control-input" id="metabolizam" data-check="4">
                   <label class="custom-control-label" for="metabolizam">Check this custom checkbox</label>
                 </div>
                 </td>
@@ -232,86 +242,86 @@
           <button id="submit" type="button" class="btn btn-primary" value="submit">Submit</button>
           </div>
           </form>`,
-        proizvod_1: `<div id="proizvod_1" class="card">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_1.jpg" alt="proizvod 1 slika">
+        direct: `<div id="direct" class="card">
+                      <img class="card-img-top" src="./img/proizvodi/direct.jpg" alt="proizvod 1 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 1</h5>
                         <p class="card-text">Ovo je proizvod 1 i mnogo je dobar</p>
                         <a href="#" class="btn btn-primary">Detaljnije</a>
                       </div>
                     </div>`,
-        proizvod_2: `<div id="proizvod_2" class="card" >
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_2.jpg" alt="proizvod 2 slika">
+        cardio: `<div id="cardio" class="card" >
+                      <img class="card-img-top" src="./img/proizvodi/cardio.jpg" alt="proizvod 2 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 2</h5>
                         <p class="card-text">Ovo je proizvod 2 i mnogo je dobar</p>
                         <a href="#" class="btn btn-primary">Detaljnije</a>
                       </div>
                     </div>`,
-        proizvod_3: `<div id="proizvod_3" class="card">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_3.jpg" alt="proizvod 3 slika">
+        relax: `<div id="relax" class="card">
+                      <img class="card-img-top" src="./img/proizvodi/relax.jpg" alt="proizvod 3 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 3</h5>
                         <p class="card-text">Ovo je proizvod 3 i mnogo je dobar</p>
                         <a href="#" class="btn btn-primary">Detaljnije</a>
                       </div>
                     </div>`,
-        proizvod_4: `<div id="proizvod_4" class="card">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_4.jpg" alt="proizvod 4 slika">
+        immuno: `<div id="immuno" class="card">
+                      <img class="card-img-top" src="./img/proizvodi/immuno.jpg" alt="proizvod 4 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 4</h5>
                         <p class="card-text">Ovo je proizvod 4 i mnogo je dobar</p>
                         <a href="#" class="btn btn-primary">Detaljnije</a>
                       </div>
                     </div>`,
-        proizvod_5: `<div id="proizvod_5" class="card">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_5.jpg" alt="proizvod 4 slika">
+        mineral: `<div id="mineral" class="card">
+                      <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="proizvod 4 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 5</h5>
                         <p class="card-text">Ovo je proizvod 5 i mnogo je dobar</p>
                         <a href="#" class="btn btn-primary">Detaljnije</a>
                       </div>
                     </div>`,
-        proizvod_6: `<div id="proizvod_6" class="card">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_6.jpg" alt="proizvod 6 slika">
+        sleep: `<div id="sleep" class="card">
+                      <img class="card-img-top" src="./img/proizvodi/sleep.jpg" alt="proizvod 6 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 6</h5>
                         <p class="card-text">Ovo je proizvod 6 i mnogo je dobar</p>
                         <a href="#" class="btn btn-primary">Detaljnije</a>
                       </div>
                     </div>`,
-        ostaliProizvod_1: `<div id="proizvod_1" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_1.jpg" alt="proizvod 1 slika">
+        ostalidirect: `<div id="ostalidirect" class="card" style="width: 10em; height: 10em">
+                      <img class="card-img-top" src="./img/proizvodi/direct.jpg" alt="proizvod 1 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 1</h5>
                       </div>
                     </div>`,
-        ostaliProizvod_2: `<div id="proizvod_2" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_2.jpg" alt="proizvod 2 slika">
+        ostalicardio: `<div id="ostalicardio" class="card" style="width: 10em; height: 10em">
+                      <img class="card-img-top" src="./img/proizvodi/cardio.jpg" alt="proizvod 2 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 2</h5>
                       </div>
                     </div>`,
-        ostaliProizvod_3: `<div id="proizvod_3" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_3.jpg" alt="proizvod 3 slika">
+        ostalirelax: `<div id="ostalirelax" class="card" style="width: 10em; height: 10em">
+                      <img class="card-img-top" src="./img/proizvodi/relax.jpg" alt="proizvod 3 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 3</h5>
                       </div>
                     </div>`,
-        ostaliProizvod_4: `<div id="proizvod_4" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_4.jpg" alt="proizvod 4 slika">
+        ostaliimmuno: `<div id="ostaliimmuno" class="card" style="width: 10em; height: 10em">
+                      <img class="card-img-top" src="./img/proizvodi/immuno.jpg" alt="proizvod 4 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 4</h5>
                       </div>
                     </div>`,
-        ostaliProizvod_5: `<div id="proizvod_5" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_5.jpg" alt="proizvod 5 slika">
+        ostalimineral: `<div id="ostalimineral" class="card" style="width: 10em; height: 10em">
+                      <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="proizvod 5 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 4</h5>
                       </div>
                     </div>`,
-        ostaliProizvod_6: `<div id="proizvod_6" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/proizvod_6.jpg" alt="proizvod 6 slika">
+        ostalisleep: `<div id="ostalisleep" class="card" style="width: 10em; height: 10em">
+                      <img class="card-img-top" src="./img/proizvodi/sleep.jpg" alt="proizvod 6 slika">
                       <div class="card-body">
                         <h5 class="card-title">Proizvod 6</h5>
                       </div>
@@ -338,30 +348,34 @@
     var page = 1;
     var answersArr = [];
     var checkedValues = [];
+    var recommendedProducts = []
+    var productListArr = ['direct','cardio','relax','immuno','mineral','sleep'];
     var products = {
-      proizvod_1: ['energija', 'misici', 'nervni_sistem', 'kosti'],
-      proizvod_2: ['nervni_sistem', 'kontrola_stresa', 'energija', 'misici'],
-      proizvod_3: ['nervni_sistem', 'kontrola_stresa', 'energija', 'misici'],
-      proizvod_4: ['imunitet', 'energija', 'misici'],
-      proizvod_5: ['energija', 'misici', 'metabolizam', 'nervni_sistem'],
-      proizvod_6: ['metabolizam', 'energija', 'misici', 'nervni_sistem'],
+      direct: ['energija', 'misici', 'nervni_sistem', 'laka_primena', 'metabolizam'],
+      cardio: ['energija', 'misici', 'srce'],
+      relax: ['nervni_sistem', 'kontrola_stresa', 'energija', 'misici'],
+      immuno: ['imunitet', 'energija', 'misici', 'nervni_sistem'],
+      mineral: ['energija', 'misici', 'metabolizam', 'nervni_sistem'],
+      sleep: ['energija', 'misici', 'nervni_sistem', 'dobar_san'],
     }
     var uncheckList = [
       [''],
       [''],
-      ['imunitet'],
-      ['kontrola_stresa', 'imunitet', 'metabolizam'],
-      ['kosti', 'imunitet', 'metabolizam'],
-      ['nervni_sistem', 'kosti', 'kontrola_stresa', 'metabolizam'],
-      ['energija', 'kontrola_stresa', 'nervni_sistem', 'kosti']
+      ['srce'],
+      ['srce', 'kontrola_stresa', 'imunitet', 'dobar_san'],
+      ['srce', 'kontrola_stresa', 'imunitet', 'dobar_san'],
+      ['nervni_sistem', 'laka_primena', 'metabolizam', 'kontrola_stresa', 'imunitet', 'dobar_san'],
+      ['laka_primena', 'metabolizam', 'srce', 'imunitet', 'dobar_san'],
+      ['laka_primena', 'metabolizam', 'srce', 'kontrola_stresa', 'dobar_san'],
+      ['laka_primena', 'metabolizam', 'srce', 'kontrola_stresa', 'imunitet',]
     ]
     var matchingProducts = {
-        proizvod_1 : [],
-        proizvod_2 : [],
-        proizvod_3 : [],
-        proizvod_4: [],
-        proizvod_5: [],
-        proizvod_6: [],
+        direct : [],
+        cardio : [],
+        relax : [],
+        immuno: [],
+        mineral: [],
+        sleep: [],
       };
     var sortByLength = new Array;
 
@@ -454,8 +468,10 @@
     }
 
     // delete last answer on prev button
-    function deleteAnswer() {
-      answersArr.pop();
+    function deleteAnswer(arr) {
+      if(arr.length !== 0) {
+        arr.pop();
+      }
     }
 
     // adds checked answers to array //for showProduct function
@@ -468,29 +484,38 @@
         }
       }
     }
+    
+    //pushes data-key values to recommendedProducts = [] to be shown as recommended products 
+    function pushDataKey() {
+      var dataKey = event.target.dataset.key;
+      if(dataKey !== '') {
+        recommendedProducts.push(productListArr[dataKey]);
+        console.log(recommendedProducts);
+      }
+    }
 
     // Push matching answers to matchingProducts
     function pushMatchingAnswers(checkedAnswersArr, proizvod1Arr, proizvod2Arr, proizvod3Arr, proizvod4Arr, proizvod5Arr, proizvod6Arr) {
       checkedAnswersArr.forEach( (e1) => proizvod1Arr.forEach( (e2) => proizvod2Arr.forEach((e3) => proizvod3Arr.forEach((e4) => proizvod4Arr.forEach((e5) => proizvod5Arr.forEach((e6) => proizvod6Arr.forEach((e7) => {
         if(e1 === e2) {
-          matchingProducts.proizvod_1.indexOf(e2) === -1 ? matchingProducts.proizvod_1.push(e2) : '';
+          matchingProducts.direct.indexOf(e2) === -1 ? matchingProducts.direct.push(e2) : '';
         }
 
         if(e1 === e3) {
-          matchingProducts.proizvod_2.indexOf(e3) === -1 ? matchingProducts.proizvod_2.push(e3) : '';
+          matchingProducts.cardio.indexOf(e3) === -1 ? matchingProducts.cardio.push(e3) : '';
         }
 
         if(e1 === e4) {
-          matchingProducts.proizvod_3.indexOf(e4) === -1 ? matchingProducts.proizvod_3.push(e4) : '';
+          matchingProducts.relax.indexOf(e4) === -1 ? matchingProducts.relax.push(e4) : '';
         }
         if (e1 === e5) {
-          matchingProducts.proizvod_4.indexOf(e5) === -1 ? matchingProducts.proizvod_4.push(e5) : '';
+          matchingProducts.immuno.indexOf(e5) === -1 ? matchingProducts.immuno.push(e5) : '';
         }
         if (e1 === e6) {
-          matchingProducts.proizvod_5.indexOf(e6) === -1 ? matchingProducts.proizvod_5.push(e6) : '';
+          matchingProducts.mineral.indexOf(e6) === -1 ? matchingProducts.mineral.push(e6) : '';
         }
         if (e1 === e7) {
-          matchingProducts.proizvod_6.indexOf(e7) === -1 ? matchingProducts.proizvod_6.push(e7) : '';
+          matchingProducts.sleep.indexOf(e7) === -1 ? matchingProducts.sleep.push(e7) : '';
         }
 
       } )))))));
@@ -498,22 +523,22 @@
       
     // Push matched answers from user input
     function sortProducts() {
-      var proizvod1Length = matchingProducts.proizvod_1.length;
-      var proizvod2Length = matchingProducts.proizvod_2.length;
-      var proizvod3Length = matchingProducts.proizvod_3.length;
-      var proizvod4Length = matchingProducts.proizvod_4.length;
-      var proizvod5Length = matchingProducts.proizvod_5.length;
-      var proizvod6Length = matchingProducts.proizvod_6.length;
+      var proizvod1Length = matchingProducts.direct.length;
+      var proizvod2Length = matchingProducts.cardio.length;
+      var proizvod3Length = matchingProducts.relax.length;
+      var proizvod4Length = matchingProducts.immuno.length;
+      var proizvod5Length = matchingProducts.mineral.length;
+      var proizvod6Length = matchingProducts.sleep.length;
 
 
 
 
-      sortByLength['proizvod_1'] = proizvod1Length;
-      sortByLength['proizvod_2'] = proizvod2Length;
-      sortByLength['proizvod_3'] = proizvod3Length;
-      sortByLength['proizvod_4'] = proizvod4Length;
-      sortByLength['proizvod_5'] = proizvod5Length;
-      sortByLength['proizvod_6'] = proizvod6Length;
+      sortByLength['direct'] = proizvod1Length;
+      sortByLength['cardio'] = proizvod2Length;
+      sortByLength['relax'] = proizvod3Length;
+      sortByLength['immuno'] = proizvod4Length;
+      sortByLength['mineral'] = proizvod5Length;
+      sortByLength['sleep'] = proizvod6Length;
     }
 
     // Find best match for the given answers
@@ -559,7 +584,7 @@ function disableCheckboxes() {
 //********************SHOW MATCHED PRODUCTS********************************************************************
     
 
-    // Show products on page
+    // Show products depending on checkbox answers
     function showProducts() {
       DOM.upitnik_wrapper.outerHTML = "";
       
@@ -572,54 +597,62 @@ function disableCheckboxes() {
       DOM.block2.classList.remove("hide"); */
       
       
-      if (sortByLength['proizvod_1'] == closest(sortByLength, 10)) {
+      if (sortByLength['direct'] == closest(sortByLength, 10)) {
         //insert into mian wrapper 
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().proizvod_1);
+        DOM.products.insertAdjacentHTML('afterbegin', HTML().direct);
         
       } else {
         //insert into other products
-        DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostaliProizvod_1);
+        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostalidirect); */
       }
-      if (sortByLength['proizvod_2'] == closest(sortByLength, 10)) {
+      if (sortByLength['cardio'] == closest(sortByLength, 10)) {
         //insert into main wrapper
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().proizvod_2);
+        DOM.products.insertAdjacentHTML('afterbegin', HTML().cardio);
 
       } else {
         //insert into other products
-        DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostaliProizvod_2);
+        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostalicardio); */
       }
-      if (sortByLength['proizvod_3'] == closest(sortByLength, 10)) {
+      if (sortByLength['relax'] == closest(sortByLength, 10)) {
         //insert into main wrapper 
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().proizvod_3);
+        DOM.products.insertAdjacentHTML('afterbegin', HTML().relax);
 
       } else {
         //insert into other products
-        DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostaliProizvod_3);
+        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostalirelax); */
       }
-      if (sortByLength['proizvod_4'] == closest(sortByLength, 10)) {
+      if (sortByLength['immuno'] == closest(sortByLength, 10)) {
         //insert into mian wrapper 
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().proizvod_4);
+        DOM.products.insertAdjacentHTML('afterbegin', HTML().immuno);
 
       } else {
         //insert into other products
-        DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostaliProizvod_4);
+        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostaliimmuno); */
       }
-      if (sortByLength['proizvod_5'] == closest(sortByLength, 10)) {
+      if (sortByLength['mineral'] == closest(sortByLength, 10)) {
         //insert into mian wrapper 
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().proizvod_5);
+        DOM.products.insertAdjacentHTML('afterbegin', HTML().mineral);
 
       } else {
         //insert into other products
-        DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostaliProizvod_5);
+        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostalimineral); */
       }
-      if (sortByLength['proizvod_6'] == closest(sortByLength, 10)) {
+      if (sortByLength['sleep'] == closest(sortByLength, 10)) {
         //insert into mian wrapper 
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().proizvod_6);
+        DOM.products.insertAdjacentHTML('afterbegin', HTML().sleep);
 
       } else {
         //insert into other products
-        DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostaliProizvod_6);
+        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostalisleep); */
       }
+    }
+
+
+    // shows products depending on button answers
+    function showRecommendedProducts() {
+      recommendedProducts.forEach(function(element) {
+        DOM.other_products.insertAdjacentHTML('afterbegin', HTML()[element])
+      })
     }
 
 //*****************************************
@@ -634,9 +667,11 @@ function disableCheckboxes() {
         saveAnswer();
         loadProgress();
         addGlowBorder();
+        pushDataKey();
       }
       if (event.target.id == 'prev') {
-        deleteAnswer();
+        deleteAnswer(answersArr);
+        deleteAnswer(recommendedProducts);
         showPrevPage();
         unloadProgress();
         removeGlowBorder();
@@ -644,10 +679,11 @@ function disableCheckboxes() {
       if(event.target.id == 'submit') {
         page++;
         saveCheckedValues();
-        pushMatchingAnswers(checkedValues, products.proizvod_1, products.proizvod_2, products.proizvod_3, products.proizvod_4, products.proizvod_5, products.proizvod_6);
+        pushMatchingAnswers(checkedValues, products.direct, products.cardio, products.relax, products.immuno, products.mineral, products.sleep);
         sortProducts();
         showProducts();
         loadProgress();
+        showRecommendedProducts();
         console.log(checkedValues);
       }
       if(event.target.type == 'checkbox') {
