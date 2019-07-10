@@ -149,7 +149,7 @@
             <tbody>
 
               <tr class="text-center border-primary">
-                <td class="text-center border-primary">
+                <td class="text-center border-primary field">
                   <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
                   <p>kontrola stresa</p>
                   <div class="custom-control custom-checkbox">
@@ -158,7 +158,7 @@
                   </div>
                 </td>
 
-                <td class="text-center border-primary">
+                <td class="text-center border-primary field">
                 <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
                 <p>srce</p>
                 <div class="custom-control custom-checkbox">
@@ -167,7 +167,7 @@
                 </div>
                 </td>
 
-                <td class="text-center border-primary">
+                <td class="text-center border-primary field">
                 <img src="./img/karakteristike/imuno-ikona-imunitet.png">
                 <p>imunitet </p>
                 <div class="custom-control custom-checkbox">
@@ -178,7 +178,7 @@
               </tr>
 
               <tr class="text-center border-primary">
-                <td class="text-center border-primary">
+                <td class="text-center border-primary field">
                   <img src="./img/karakteristike/mineral-ikona-energija.png">
                   <p>energija</p>
                   <div class="custom-control custom-checkbox">
@@ -187,7 +187,7 @@
                   </div>
                 </td>
 
-                <td class="text-center border-primary">
+                <td class="text-center border-primary field">
                   <img src="./img/karakteristike/relax-ikona-kontrola-stresa.png">
                   <p>dobar san</p>
                   <div class="custom-control custom-checkbox">
@@ -196,7 +196,7 @@
                   </div>
                 </td>
 
-                <td class="text-center border-primary">
+                <td class="text-center border-primary field">
                 <img src="./img/karakteristike/mineral-ikona-misici.png">
                 <p>misici </p>
                 <div class="custom-control custom-checkbox">
@@ -207,7 +207,7 @@
               </tr>
               
               <tr class="text-center ">
-                <td class="text-center border-primary">
+                <td class="text-center border-primary field">
                   <img src="./img/karakteristike/mineral-ikona-nervni-sistem.png">
                   <p>nervni sistem</p>
                   <div class="custom-control custom-checkbox">
@@ -216,7 +216,7 @@
                   </div>
                 </td>
 
-                <td class="text-center border-primary">
+                <td class="text-center border-primary field">
                   <img src="./img/karakteristike/direct-ikona-laka-upotreba.png">
                   <p>laka primena</p>
                   <div class="custom-control custom-checkbox">
@@ -225,7 +225,7 @@
                   </div>
                 </td>
 
-                <td class="text-center border-primary">
+                <td class="text-center border-primary field">
                 <img src="./img/karakteristike/sleep-ikona-metabolizam.png">
                 <p>metabolizam</p>
                 <div class="custom-control custom-checkbox">
@@ -342,6 +342,7 @@
       products : document.querySelector('.products'),
       block1 : document.querySelector('.block1'),
       block2: document.querySelector('.block2'),
+      checkboxField : document.querySelector('.field')
     };
 
     // Initialization
@@ -562,12 +563,20 @@
 
 
 //************************DISABLE CHECKBOXES******************************************************************
-function disableCheckboxes() {
-  var el = event.target;
-  var checkboxNum = parseInt(event.target.dataset.check);
-  uncheckList[checkboxNum].forEach(function(element) {
-    if(element != '') {
-      if(el.checked) {
+function checkboxOnTdclick() {
+  var field = event.target.closest('.field');
+  var currentCheckbox = field.querySelector('.custom-control-input');
+
+  if(currentCheckbox.checked) {
+    currentCheckbox.checked = false;
+  } else {
+    currentCheckbox.checked = true;
+  }
+
+  var checkboxNum = parseInt(currentCheckbox.dataset.check);
+  uncheckList[checkboxNum].forEach(function (element) {
+    if (element != '') {
+      if (currentCheckbox.checked) {
         document.getElementById(element).parentElement.parentElement.classList.add("disable");
         document.getElementById(element).disabled = true;
       } else {
@@ -576,8 +585,9 @@ function disableCheckboxes() {
       }
     }
   })
-  
 }
+
+
 //*************************************************************************************************************
 
 
@@ -686,9 +696,12 @@ function disableCheckboxes() {
         showRecommendedProducts();
         console.log(checkedValues);
       }
-      if(event.target.type == 'checkbox') {
-        disableCheckboxes();
+      if(event.target.closest('.field')) {
+        /* disableCheckboxes(); */
+        checkboxOnTdclick();
       }
+      
+    
     });
 
 //*****************************************
