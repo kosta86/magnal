@@ -51,7 +51,6 @@ html, body{
 }
 .checkboxForm {
     display: block;
-    /* position: absolute; */
     height: auto;
     margin-top: 100px;
 }
@@ -74,10 +73,6 @@ html, body{
 .other_products {
     display: flex;
 }
-/* .product {
-    height: auto;
-    width: 100%;
-} */
 .block1 {
     margin-top: 90px;
     width: 100%; 
@@ -101,13 +96,13 @@ html, body{
     position: absolute;
     top: 10px;
 }
-#progressDiv_1, #progressDiv_2, #progressDiv_3, #progressDiv_4 {
+#progressDiv_1, #progressDiv_2, #progressDiv_3, #progressDiv_4, #progressDiv_5 {
 display: inline-block;
 width: 10%;
 background-color: #ddd;
 border-radius: 30px;
 }
-#progress_1, #progress_2, #progress_3, #progress_4 {
+#progress_1, #progress_2, #progress_3, #progress_4, #progress_5{
 width: 0%;
 height: 30px;
 background-color: #4CAF50;

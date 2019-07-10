@@ -29,6 +29,9 @@
             <div id="progressDiv_4">
               <div id="progress_4"></div>
             </div>
+            <div id="progressDiv_5">
+              <div id="progress_5"></div>
+            </div>
           </div>
 
       <div class="upitnik_wrapper">
@@ -71,56 +74,77 @@
     var HTML = function () {
       return {
         1: `<div class="pitanjaDiv">
+              <h1 class="text-center">Pol</h1>
               <div id="strana_1" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">5-10 godina</button>
+                  <button id="btn_1_1" type="button" class="btn btn-primary" value="next" data-value="Muški" data-goto="${page}">Muški</button>
                 </div>
 
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">10-50 godina</button>
+                  <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-value="Ženski" data-goto="${page}">Ženski</button>
                 </div>
                   
                 <div id="3" class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">50+ godina</button>
+                  <button id="btn_1_3" type="button" class="btn btn-primary" value="next" data-value="Ne znam" data-goto="${page}">Ne znam</button>
                 </div>
               </div>
             </div>`,
         
         2: `<div class="pitanjaDiv">
+              <h1 class="text-center">Fizička aktivnost</h1>
               <div id="strana_2" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">Ne treniram</button>
+                  <button id="btn_2_1" type="button" class="btn btn-primary" value="next" data-value="Ne treniram" data-goto="${page}">Ne treniram</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">Ponekad treniram</button>
+                  <button id="btn_2_2" type="button" class="btn btn-primary" value="next" data-value="Ponekad treniram" data-goto="${page}">Ponekad treniram</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">Aktivno treniram</button>
+                  <button id="btn_2_3" type="button" class="btn btn-primary" value="next" data-value="Redovno treniram" data-goto="${page}">Redovno treniram</button>
                 </div>
               </div>
               <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
             </div>`,
 
         3: `<div class="pitanjaDiv">
+              <h1 class="text-center">Kakav Vam je san</h1>
               <div id="strana_3" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_1" type="button" class="btn btn-primary" value="next" data-goto="${page}">Musko</button>
+                  <button id="btn_3_1" type="button" class="btn btn-primary" value="next" data-value="Spavam kao beba" data-goto="${page}">Spavam kao beba</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_2" type="button" class="btn btn-primary" value="next" data-goto="${page}">Zensko</button>
+                  <button id="btn_3_2" type="button" class="btn btn-primary" value="next" data-value="Često se budim noću" data-goto="${page}">Često se budim noću</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_3" type="button" class="btn btn-primary" value="next" data-goto="${page}">Nesto izmedju :)</button>
+                  <button id="btn_3_3" type="button" class="btn btn-primary" value="next" data-value="Ne mogu da se uspavam dugo" data-goto="${page}">Ne mogu da se uspavam dugo</button>
+                </div>
+              </div>
+              <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
+            </div>`,
+        
+        4: `<div class="pitanjaDiv">
+              <h1 class="text-center">Kakav Vam je krvni pritisak</h1>
+              <div id="strana_4" class="row border border-primary">
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_4_1" type="button" class="btn btn-primary" value="next" data-value="Ne kontrolišem" data-goto="${page}">Ne kontrolišem</button>
+                </div>
+              
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_4_2" type="button" class="btn btn-primary" value="next" data-value="Normalan ili ponekad povećan kada smo nervozni" data-goto="${page}">Normalan ili ponekad povećan kada smo nervozni</button>
+                </div>
+              
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_4_3" type="button" class="btn btn-primary" value="next" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
                 </div>
               </div>
               <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
             </div>`,
 
-        4: `<form class="checkboxForm" action="#">
+        5: `<form class="checkboxForm" action="#">
             <table class="table table-bordered">
             <tbody>
 
@@ -345,38 +369,6 @@
 
 
 
-
-//*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?*?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//?*?*?*?*?*?*?*?**?*?*?*??*?*?*?**??*?*?*?*?*?**??*?*?*?*?*?*?*?*?
-
-
-
-
-
-
-
-
-
-
-
-
 //************************RENDER PAGES************************************************
     // on load show first page
     DOM.upitnik_wrapper.innerHTML = HTML()[page];
@@ -430,9 +422,11 @@
       var clear = setInterval(current, 350);
 
       function current() {
-        currentBar.classList.add('glowBorder');
-        clearInterval(clear);
-        barBefore.classList.remove('glowBorder');
+        if(currentBar) {
+          currentBar.classList.add('glowBorder');
+          clearInterval(clear);
+          barBefore.classList.remove('glowBorder');
+        }
       }
     }
     function removeGlowBorder() {
@@ -453,8 +447,10 @@
 //***************************SAVE, DELETE, PUSH, MATCH********************************
     // save answer on user input
     function saveAnswer() {
-      var answer = event.target.id.split('_')[2];
+      /* var answer = event.target.id.split('_')[2]; */
+      var answer = event.target.dataset.value;
       answersArr.push(answer);
+      console.log(answersArr);
     }
 
     // delete last answer on prev button
@@ -518,7 +514,6 @@
       sortByLength['proizvod_4'] = proizvod4Length;
       sortByLength['proizvod_5'] = proizvod5Length;
       sortByLength['proizvod_6'] = proizvod6Length;
-
     }
 
     // Find best match for the given answers
@@ -653,6 +648,7 @@ function disableCheckboxes() {
         sortProducts();
         showProducts();
         loadProgress();
+        console.log(checkedValues);
       }
       if(event.target.type == 'checkbox') {
         disableCheckboxes();
