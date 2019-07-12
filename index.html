@@ -164,110 +164,101 @@
               <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
             </div>`,
 
-        6: `<form class="checkboxForm" action="#">
+        /* 6: `<form class="checkboxForm" action="#">
             <table class="table table-bordered">
             <tbody>
 
               <tr class="text-center border-primary">
-                <td class="text-center border-primary field" id="kontrola_stresa" data-check="6">
+                <td class="text-center border-primary field" id="kontrola_stresa" data-check="6" onclick="selected(this)">
                   <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
                   <p>kontrola stresa</p>
                   <div class="checkbox_overlay">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" data-value="kontrola_stresa">
-                      <label class="form-check-label" for="kontrola_stresa">Check this custom checkbox</label>
                     </div>
                   </div>
                 </td>
 
-                <td class="text-center border-primary field" id="srce" data-check="5">
+                <td class="text-center border-primary field" id="srce" data-check="5" onclick="selected(this)">
                   <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
                   <p>srce</p>
                   <div class="checkbox_overlay">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input"data-value="srce">
-                      <label class="form-check-label" for="srce">Check this custom checkbox</label>
                     </div>
                   </div>
                 </td>
 
-                <td class="text-center border-primary field" id="imunitet" data-check="7">
+                <td class="text-center border-primary field" id="imunitet" data-check="7" onclick="selected(this)">
                   <img src="./img/karakteristike/imuno-ikona-imunitet.png">
                   <p>imunitet </p>
                   <div class="checkbox_overlay">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" data-value="imunitet">
-                      <label class="form-check-label" for="imunitet">Check this custom checkbox</label>
                     </div
                   </div>
                 </td>
               </tr>
 
               <tr class="text-center border-primary">
-                <td class="text-center border-primary field" id="energija" data-check="0">
+                <td class="text-center border-primary field" id="energija" data-check="0" onclick="selected(this)">
                   <img src="./img/karakteristike/mineral-ikona-energija.png">
                   <p>energija</p>
                   <div class="checkbox_overlay">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" data-value="energija">
-                      <label class="form-check-label" for="energija">Check this custom checkbox</label>
                     </div>
                   </div
                 </td>
 
-                <td class="text-center border-primary field" id="dobar_san" data-check="8">
+                <td class="text-center border-primary field" id="dobar_san" data-check="8" onclick="selected(this)">
                   <img src="./img/karakteristike/relax-ikona-kontrola-stresa.png">
                   <p>dobar san</p>
                   <div class="checkbox_overlay">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" data-value="dobar_san">
-                      <label class="form-check-label" for="dobar_san">Check this custom checkbox</label>
                     </div>
                   </div>
                 </td>
 
-                <td class="text-center border-primary field" id="misici" data-check="1" >
+                <td class="text-center border-primary field" id="misici" data-check="1" onclick="selected(this)">
                   <img src="./img/karakteristike/mineral-ikona-misici.png">
                   <p>misici </p>
                   <div class="checkbox_overlay">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" data-value="misici">
-                      <label class="form-check-label" for="misici">Check this custom checkbox</label>
                     </div>
                   </div>
                 </td>
               </tr>
               
               <tr class="text-center ">
-                <td class="text-center border-primary field" id="nervni_sistem" data-check="2">
+                <td class="text-center border-primary field" id="nervni_sistem" data-check="2" onclick="selected(this)">
                   <img src="./img/karakteristike/mineral-ikona-nervni-sistem.png">
                   <p>nervni sistem</p>
                   <div class="checkbox_overlay">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" data-value="nervni_sistem">
-                      <label class="form-check-label" for="nervni_sistem">Check this custom checkbox</label>
                     </div>
                   </div>
                 </td>
 
-                <td class="text-center border-primary field" id="laka_primena" data-check="3">
+                <td class="text-center border-primary field" id="laka_primena" data-check="3" onclick="selected(this)">
                   <img src="./img/karakteristike/direct-ikona-laka-upotreba.png">
                   <p>laka primena</p>
                   <div class="checkbox_overlay">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" data-value="laka_primena">
-                      <label class="form-check-label" for="laka_primena">Check this custom checkbox</label>
                     </div>
                   </div>
                 </td>
 
-                <td class="text-center border-primary field" id="metabolizam" data-check="4">
+                <td class="text-center border-primary field" id="metabolizam" data-check="4" onclick="selected(this)">
                   <img src="./img/karakteristike/sleep-ikona-metabolizam.png">
                   <p>metabolizam</p>
                   <div class="checkbox_overlay">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" data-value="metabolizam">
-                      <label class="form-check-label" for="metabolizam">Check this custom checkbox</label>
                     </div>
                   </div>
                 </td>
@@ -279,7 +270,100 @@
           <div class="text-center">
           <button id="submit" type="button" class="btn btn-primary" value="submit">Submit</button>
           </div>
-          </form>`,
+          </form>`, */
+        
+        6: `<div class="container checkboxForm">
+
+              <div class="row text-center">
+                <div class="col-sm text-center field" id="kontrola_stresa" data-check="6" onclick="selected(this)">
+                  <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
+                  <p>kontrola stresa</p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="kontrola_stresa">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm text-center field" id="srce" data-check="5" onclick="selected(this)">
+                  <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
+                  <p>srce</p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input"data-value="srce">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm text-center field" id="imunitet" data-check="7" onclick="selected(this)">
+                  <img src="./img/karakteristike/imuno-ikona-imunitet.png">
+                  <p>imunitet </p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="imunitet">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row text-center">
+                <div class="col-sm text-center field" id="energija" data-check="0" onclick="selected(this)">
+                  <img src="./img/karakteristike/mineral-ikona-energija.png">
+                  <p>energija</p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="energija">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm text-center field" id="dobar_san" data-check="8" onclick="selected(this)">
+                  <img src="./img/karakteristike/relax-ikona-kontrola-stresa.png">
+                  <p>dobar san</p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="dobar_san">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm text-center field" id="misici" data-check="1" onclick="selected(this)">
+                  <img src="./img/karakteristike/mineral-ikona-misici.png">
+                  <p>misici </p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="misici">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row text-center">
+                <div class="col-sm text-center field" id="nervni_sistem" data-check="2" onclick="selected(this)">
+                  <img src="./img/karakteristike/mineral-ikona-nervni-sistem.png">
+                  <p>nervni sistem</p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="nervni_sistem">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm text-center field" id="laka_primena" data-check="3" onclick="selected(this)">
+                  <img src="./img/karakteristike/direct-ikona-laka-upotreba.png">
+                  <p>laka primena</p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="laka_primena">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm text-center field" id="metabolizam" data-check="4" onclick="selected(this)">
+                  <img src="./img/karakteristike/sleep-ikona-metabolizam.png">
+                  <p>metabolizam</p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="metabolizam">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>`,
         direct: `<div id="direct" class="card">
                       <img class="card-img-top" src="./img/proizvodi/direct.jpg" alt="proizvod 1 slika">
                       <div class="card-body">
@@ -440,9 +524,11 @@
     }
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//********************************
 
 
+
+//******************************************UI****************************************************************************************
     function loadProgress() {
       var progressBar = document.getElementById(`progress_${page - 1}`); 
       var width = 1;
@@ -490,8 +576,7 @@
       currentBar.classList.add('glowBorder');
     }
     
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   
+    
 
 
 //********************************
@@ -659,65 +744,35 @@
     function showProducts() {
       DOM.upitnik_wrapper.outerHTML = "";
       
-      /* DOM.block1.classList.add("show");
-      DOM.block1.classList.remove("hide"); */
       DOM.product_wrapper.classList.add("show");
       DOM.product_wrapper.classList.remove("hide");
-      
-      /* DOM.block2.classList.add("show");
-      DOM.block2.classList.remove("hide"); */
-      
       
       if (sortByLength['direct'] == closest(sortByLength, 10)) {
         //insert into mian wrapper 
         DOM.products.insertAdjacentHTML('afterbegin', HTML().direct);
         
-      } else {
-        //insert into other products
-        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostalidirect); */
-      }
+      } 
       if (sortByLength['cardio'] == closest(sortByLength, 10)) {
         //insert into main wrapper
         DOM.products.insertAdjacentHTML('afterbegin', HTML().cardio);
-
-      } else {
-        //insert into other products
-        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostalicardio); */
-      }
+      } 
       if (sortByLength['relax'] == closest(sortByLength, 10)) {
         //insert into main wrapper 
         DOM.products.insertAdjacentHTML('afterbegin', HTML().relax);
-
-      } else {
-        //insert into other products
-        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostalirelax); */
-      }
+      } 
       if (sortByLength['immuno'] == closest(sortByLength, 10)) {
         //insert into mian wrapper 
         DOM.products.insertAdjacentHTML('afterbegin', HTML().immuno);
-
-      } else {
-        //insert into other products
-        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostaliimmuno); */
-      }
+      } 
       if (sortByLength['mineral'] == closest(sortByLength, 10)) {
         //insert into mian wrapper 
         DOM.products.insertAdjacentHTML('afterbegin', HTML().mineral);
-
-      } else {
-        //insert into other products
-        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostalimineral); */
-      }
+      } 
       if (sortByLength['sleep'] == closest(sortByLength, 10)) {
         //insert into mian wrapper 
         DOM.products.insertAdjacentHTML('afterbegin', HTML().sleep);
-
-      } else {
-        //insert into other products
-        /* DOM.other_products.insertAdjacentHTML('afterbegin', HTML().ostalisleep); */
-      }
+      } 
     }
-
 
     // shows products depending on button answers
     function showRecommendedProducts() {
@@ -792,10 +847,11 @@
 
     
 //*****************************************
-
-
-
 };
+
+function selected(element) {
+    element.classList.toggle('selected');
+  }
 
 </script>
 
