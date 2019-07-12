@@ -98,15 +98,28 @@ html, body{
     position: absolute;
     top: 10px;
 }
-#progressDiv_1, #progressDiv_2, #progressDiv_3, #progressDiv_4, #progressDiv_5 {
+#progressDiv_1, #progressDiv_2, #progressDiv_3, #progressDiv_4, #progressDiv_5, #progressDiv_6 {
 display: inline-block;
 width: 10%;
 background-color: #ddd;
 border-radius: 30px;
 }
-#progress_1, #progress_2, #progress_3, #progress_4, #progress_5{
+#progress_1, #progress_2, #progress_3, #progress_4, #progress_5, #progress_6{
 width: 0%;
 height: 30px;
 background-color: #4CAF50;
 border-radius: 30px;
+}
+.checkbox_overlay {
+    z-index: 99999;
+    background-color: transparent;
+    pointer-events: none;
+}
+input[type='checkbox'].check-custom {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

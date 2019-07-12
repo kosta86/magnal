@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -31,6 +31,9 @@
             </div>
             <div id="progressDiv_5">
               <div id="progress_5"></div>
+            </div>
+            <div id="progressDiv_6">
+              <div id="progress_6"></div>
             </div>
           </div>
 
@@ -77,11 +80,11 @@
               <h1 class="text-center">Pol</h1>
               <div id="strana_1" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Muški" data-goto="${page}">Muški</button>
+                  <button id="btn_1_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Muski" data-goto="${page}">Muški</button>
                 </div>
 
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-key="" data-value="Ženski" data-goto="${page}">Ženski</button>
+                  <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-key="" data-value="Zenski" data-goto="${page}">Ženski</button>
                 </div>
                   
                 <div id="3" class="col-sm text-center border border-primary p-4">
@@ -91,147 +94,182 @@
             </div>`,
         
         2: `<div class="pitanjaDiv">
+              <h1 class="text-center">Godine</h1>
+              <div id="strana_1" class="row border border-primary">
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_2_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="16-34" data-goto="${page}">16-34</button>
+                </div>
+
+                <div class="col-sm text-center border border-primary p-4">
+                  <button id="btn_2_2" type="button" class="btn btn-primary" value="next" data-key="" data-value="35-49" data-goto="${page}">35-49</button>
+                </div>
+                  
+                <div id="3" class="col-sm text-center border border-primary p-4">
+                  <button id="btn_2_3" type="button" class="btn btn-primary" value="next" data-key="" data-value="50+" data-goto="${page}">50+</button>
+                </div>
+              </div>
+            </div>`,
+        
+        3: `<div class="pitanjaDiv">
               <h1 class="text-center">Fizička aktivnost</h1>
               <div id="strana_2" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_1" type="button" class="btn btn-primary" value="next" data-key="4" data-value="Ne treniram" data-goto="${page}">Ne treniram</button>
+                  <button id="btn_3_1" type="button" class="btn btn-primary" value="next" data-key="4" data-value="Ne treniram" data-goto="${page}">Ne treniram</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_2" type="button" class="btn btn-primary" value="next" data-key="0" data-value="Ponekad treniram" data-goto="${page}">Ponekad treniram</button>
+                  <button id="btn_3_2" type="button" class="btn btn-primary" value="next" data-key="0" data-value="Ponekad treniram" data-goto="${page}">Ponekad treniram</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_3" type="button" class="btn btn-primary" value="next" data-key="3" data-value="Redovno treniram" data-goto="${page}">Redovno treniram</button>
+                  <button id="btn_3_3" type="button" class="btn btn-primary" value="next" data-key="3" data-value="Redovno treniram" data-goto="${page}">Redovno treniram</button>
                 </div>
               </div>
               <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
             </div>`,
 
-        3: `<div class="pitanjaDiv">
+        4: `<div class="pitanjaDiv">
               <h1 class="text-center">Kakav Vam je san</h1>
               <div id="strana_3" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Spavam kao beba" data-goto="${page}">Spavam kao beba</button>
+                  <button id="btn_4_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Spavam kao beba" data-goto="${page}">Spavam kao beba</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_2" type="button" class="btn btn-primary" value="next" data-key="5" data-value="Često se budim noću" data-goto="${page}">Često se budim noću</button>
+                  <button id="btn_4_2" type="button" class="btn btn-primary" value="next" data-key="5" data-value="Cesto se budim nocu" data-goto="${page}">Često se budim noću</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_3" type="button" class="btn btn-primary" value="next" data-key="5" data-value="Ne mogu da se uspavam dugo" data-goto="${page}">Ne mogu da se uspavam dugo</button>
+                  <button id="btn_4_3" type="button" class="btn btn-primary" value="next" data-key="5" data-value="Ne mogu da se uspavam dugo" data-goto="${page}">Ne mogu da se uspavam dugo</button>
                 </div>
               </div>
               <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
             </div>`,
         
-        4: `<div class="pitanjaDiv">
+        5: `<div class="pitanjaDiv">
               <h1 class="text-center">Kakav Vam je krvni pritisak</h1>
               <div id="strana_4" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Ne kontrolišem" data-goto="${page}">Ne kontrolišem</button>
+                  <button id="btn_5_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Ne kontrolisem" data-goto="${page}">Ne kontrolišem</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_2" type="button" class="btn btn-primary" value="next" data-key="2" data-value="Normalan ili ponekad povećan kada smo nervozni" data-goto="${page}">Normalan ili ponekad povećan kada smo nervozni</button>
+                  <button id="btn_5_2" type="button" class="btn btn-primary" value="next" data-key="2" data-value="Normalan ili ponekad povecan kada smo nervozni" data-goto="${page}">Normalan ili ponekad povećan kada smo nervozni</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_3" type="button" class="btn btn-primary" value="next" data-key="1" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
+                  <button id="btn_5_3" type="button" class="btn btn-primary" value="next" data-key="1" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
                 </div>
               </div>
               <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
             </div>`,
 
-        5: `<form class="checkboxForm" action="#">
+        6: `<form class="checkboxForm" action="#">
             <table class="table table-bordered">
             <tbody>
 
               <tr class="text-center border-primary">
-                <td class="text-center border-primary field">
+                <td class="text-center border-primary field" id="kontrola_stresa" data-check="6">
                   <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
                   <p>kontrola stresa</p>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="kontrola_stresa" data-check="6">
-                    <label class="custom-control-label" for="kontrola_stresa">Check this custom checkbox</label>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="kontrola_stresa">
+                      <label class="form-check-label" for="kontrola_stresa">Check this custom checkbox</label>
+                    </div>
                   </div>
                 </td>
 
-                <td class="text-center border-primary field">
-                <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
-                <p>srce</p>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="srce" data-check="5">
-                  <label class="custom-control-label" for="srce">Check this custom checkbox</label>
-                </div>
+                <td class="text-center border-primary field" id="srce" data-check="5">
+                  <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
+                  <p>srce</p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input"data-value="srce">
+                      <label class="form-check-label" for="srce">Check this custom checkbox</label>
+                    </div>
+                  </div>
                 </td>
 
-                <td class="text-center border-primary field">
-                <img src="./img/karakteristike/imuno-ikona-imunitet.png">
-                <p>imunitet </p>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="imunitet" data-check="7">
-                  <label class="custom-control-label" for="imunitet">Check this custom checkbox</label>
-                </div>
+                <td class="text-center border-primary field" id="imunitet" data-check="7">
+                  <img src="./img/karakteristike/imuno-ikona-imunitet.png">
+                  <p>imunitet </p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="imunitet">
+                      <label class="form-check-label" for="imunitet">Check this custom checkbox</label>
+                    </div
+                  </div>
                 </td>
               </tr>
 
               <tr class="text-center border-primary">
-                <td class="text-center border-primary field">
+                <td class="text-center border-primary field" id="energija" data-check="0">
                   <img src="./img/karakteristike/mineral-ikona-energija.png">
                   <p>energija</p>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="energija" data-check="0">
-                    <label class="custom-control-label" for="energija">Check this custom checkbox</label>
-                  </div>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="energija">
+                      <label class="form-check-label" for="energija">Check this custom checkbox</label>
+                    </div>
+                  </div
                 </td>
 
-                <td class="text-center border-primary field">
+                <td class="text-center border-primary field" id="dobar_san" data-check="8">
                   <img src="./img/karakteristike/relax-ikona-kontrola-stresa.png">
                   <p>dobar san</p>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="dobar_san" data-check="8">
-                    <label class="custom-control-label" for="dobar_san">Check this custom checkbox</label>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="dobar_san">
+                      <label class="form-check-label" for="dobar_san">Check this custom checkbox</label>
+                    </div>
                   </div>
                 </td>
 
-                <td class="text-center border-primary field">
-                <img src="./img/karakteristike/mineral-ikona-misici.png">
-                <p>misici </p>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="misici" data-check="1">
-                  <label class="custom-control-label" for="misici">Check this custom checkbox</label>
-                </div>
+                <td class="text-center border-primary field" id="misici" data-check="1" >
+                  <img src="./img/karakteristike/mineral-ikona-misici.png">
+                  <p>misici </p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="misici">
+                      <label class="form-check-label" for="misici">Check this custom checkbox</label>
+                    </div>
+                  </div>
                 </td>
               </tr>
               
               <tr class="text-center ">
-                <td class="text-center border-primary field">
+                <td class="text-center border-primary field" id="nervni_sistem" data-check="2">
                   <img src="./img/karakteristike/mineral-ikona-nervni-sistem.png">
                   <p>nervni sistem</p>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="nervni_sistem" data-check="2">
-                    <label class="custom-control-label" for="nervni_sistem">Check this custom checkbox</label>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="nervni_sistem">
+                      <label class="form-check-label" for="nervni_sistem">Check this custom checkbox</label>
+                    </div>
                   </div>
                 </td>
 
-                <td class="text-center border-primary field">
+                <td class="text-center border-primary field" id="laka_primena" data-check="3">
                   <img src="./img/karakteristike/direct-ikona-laka-upotreba.png">
                   <p>laka primena</p>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="laka_primena" data-check="3">
-                    <label class="custom-control-label" for="laka_primena">Check this custom checkbox</label>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="laka_primena">
+                      <label class="form-check-label" for="laka_primena">Check this custom checkbox</label>
+                    </div>
                   </div>
                 </td>
 
-                <td class="text-center border-primary field">
-                <img src="./img/karakteristike/sleep-ikona-metabolizam.png">
-                <p>metabolizam</p>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="metabolizam" data-check="4">
-                  <label class="custom-control-label" for="metabolizam">Check this custom checkbox</label>
-                </div>
+                <td class="text-center border-primary field" id="metabolizam" data-check="4">
+                  <img src="./img/karakteristike/sleep-ikona-metabolizam.png">
+                  <p>metabolizam</p>
+                  <div class="checkbox_overlay">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" data-value="metabolizam">
+                      <label class="form-check-label" for="metabolizam">Check this custom checkbox</label>
+                    </div>
+                  </div>
                 </td>
               </tr>
 
@@ -349,7 +387,8 @@
     var page = 1;
     var answersArr = [];
     var checkedValues = [];
-    var recommendedProducts = []
+    var recommendedProducts = [];
+    var jsonAnswers;
     var productListArr = ['direct','cardio','relax','immuno','mineral','sleep'];
     var products = {
       direct: ['energija', 'misici', 'nervni_sistem', 'laka_primena', 'metabolizam'],
@@ -360,15 +399,15 @@
       sleep: ['energija', 'misici', 'nervni_sistem', 'dobar_san'],
     }
     var uncheckList = [
-      [''],
-      [''],
-      ['srce'],
-      ['srce', 'kontrola_stresa', 'imunitet', 'dobar_san'],
-      ['srce', 'kontrola_stresa', 'imunitet', 'dobar_san'],
-      ['nervni_sistem', 'laka_primena', 'metabolizam', 'kontrola_stresa', 'imunitet', 'dobar_san'],
-      ['laka_primena', 'metabolizam', 'srce', 'imunitet', 'dobar_san'],
-      ['laka_primena', 'metabolizam', 'srce', 'kontrola_stresa', 'dobar_san'],
-      ['laka_primena', 'metabolizam', 'srce', 'kontrola_stresa', 'imunitet',]
+      [''], //energija
+      [''], //misici
+      ['srce'], //nervni_sisiem
+      ['srce', 'kontrola_stresa', 'imunitet', 'dobar_san'], // laka_primena
+      ['srce', 'kontrola_stresa', 'imunitet', 'dobar_san'], // metabolizam
+      ['nervni_sistem', 'laka_primena', 'metabolizam', 'kontrola_stresa', 'imunitet', 'dobar_san'], // srce
+      ['laka_primena', 'metabolizam', 'srce', 'imunitet', 'dobar_san'], // kontrola_stresa
+      ['laka_primena', 'metabolizam', 'srce', 'kontrola_stresa', 'dobar_san'], // imunitet
+      ['laka_primena', 'metabolizam', 'srce', 'kontrola_stresa', 'imunitet',] // dobar_san
     ]
     var matchingProducts = {
         direct : [],
@@ -465,7 +504,7 @@
       /* var answer = event.target.id.split('_')[2]; */
       var answer = event.target.dataset.value;
       answersArr.push(answer);
-      console.log(answersArr);
+      
     }
 
     // delete last answer on prev button
@@ -480,7 +519,7 @@
       var form = event.target.form;
       for (var i = 0; i < form.length; i++) {
         if (form[i].checked) {
-          var checkedBoxName = form[i].id;
+          var checkedBoxName = form[i].dataset.value;
           checkedValues.push(checkedBoxName);
         }
       }
@@ -491,7 +530,6 @@
       var dataKey = event.target.dataset.key;
       if(dataKey !== '') {
         recommendedProducts.push(productListArr[dataKey]);
-        console.log(recommendedProducts);
       }
     }
 
@@ -563,29 +601,52 @@
 
 
 //************************DISABLE CHECKBOXES******************************************************************
-function checkboxOnTdclick() {
-  var field = event.target.closest('.field');
-  var currentCheckbox = field.querySelector('.custom-control-input');
+    // add disabled className to non matching characteristics
+    function addDisableClass(currentFieldNum) {
+      uncheckList[currentFieldNum].forEach(function(element) {
+        if (element != '') {
+          document.getElementById(element).className += ' disable';
+        }
+      })
+    }
+    // remove disabled className to non matching characteristics
+    function removeDisableClass(currentFieldNum) {
+      uncheckList[currentFieldNum].forEach(function (element) {
+        if (element != '') {
+          var classNames = document.getElementById(element).className;
+          var classNamesToAppend = classNames.slice(0, -7);
+          document.getElementById(element).className = classNamesToAppend;
+        }
+      })
+    }
+    // check current checkbox
+    function checkTheCheckbox(currentCheckbox, currentField) {
+        currentCheckbox.checked = true;
+    }
+    // uncheck current checkbox
+    function uncheckTheCheckbox(currentCheckbox) {
+      currentCheckbox.checked = false;
+    }
 
-  if(currentCheckbox.checked) {
-    currentCheckbox.checked = false;
-  } else {
-    currentCheckbox.checked = true;
-  }
 
-  var checkboxNum = parseInt(currentCheckbox.dataset.check);
-  uncheckList[checkboxNum].forEach(function (element) {
-    if (element != '') {
-      if (currentCheckbox.checked) {
-        document.getElementById(element).parentElement.parentElement.classList.add("disable");
-        document.getElementById(element).disabled = true;
+    // manipulate checkboxes
+    function manageCheckboxes(event) {
+      var currentField = event.target.closest('.field');
+      var currentCheckbox = currentField.querySelector('.form-check-input');
+      var currentFieldNum = parseInt(currentField.dataset.check);
+      
+      if(currentCheckbox.checked == false) {
+        if(!currentField.classList.contains('disable')) {
+          addDisableClass(currentFieldNum);
+          checkTheCheckbox(currentCheckbox, currentField);
+        } else {
+          return;
+        }
       } else {
-        document.getElementById(element).parentElement.parentElement.classList.remove("disable");
-        document.getElementById(element).disabled = false;
+        removeDisableClass(currentFieldNum);
+        uncheckTheCheckbox(currentCheckbox);
       }
     }
-  })
-}
 
 
 //*************************************************************************************************************
@@ -669,6 +730,32 @@ function checkboxOnTdclick() {
 
 
 
+//***********************************************SEND DATA TO PHP FOR STATS***************************************************************
+    // make jsonObj for postData
+    function makeJson() {
+      var answersObj = { ...answersArr };
+      jsonAnswers = JSON.stringify(answersObj);
+    }
+
+    //sends answers to php script
+    function postData() {
+      var xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          var responce = xhr.responseText;
+        }
+      }
+      xhr.open("POST", "./php/user_input.php", true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(jsonAnswers);
+
+    }
+    
+//*****************************************
+
+
+
 //**********************************************iNPUT LISTENER*******************************************************
     // user input listener
     DOM.upitnik_wrapper.addEventListener('click', function(event) {
@@ -694,16 +781,16 @@ function checkboxOnTdclick() {
         showProducts();
         loadProgress();
         showRecommendedProducts();
-        console.log(checkedValues);
+        makeJson();
+        postData();
       }
       if(event.target.closest('.field')) {
-        /* disableCheckboxes(); */
-        checkboxOnTdclick();
+        manageCheckboxes(event);
       }
-      
-    
+
     });
 
+    
 //*****************************************
 
 
