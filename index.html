@@ -40,14 +40,16 @@
       <div class="upitnik_wrapper">
         <div class="pitanjaDiv text-center"></div>
 
+
       </div>
 
       <div class="product_wrapper border border-primary hide">
         <div class="block1 text-center">
           <h1>Izabrani proizvodi (u odnosu na checkbox odgovore)</h1>
         </div>
-        <div class="productsDiv">
-          <div class="products justify-content-center">
+        <div class="productsDiv container">
+          <div class="products row justify-content-center">
+            
 
           </div>
         </div>
@@ -58,6 +60,8 @@
         <div class="otherProductsDiv">
           <div class="other_products justify-content-center border border-primary">
             
+
+
           </div>
         </div>
       </div>
@@ -272,10 +276,11 @@
           </div>
           </form>`, */
         
-        6: `<div class="container checkboxForm">
+        6: ` <form>
+              <div class="container checkboxForm">
 
               <div class="row text-center">
-                <div class="col-sm text-center field" id="kontrola_stresa" data-check="6" onclick="selected(this)">
+                <div class="col-4 text-center field" id="kontrola_stresa" data-check="6" onclick="selected(this)">
                   <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
                   <p>kontrola stresa</p>
                   <div class="checkbox_overlay">
@@ -284,7 +289,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm text-center field" id="srce" data-check="5" onclick="selected(this)">
+                <div class="col-4 text-center field" id="srce" data-check="5" onclick="selected(this)">
                   <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
                   <p>srce</p>
                   <div class="checkbox_overlay">
@@ -293,7 +298,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm text-center field" id="imunitet" data-check="7" onclick="selected(this)">
+                <div class="col-4 text-center field" id="imunitet" data-check="7" onclick="selected(this)">
                   <img src="./img/karakteristike/imuno-ikona-imunitet.png">
                   <p>imunitet </p>
                   <div class="checkbox_overlay">
@@ -305,7 +310,7 @@
               </div>
               
               <div class="row text-center">
-                <div class="col-sm text-center field" id="energija" data-check="0" onclick="selected(this)">
+                <div class="col-4 text-center field" id="energija" data-check="0" onclick="selected(this)">
                   <img src="./img/karakteristike/mineral-ikona-energija.png">
                   <p>energija</p>
                   <div class="checkbox_overlay">
@@ -314,7 +319,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm text-center field" id="dobar_san" data-check="8" onclick="selected(this)">
+                <div class="col-4 text-center field" id="dobar_san" data-check="8" onclick="selected(this)">
                   <img src="./img/karakteristike/relax-ikona-kontrola-stresa.png">
                   <p>dobar san</p>
                   <div class="checkbox_overlay">
@@ -323,7 +328,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm text-center field" id="misici" data-check="1" onclick="selected(this)">
+                <div class="col-4 text-center field" id="misici" data-check="1" onclick="selected(this)">
                   <img src="./img/karakteristike/mineral-ikona-misici.png">
                   <p>misici </p>
                   <div class="checkbox_overlay">
@@ -335,7 +340,7 @@
               </div>
               
               <div class="row text-center">
-                <div class="col-sm text-center field" id="nervni_sistem" data-check="2" onclick="selected(this)">
+                <div class="col-4 text-center field" id="nervni_sistem" data-check="2" onclick="selected(this)">
                   <img src="./img/karakteristike/mineral-ikona-nervni-sistem.png">
                   <p>nervni sistem</p>
                   <div class="checkbox_overlay">
@@ -344,7 +349,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm text-center field" id="laka_primena" data-check="3" onclick="selected(this)">
+                <div class="col-4 text-center field" id="laka_primena" data-check="3" onclick="selected(this)">
                   <img src="./img/karakteristike/direct-ikona-laka-upotreba.png">
                   <p>laka primena</p>
                   <div class="checkbox_overlay">
@@ -353,7 +358,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm text-center field" id="metabolizam" data-check="4" onclick="selected(this)">
+                <div class="col-4 text-center field" id="metabolizam" data-check="4" onclick="selected(this)">
                   <img src="./img/karakteristike/sleep-ikona-metabolizam.png">
                   <p>metabolizam</p>
                   <div class="checkbox_overlay">
@@ -363,91 +368,107 @@
                   </div>
                 </div>
               </div>
-            </div>`,
-        direct: `<div id="direct" class="card">
-                      <img class="card-img-top" src="./img/proizvodi/direct.jpg" alt="proizvod 1 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 1</h5>
-                        <p class="card-text">Ovo je proizvod 1 i mnogo je dobar</p>
-                        <a href="#" class="btn btn-primary">Detaljnije</a>
-                      </div>
-                    </div>`,
-        cardio: `<div id="cardio" class="card" >
-                      <img class="card-img-top" src="./img/proizvodi/cardio.jpg" alt="proizvod 2 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 2</h5>
-                        <p class="card-text">Ovo je proizvod 2 i mnogo je dobar</p>
-                        <a href="#" class="btn btn-primary">Detaljnije</a>
-                      </div>
-                    </div>`,
-        relax: `<div id="relax" class="card">
-                      <img class="card-img-top" src="./img/proizvodi/relax.jpg" alt="proizvod 3 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 3</h5>
-                        <p class="card-text">Ovo je proizvod 3 i mnogo je dobar</p>
-                        <a href="#" class="btn btn-primary">Detaljnije</a>
-                      </div>
-                    </div>`,
-        immuno: `<div id="immuno" class="card">
-                      <img class="card-img-top" src="./img/proizvodi/immuno.jpg" alt="proizvod 4 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 4</h5>
-                        <p class="card-text">Ovo je proizvod 4 i mnogo je dobar</p>
-                        <a href="#" class="btn btn-primary">Detaljnije</a>
-                      </div>
-                    </div>`,
-        mineral: `<div id="mineral" class="card">
-                      <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="proizvod 4 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 5</h5>
-                        <p class="card-text">Ovo je proizvod 5 i mnogo je dobar</p>
-                        <a href="#" class="btn btn-primary">Detaljnije</a>
-                      </div>
-                    </div>`,
-        sleep: `<div id="sleep" class="card">
-                      <img class="card-img-top" src="./img/proizvodi/sleep.jpg" alt="proizvod 6 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 6</h5>
-                        <p class="card-text">Ovo je proizvod 6 i mnogo je dobar</p>
-                        <a href="#" class="btn btn-primary">Detaljnije</a>
-                      </div>
-                    </div>`,
-        ostalidirect: `<div id="ostalidirect" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/direct.jpg" alt="proizvod 1 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 1</h5>
-                      </div>
-                    </div>`,
-        ostalicardio: `<div id="ostalicardio" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/cardio.jpg" alt="proizvod 2 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 2</h5>
-                      </div>
-                    </div>`,
-        ostalirelax: `<div id="ostalirelax" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/relax.jpg" alt="proizvod 3 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 3</h5>
-                      </div>
-                    </div>`,
-        ostaliimmuno: `<div id="ostaliimmuno" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/immuno.jpg" alt="proizvod 4 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 4</h5>
-                      </div>
-                    </div>`,
-        ostalimineral: `<div id="ostalimineral" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="proizvod 5 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 4</h5>
-                      </div>
-                    </div>`,
-        ostalisleep: `<div id="ostalisleep" class="card" style="width: 10em; height: 10em">
-                      <img class="card-img-top" src="./img/proizvodi/sleep.jpg" alt="proizvod 6 slika">
-                      <div class="card-body">
-                        <h5 class="card-title">Proizvod 6</h5>
-                      </div>
-                    </div>`,
+            </div>
+            <div class="text-center">
+              <button id="submit" type="button" class="btn btn-primary" value="submit">Submit</button>
+            </div>
+            </form>`,
+        direct: `<div id="direct" class="card col-6">
+                  <img class="card-img-top" src="./img/proizvodi/direct.jpg" alt="proizvod 1 slika">
+                  <div class="card-body">
+                    <h5 class="card-title">Proizvod 1</h5>
+                    <p class="card-text">Ovo je proizvod 1 i mnogo je dobar</p>
+                    <a href="#" class="btn btn-primary">Detaljnije</a>
+                  </div>
+                </div>`,
+        cardio: `<div id="cardio" class="card col-6" >
+                  <img class="card-img-top" src="./img/proizvodi/cardio.jpg" alt="proizvod 2 slika">
+                  <div class="card-body">
+                    <h5 class="card-title">Proizvod 2</h5>
+                    <p class="card-text">Ovo je proizvod 2 i mnogo je dobar</p>
+                    <a href="#" class="btn btn-primary">Detaljnije</a>
+                  </div>
+                </div>`,
+        relax: `<div id="relax" class="card col-6">
+                  <img class="card-img-top" src="./img/proizvodi/relax.jpg" alt="proizvod 3 slika">
+                  <div class="card-body">
+                    <h5 class="card-title">Proizvod 3</h5>
+                    <p class="card-text">Ovo je proizvod 3 i mnogo je dobar</p>
+                    <a href="#" class="btn btn-primary">Detaljnije</a>
+                  </div>
+                </div>`,
+        immuno: `<div id="immuno" class="card col-6">
+                  <img class="card-img-top" src="./img/proizvodi/immuno.jpg" alt="proizvod 4 slika">
+                  <div class="card-body">
+                    <h5 class="card-title">Proizvod 4</h5>
+                    <p class="card-text">Ovo je proizvod 4 i mnogo je dobar</p>
+                    <a href="#" class="btn btn-primary">Detaljnije</a>
+                  </div>
+                </div>`,
+        mineral: `<div id="mineral" class="card col-6">
+                    <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="proizvod 4 slika">
+                    <div class="card-body">
+                      <h5 class="card-title">Proizvod 5</h5>
+                      <p class="card-text">Ovo je proizvod 5 i mnogo je dobar</p>
+                      <a href="#" class="btn btn-primary">Detaljnije</a>
+                    </div>
+                  </div>`,
+        sleep: `<div id="sleep" class="card col-6">
+                  <img class="card-img-top" src="./img/proizvodi/sleep.jpg" alt="proizvod 6 slika">
+                  <div class="card-body">
+                    <h5 class="card-title">Proizvod 6</h5>
+                    <p class="card-text">Ovo je proizvod 6 i mnogo je dobar</p>
+                    <a href="#" class="btn btn-primary">Detaljnije</a>
+                  </div>
+                </div>`,
+        ostalidirect: `<div id="direct" class="card">
+                        <img class="card-img-top" src="./img/proizvodi/direct.jpg" alt="proizvod 1 slika">
+                        <div class="card-body">
+                          <h5 class="card-title">Proizvod 1</h5>
+                          <p class="card-text">Ovo je proizvod 1 i mnogo je dobar</p>
+                          <a href="#" class="btn btn-primary">Detaljnije</a>
+                        </div>
+                      </div>`,
+        ostalicardio: `<div id="cardio" class="card" >
+                        <img class="card-img-top" src="./img/proizvodi/cardio.jpg" alt="proizvod 2 slika">
+                        <div class="card-body">
+                          <h5 class="card-title">Proizvod 2</h5>
+                          <p class="card-text">Ovo je proizvod 2 i mnogo je dobar</p>
+                          <a href="#" class="btn btn-primary">Detaljnije</a>
+                        </div>
+                      </div>`,
+        ostalirelax: `<div id="relax" class="card">
+                        <img class="card-img-top" src="./img/proizvodi/relax.jpg" alt="proizvod 3 slika">
+                        <div class="card-body">
+                          <h5 class="card-title">Proizvod 3</h5>
+                          <p class="card-text">Ovo je proizvod 3 i mnogo je dobar</p>
+                          <a href="#" class="btn btn-primary">Detaljnije</a>
+                        </div>
+                      </div>`,
+        ostaliimmuno: `<div id="immuno" class="card">
+                        <img class="card-img-top" src="./img/proizvodi/immuno.jpg" alt="proizvod 4 slika">
+                        <div class="card-body">
+                          <h5 class="card-title">Proizvod 4</h5>
+                          <p class="card-text">Ovo je proizvod 4 i mnogo je dobar</p>
+                          <a href="#" class="btn btn-primary">Detaljnije</a>
+                        </div>
+                      </div>`,
+        ostalimineral: `<div id="mineral" class="card">
+                          <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="proizvod 4 slika">
+                          <div class="card-body">
+                            <h5 class="card-title">Proizvod 5</h5>
+                            <p class="card-text">Ovo je proizvod 5 i mnogo je dobar</p>
+                            <a href="#" class="btn btn-primary">Detaljnije</a>
+                          </div>
+                        </div>`,
+        ostalisleep: `<div id="sleep" class="card">
+                        <img class="card-img-top" src="./img/proizvodi/sleep.jpg" alt="proizvod 6 slika">
+                        <div class="card-body">
+                          <h5 class="card-title">Proizvod 6</h5>
+                          <p class="card-text">Ovo je proizvod 6 i mnogo je dobar</p>
+                          <a href="#" class="btn btn-primary">Detaljnije</a>
+                        </div>
+                      </div>`,
       }
     }
 //***********************************
@@ -777,7 +798,7 @@
     // shows products depending on button answers
     function showRecommendedProducts() {
       recommendedProducts.forEach(function(element) {
-        DOM.other_products.insertAdjacentHTML('afterbegin', HTML()[element])
+        DOM.other_products.insertAdjacentHTML('afterbegin', HTML()[`ostali${element}`])
       })
     }
 
