@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 html, body{ 
@@ -7,8 +7,8 @@ html, body{
     padding: 0!important;
     margin: 0!important;
     min-height: 100%;
-}
-.clearfix:after {
+} */
+/* .clearfix:after {
   visibility: hidden;
   display: block;
   font-size: 0;
@@ -135,4 +135,51 @@ input[type='checkbox'] {
   width: 1px;
   height: 1px;
   overflow: hidden;
+} */
+
+
+
+.btn_answer {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #93F9B9;
+    border-style: solid;
+    border-radius: 25px;
+    background-image: linear-gradient(to top,#1D976C 0%, #93F9B9 100%);
+    width: 13em;
+    height: 3em;
+}
+.btn_answer:hover {
+    background-image: linear-gradient(to top, #93F9B9 0%, #1D976C 100%);
+}
+.hide {
+    display: none!important;
+}
+.show {
+    display: block!important;
+}
+.checkbox_overlay {
+    z-index: 99999;
+    background-color: transparent;
+    pointer-events: none;
+}
+input[type='checkbox'] {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+} 
+#progressDiv_1, #progressDiv_2, #progressDiv_3, #progressDiv_4, #progressDiv_5, #progressDiv_6 {
+    display: inline-block;
+    width: 10%;
+    background-color: #ddd;
+    border-radius: 30px;
+    }
+#progress_1, #progress_2, #progress_3, #progress_4, #progress_5, #progress_6{
+    width: 0%;
+    height: 30px;
+    background-color: #4CAF50;
+    border-radius: 30px;
 }

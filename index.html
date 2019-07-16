@@ -16,7 +16,8 @@
 <body>
     <div class="main_content">
 
-        <div class="progressWrapper text-center">
+        <div class="container">
+          <div class="progressWrapper text-center">
             <div id="progressDiv_1" class="glowBorder">
               <div id="progress_1"></div>
             </div>
@@ -36,8 +37,9 @@
               <div id="progress_6"></div>
             </div>
           </div>
+        </div>
 
-      <div class="upitnik_wrapper">
+      <div class="upitnik_wrapper container">
         <div class="pitanjaDiv text-center"></div>
 
 
@@ -57,15 +59,11 @@
         <div class="block2 text-center">
           <h1>Mi vam preporucujemo (u odnosu na odgovore na pitanja)</h1>
         </div>
-        <div class="otherProductsDiv">
-          <div class="other_products justify-content-center border border-primary">
+        <div class="container">
+          <div class="other_products justify-content-center border border-primary row">
             
-
-
           </div>
         </div>
-      </div>
-              
         
       
       
@@ -84,15 +82,15 @@
               <h1 class="text-center">Pol</h1>
               <div id="strana_1" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Muski" data-goto="${page}">Muški</button>
+                  <button id="btn_1_1" type="button" class="btn_answer" value="next" data-key="" data-value="Muski" data-goto="${page}">Muški</button>
                 </div>
 
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_2" type="button" class="btn btn-primary" value="next" data-key="" data-value="Zenski" data-goto="${page}">Ženski</button>
+                  <button id="btn_1_2" type="button" class="btn_answer" value="next" data-key="" data-value="Zenski" data-goto="${page}">Ženski</button>
                 </div>
                   
                 <div id="3" class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_3" type="button" class="btn btn-primary" value="next" data-key="" data-value="Ne znam" data-goto="${page}">Ne znam</button>
+                  <button id="btn_1_3" type="button" class="btn_answer" value="next" data-key="" data-value="Ne znam" data-goto="${page}">Ne znam</button>
                 </div>
               </div>
             </div>`,
@@ -101,15 +99,15 @@
               <h1 class="text-center">Godine</h1>
               <div id="strana_1" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="16-34" data-goto="${page}">16-34</button>
+                  <button id="btn_2_1" type="button" class="btn_answer" value="next" data-key="" data-value="16-34" data-goto="${page}">16-34</button>
                 </div>
 
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_2" type="button" class="btn btn-primary" value="next" data-key="" data-value="35-49" data-goto="${page}">35-49</button>
+                  <button id="btn_2_2" type="button" class="btn_answer" value="next" data-key="" data-value="35-49" data-goto="${page}">35-49</button>
                 </div>
                   
                 <div id="3" class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_3" type="button" class="btn btn-primary" value="next" data-key="" data-value="50+" data-goto="${page}">50+</button>
+                  <button id="btn_2_3" type="button" class="btn_answer" value="next" data-key="" data-value="50+" data-goto="${page}">50+</button>
                 </div>
               </div>
             </div>`,
@@ -118,54 +116,54 @@
               <h1 class="text-center">Fizička aktivnost</h1>
               <div id="strana_2" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_1" type="button" class="btn btn-primary" value="next" data-key="4" data-value="Ne treniram" data-goto="${page}">Ne treniram</button>
+                  <button id="btn_3_1" type="button" class="btn_answer" value="next" data-key="4" data-value="Ne treniram" data-goto="${page}">Ne treniram</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_2" type="button" class="btn btn-primary" value="next" data-key="0" data-value="Ponekad treniram" data-goto="${page}">Ponekad treniram</button>
+                  <button id="btn_3_2" type="button" class="btn_answer" value="next" data-key="0" data-value="Ponekad treniram" data-goto="${page}">Ponekad treniram</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_3" type="button" class="btn btn-primary" value="next" data-key="3" data-value="Redovno treniram" data-goto="${page}">Redovno treniram</button>
+                  <button id="btn_3_3" type="button" class="btn_answer" value="next" data-key="3" data-value="Redovno treniram" data-goto="${page}">Redovno treniram</button>
                 </div>
               </div>
-              <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
+              <button id="prev" type="button" class="btn_answer" data-goto="${page}">Nazad</button>
             </div>`,
 
         4: `<div class="pitanjaDiv">
               <h1 class="text-center">Kakav Vam je san</h1>
               <div id="strana_3" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Spavam kao beba" data-goto="${page}">Spavam kao beba</button>
+                  <button id="btn_4_1" type="button" class="btn_answer" value="next" data-key="" data-value="Spavam kao beba" data-goto="${page}">Spavam kao beba</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_2" type="button" class="btn btn-primary" value="next" data-key="5" data-value="Cesto se budim nocu" data-goto="${page}">Često se budim noću</button>
+                  <button id="btn_4_2" type="button" class="btn_answer" value="next" data-key="5" data-value="Cesto se budim nocu" data-goto="${page}">Često se budim noću</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_3" type="button" class="btn btn-primary" value="next" data-key="5" data-value="Ne mogu da se uspavam dugo" data-goto="${page}">Ne mogu da se uspavam dugo</button>
+                  <button id="btn_4_3" type="button" class="btn_answer" value="next" data-key="5" data-value="Ne mogu da se uspavam dugo" data-goto="${page}">Ne mogu da se uspavam dugo</button>
                 </div>
               </div>
-              <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
+              <button id="prev" type="button" class="btn_answer" data-goto="${page}">Nazad</button>
             </div>`,
         
         5: `<div class="pitanjaDiv">
               <h1 class="text-center">Kakav Vam je krvni pritisak</h1>
               <div id="strana_4" class="row border border-primary">
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_5_1" type="button" class="btn btn-primary" value="next" data-key="" data-value="Ne kontrolisem" data-goto="${page}">Ne kontrolišem</button>
+                  <button id="btn_5_1" type="button" class="btn_answer" value="next" data-key="" data-value="Ne kontrolisem" data-goto="${page}">Ne kontrolišem</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_5_2" type="button" class="btn btn-primary" value="next" data-key="2" data-value="Normalan ili ponekad povecan kada smo nervozni" data-goto="${page}">Normalan ili ponekad povećan kada smo nervozni</button>
+                  <button id="btn_5_2" type="button" class="btn_answer" value="next" data-key="2" data-value="Normalan ili ponekad povecan kada smo nervozni" data-goto="${page}">Normalan ili ponekad povećan kada smo nervozni</button>
                 </div>
               
                 <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_5_3" type="button" class="btn btn-primary" value="next" data-key="1" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
+                  <button id="btn_5_3" type="button" class="btn_answer" value="next" data-key="1" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
                 </div>
               </div>
-              <button id="prev" type="button" class="btn btn-primary" data-goto="${page}">Nazad</button>
+              <button id="prev" type="button" class="btn_answer" data-goto="${page}">Nazad</button>
             </div>`,
 
         /* 6: `<form class="checkboxForm" action="#">
@@ -272,7 +270,7 @@
           </table>
           </br>
           <div class="text-center">
-          <button id="submit" type="button" class="btn btn-primary" value="submit">Submit</button>
+          <button id="submit" type="button" class="btn_answer" value="submit">Submit</button>
           </div>
           </form>`, */
         
@@ -370,103 +368,103 @@
               </div>
             </div>
             <div class="text-center">
-              <button id="submit" type="button" class="btn btn-primary" value="submit">Submit</button>
+              <button id="submit" type="button" class="btn_answer" value="submit">Submit</button>
             </div>
             </form>`,
-        direct: `<div id="direct" class="card col-6">
+        direct: `<div id="direct" class="card col col-sm-4">
                   <img class="card-img-top" src="./img/proizvodi/direct.jpg" alt="proizvod 1 slika">
                   <div class="card-body">
                     <h5 class="card-title">Proizvod 1</h5>
                     <p class="card-text">Ovo je proizvod 1 i mnogo je dobar</p>
-                    <a href="#" class="btn btn-primary">Detaljnije</a>
+                    <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
-        cardio: `<div id="cardio" class="card col-6" >
+        cardio: `<div id="cardio" class="card col col-sm-4" >
                   <img class="card-img-top" src="./img/proizvodi/cardio.jpg" alt="proizvod 2 slika">
                   <div class="card-body">
                     <h5 class="card-title">Proizvod 2</h5>
                     <p class="card-text">Ovo je proizvod 2 i mnogo je dobar</p>
-                    <a href="#" class="btn btn-primary">Detaljnije</a>
+                    <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
-        relax: `<div id="relax" class="card col-6">
+        relax: `<div id="relax" class="card col col-sm-4">
                   <img class="card-img-top" src="./img/proizvodi/relax.jpg" alt="proizvod 3 slika">
                   <div class="card-body">
                     <h5 class="card-title">Proizvod 3</h5>
                     <p class="card-text">Ovo je proizvod 3 i mnogo je dobar</p>
-                    <a href="#" class="btn btn-primary">Detaljnije</a>
+                    <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
-        immuno: `<div id="immuno" class="card col-6">
+        immuno: `<div id="immuno" class="card col col-sm-4">
                   <img class="card-img-top" src="./img/proizvodi/immuno.jpg" alt="proizvod 4 slika">
                   <div class="card-body">
                     <h5 class="card-title">Proizvod 4</h5>
                     <p class="card-text">Ovo je proizvod 4 i mnogo je dobar</p>
-                    <a href="#" class="btn btn-primary">Detaljnije</a>
+                    <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
-        mineral: `<div id="mineral" class="card col-6">
+        mineral: `<div id="mineral" class="card col col-sm-4">
                     <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="proizvod 4 slika">
                     <div class="card-body">
                       <h5 class="card-title">Proizvod 5</h5>
                       <p class="card-text">Ovo je proizvod 5 i mnogo je dobar</p>
-                      <a href="#" class="btn btn-primary">Detaljnije</a>
+                      <a href="#" class="btn_answer">Detaljnije</a>
                     </div>
                   </div>`,
-        sleep: `<div id="sleep" class="card col-6">
+        sleep: `<div id="sleep" class="card col col-sm-4">
                   <img class="card-img-top" src="./img/proizvodi/sleep.jpg" alt="proizvod 6 slika">
                   <div class="card-body">
                     <h5 class="card-title">Proizvod 6</h5>
                     <p class="card-text">Ovo je proizvod 6 i mnogo je dobar</p>
-                    <a href="#" class="btn btn-primary">Detaljnije</a>
+                    <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
-        ostalidirect: `<div id="direct" class="card">
+        ostalidirect: `<div id="direct" class="card col">
                         <img class="card-img-top" src="./img/proizvodi/direct.jpg" alt="proizvod 1 slika">
                         <div class="card-body">
                           <h5 class="card-title">Proizvod 1</h5>
                           <p class="card-text">Ovo je proizvod 1 i mnogo je dobar</p>
-                          <a href="#" class="btn btn-primary">Detaljnije</a>
+                          <a href="#" class="btn_answer">Detaljnije</a>
                         </div>
                       </div>`,
-        ostalicardio: `<div id="cardio" class="card" >
+        ostalicardio: `<div id="cardio" class="card col" >
                         <img class="card-img-top" src="./img/proizvodi/cardio.jpg" alt="proizvod 2 slika">
                         <div class="card-body">
                           <h5 class="card-title">Proizvod 2</h5>
                           <p class="card-text">Ovo je proizvod 2 i mnogo je dobar</p>
-                          <a href="#" class="btn btn-primary">Detaljnije</a>
+                          <a href="#" class="btn_answer">Detaljnije</a>
                         </div>
                       </div>`,
-        ostalirelax: `<div id="relax" class="card">
+        ostalirelax: `<div id="relax" class="card col">
                         <img class="card-img-top" src="./img/proizvodi/relax.jpg" alt="proizvod 3 slika">
                         <div class="card-body">
                           <h5 class="card-title">Proizvod 3</h5>
                           <p class="card-text">Ovo je proizvod 3 i mnogo je dobar</p>
-                          <a href="#" class="btn btn-primary">Detaljnije</a>
+                          <a href="#" class="btn_answer">Detaljnije</a>
                         </div>
                       </div>`,
-        ostaliimmuno: `<div id="immuno" class="card">
+        ostaliimmuno: `<div id="immuno" class="card col">
                         <img class="card-img-top" src="./img/proizvodi/immuno.jpg" alt="proizvod 4 slika">
                         <div class="card-body">
                           <h5 class="card-title">Proizvod 4</h5>
                           <p class="card-text">Ovo je proizvod 4 i mnogo je dobar</p>
-                          <a href="#" class="btn btn-primary">Detaljnije</a>
+                          <a href="#" class="btn_answer">Detaljnije</a>
                         </div>
                       </div>`,
-        ostalimineral: `<div id="mineral" class="card">
+        ostalimineral: `<div id="mineral" class="card col">
                           <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="proizvod 4 slika">
                           <div class="card-body">
                             <h5 class="card-title">Proizvod 5</h5>
                             <p class="card-text">Ovo je proizvod 5 i mnogo je dobar</p>
-                            <a href="#" class="btn btn-primary">Detaljnije</a>
+                            <a href="#" class="btn_answer">Detaljnije</a>
                           </div>
                         </div>`,
-        ostalisleep: `<div id="sleep" class="card">
+        ostalisleep: `<div id="sleep" class="card col">
                         <img class="card-img-top" src="./img/proizvodi/sleep.jpg" alt="proizvod 6 slika">
                         <div class="card-body">
                           <h5 class="card-title">Proizvod 6</h5>
                           <p class="card-text">Ovo je proizvod 6 i mnogo je dobar</p>
-                          <a href="#" class="btn btn-primary">Detaljnije</a>
+                          <a href="#" class="btn_answer">Detaljnije</a>
                         </div>
                       </div>`,
       }
