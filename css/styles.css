@@ -323,4 +323,13 @@ i {
     padding-bottom: 7rem;
     width: 100%;
 }
+#strana_1 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
+.card h4 {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
