@@ -4,8 +4,8 @@ $host = 'localhost';
 $dbname = 'magnall';
 $charset = 'utf8mb4';
 
-$username = 'username';
-$password = 'password';
+$username = 'kosta86';
+$password = 'kosta1986';
 $options = [
 			PDO::ATTR_ERRMODE 			 => PDO::ERRMODE_EXCEPTION,
 			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,

@@ -1,13 +1,4 @@
-/* * {
-    box-sizing: border-box;
-}
-html, body{ 
-    height: 100%;
-    width: 100vw;
-    padding: 0!important;
-    margin: 0!important;
-    min-height: 100%;
-} */
+
 /* .clearfix:after {
   visibility: hidden;
   display: block;
@@ -136,21 +127,48 @@ input[type='checkbox'] {
   height: 1px;
   overflow: hidden;
 } */
-
-
-
+* {
+    box-sizing: border-box;
+}
+html, body{ 
+    height: 100vh;
+    width: 100vw;
+    padding: 0!important;
+    margin: 0!important;
+    min-height: 100%;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+body {
+    font-family: Lato, Helvetica, Arial, sans-serif!important;
+}
+h1 {
+    color:  #FFFFFF;
+}
+.pitanje {
+    color:  #FFFFFF;
+    font-size: 2.0rem;
+}
 .btn_answer {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #93F9B9;
-    border-style: solid;
-    border-radius: 25px;
-    background-image: linear-gradient(to top,#1D976C 0%, #93F9B9 100%);
-    width: 13em;
-    height: 3em;
+    color: #fff!important;
+    font-size: 1.2rem!important;
+    background-color: #019966!important;
+    border-color: #96dbc5!important;
+    border-style: solid!important;
+    border-radius: 3rem!important;
+    border-width: 2px!important;
+    background-image: linear-gradient(to top,#019966 5%, #FFFFFF 150%)!important;
+    width: 100%!important;
+    height: 3.2rem;
 }
 .btn_answer:hover {
-    background-image: linear-gradient(to top, #93F9B9 0%, #1D976C 100%);
+    background-image: linear-gradient(to top, #93F9B9 0%, #019966 100%);
 }
 .hide {
     display: none!important;
@@ -171,15 +189,138 @@ input[type='checkbox'] {
   height: 1px;
   overflow: hidden;
 } 
-#progressDiv_1, #progressDiv_2, #progressDiv_3, #progressDiv_4, #progressDiv_5, #progressDiv_6 {
-    display: inline-block;
-    width: 10%;
-    background-color: #ddd;
-    border-radius: 30px;
-    }
-#progress_1, #progress_2, #progress_3, #progress_4, #progress_5, #progress_6{
-    width: 0%;
-    height: 30px;
-    background-color: #4CAF50;
-    border-radius: 30px;
+.pitanje_container {
+    height: auto;
 }
+.pitanje_row {
+    padding: 0.6rem;
+    background-color: #019966;
+}
+.main_content {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+.navigacija {
+    display: block!important;
+    background-color: #5f1ae6;
+    height: 96px!important;
+    width: 100%;
+}
+
+form p {
+    font-size: 0.7rem;
+}
+form .row img {
+    height: 3.9rem;
+}
+.progress1 {
+    background-color: rgba(147, 249, 185, 0.1);
+    border: solid #019966;
+    border-bottom: none;
+    border-radius: 50px 50px 0 0;
+    height: 100%č
+}
+.progressWrapper {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+}
+i {
+    display: inline-block;
+}
+.circle {
+    background-color:#fff;
+    border: 0.22rem solid rgb(0, 59, 158);    
+    height:22px;
+    width:22px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+.circle_big {
+    border:0.22rem solid rgb(0, 59, 158);    
+    height:27px;
+    width:27px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+.progress_col {
+    overflow: hidden;
+    display: inline;
+}
+.circle_shadow {
+    box-shadow: 0px 2px 4px rgba(0, 59, 158, 1);
+	-moz-box-shadow: 0px 2px 4px rgba(0, 59, 158, 1);
+	-webkit-box-shadow: 0px 2px 4px rgba(0, 59, 158, 1);
+	-o-box-shadow: 0px 2px 4px rgba(0, 59, 158, 1);
+}
+.circle_background {
+    background-color: rgb(0, 166, 222);
+}
+.prev_btn {
+    border-radius: 0 30px 30px 0;
+    border-color: rgb(250,167,37);
+    margin-left: -15px;
+    background-color: rgb(253,209,139);
+    border-style: solid;
+    border-left: none;
+    color: dimgrey;
+    width: 120px;
+    height: 40px;
+    padding: 0;
+}
+.submit_btn {
+    border-radius: 30px 0 0 30px;
+    border-style: solid;
+    margin-right: -15px;
+    height: 3.5rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #019966;
+}
+.otherProductsDiv {
+    height: auto;
+    margin-top: 20px;
+}
+.other_products {
+    height: auto;
+    display: flex;
+}
+.progress_container {
+    background-color: rgba(147, 249, 185, 0.1);
+    height: 4.375rem;
+    border: solid #019966;
+    border-bottom: none;
+    border-radius: 50px 50px 0 0;
+    max-width: 95%;
+    display: block;
+    position: absolute;
+    bottom: 0!important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.btn_nav_div {
+    position: absolute;
+    bottom: 4.5rem!important;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.btn_nav_row {
+    max-width: 100%;
+    margin: 0!important;
+}
+.upitnik_wrapper {
+    padding-bottom: 7rem;
+    width: 100%;
+}
+.product_wrapper {
+    padding-bottom: 7rem;
+    width: 100%;
+}
+

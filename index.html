@@ -14,61 +14,52 @@
   <title></title>
 </head>
 <body>
-    <div class="main_content">
+  <div class="main_content">
 
-        <div class="container">
-          <div class="progressWrapper text-center">
-            <div id="progressDiv_1" class="glowBorder">
-              <div id="progress_1"></div>
-            </div>
-            <div id="progressDiv_2">
-              <div id="progress_2"></div>
-            </div>
-            <div id="progressDiv_3">
-              <div id="progress_3"></div>
-            </div>
-            <div id="progressDiv_4">
-              <div id="progress_4"></div>
-            </div>
-            <div id="progressDiv_5">
-              <div id="progress_5"></div>
-            </div>
-            <div id="progressDiv_6">
-              <div id="progress_6"></div>
-            </div>
-          </div>
-        </div>
-
-      <div class="upitnik_wrapper container">
-        <div class="pitanjaDiv text-center"></div>
-
-
-      </div>
-
-      <div class="product_wrapper border border-primary hide">
-        <div class="block1 text-center">
-          <h1>Izabrani proizvodi (u odnosu na checkbox odgovore)</h1>
-        </div>
-        <div class="productsDiv container">
-          <div class="products row justify-content-center">
-            
-
-          </div>
-        </div>
-
-        <div class="block2 text-center">
-          <h1>Mi vam preporucujemo (u odnosu na odgovore na pitanja)</h1>
-        </div>
-        <div class="container">
-          <div class="other_products justify-content-center border border-primary row">
-            
-          </div>
-        </div>
-        
-      
-      
-
+    <div class="container navigacija">
+      <h1>NAVIGACIJA</h1>
     </div>
+
+    <div class="upitnik_wrapper container">
+      
+    </div>
+
+    <div class="product_wrapper container hide">
+      <div class="products row justify-content-center">
+          
+      </div>
+      <div class="other_products justify-content-center row">
+          
+      </div>
+    </div>
+
+      <div class="container progress_container text-center">
+    
+        <div class="row progress_circle_row justify-content-center h-100 px-4">
+          <div class="col progress_col my-auto px-0 pt-2">
+            <i id="progress_1" class="circle_big my-auto circle_shadow circle_background"></i>
+          </div>
+          <div class="col progress_col my-auto px-0 pt-2">
+            <i id="progress_2" class="circle my-auto"></i>
+          </div>
+          <div class="col progress_col my-auto px-0 pt-2">
+            <i id="progress_3" class="circle my-auto"></i>
+          </div>
+          <div class="col progress_col my-auto px-0 pt-2">
+            <i id="progress_4" class="circle my-auto"></i>
+          </div>
+          <div class="col progress_col my-auto px-0 pt-2">
+            <i id="progress_5" class="circle my-auto"></i>
+          </div>
+          <div class="col progress_col my-auto px-0 pt-2">
+            <i id="progress_6" class="circle_big my-auto"></i>
+          </div>
+    
+        </div>
+      </div>
+    
+  </div>
+  
 
 
 <script type="application/javascript">
@@ -78,300 +69,241 @@
 //****************************************************************HTML STRINGS***************************************************************************************************
     var HTML = function () {
       return {
-        1: `<div class="pitanjaDiv">
-              <h1 class="text-center">Pol</h1>
-              <div id="strana_1" class="row border border-primary">
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_1" type="button" class="btn_answer" value="next" data-key="" data-value="Muski" data-goto="${page}">Muški</button>
+        1: `
+              <div class="row pitanje_row justify-content-center">
+                <h1 class="text-center pitanje">Pol</h1>
+              </div>
+            
+            
+              <div id="strana_1" class="row">
+                <div class="col-sm text-center px-1 py-3">
+                  <button id="btn_1_1" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="Muski" data-goto="${page}">Muški</button>
                 </div>
 
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_2" type="button" class="btn_answer" value="next" data-key="" data-value="Zenski" data-goto="${page}">Ženski</button>
+                <div class="col-sm text-center px-1 py-3">
+                  <button id="btn_1_2" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="Zenski" data-goto="${page}">Ženski</button>
+                </div>
+              </div>
+            `,
+        
+        2: `
+              <div class="row pitanje_row justify-content-center">
+                <h1 class="text-center pitanje">Godine</h1>
+              </div>
+            
+            
+              <div id="strana_2" class="row">
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_2_1" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="16-34" data-goto="${page}">16-34</button>
+                </div>
+
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_2_2" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="35-49" data-goto="${page}">35-49</button>
                 </div>
                   
-                <div id="3" class="col-sm text-center border border-primary p-4">
-                  <button id="btn_1_3" type="button" class="btn_answer" value="next" data-key="" data-value="Ne znam" data-goto="${page}">Ne znam</button>
+                <div id="3" class="col-sm text-center px-1 py-2">
+                  <button id="btn_2_3" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="50+" data-goto="${page}">50+</button>
                 </div>
               </div>
-            </div>`,
+              <div class="btn_nav_div">
+                  <div class="row btn_nav_row">
+                    <div class="col-6 align-self-start text-left my-auto">
+                      <button id="prev" type="button" class="prev_btn" data-goto="${page}"> < nazad</button>
+                    </div>
+                  </div>
+                </div>
+            `,
         
-        2: `<div class="pitanjaDiv">
-              <h1 class="text-center">Godine</h1>
-              <div id="strana_1" class="row border border-primary">
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_1" type="button" class="btn_answer" value="next" data-key="" data-value="16-34" data-goto="${page}">16-34</button>
+        3: `
+              <div class="row pitanje_row justify-content-center">
+                <h1 class="text-center pitanje">Fizička aktivnost</h1>
+              </div>
+            
+            
+              <div id="strana_3" class="row">
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_3_1" type="button" class="btn_answer btn text-center" value="next" data-key="4" data-value="Ne treniram" data-goto="${page}">Ne treniram</button>
                 </div>
-
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_2" type="button" class="btn_answer" value="next" data-key="" data-value="35-49" data-goto="${page}">35-49</button>
+              
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_3_2" type="button" class="btn_answer btn text-center" value="next" data-key="0" data-value="Ponekad treniram" data-goto="${page}">Ponekad treniram</button>
                 </div>
-                  
-                <div id="3" class="col-sm text-center border border-primary p-4">
-                  <button id="btn_2_3" type="button" class="btn_answer" value="next" data-key="" data-value="50+" data-goto="${page}">50+</button>
+              
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_3_3" type="button" class="btn_answer btn text-center" value="next" data-key="3" data-value="Redovno treniram" data-goto="${page}">Redovno treniram</button>
                 </div>
               </div>
-            </div>`,
+              <div class="btn_nav_div">
+                  <div class="row btn_nav_row">
+                    <div class="col-6 align-self-start text-left my-auto">
+                      <button id="prev" type="button" class="prev_btn" data-goto="${page}"> < nazad</button>
+                    </div>
+                  </div>
+                </div>
+            `,
+
+        4: `
+              <div class="row pitanje_row justify-content-center">
+                <h1 class="text-center pitanje">Kvalitet sna</h1>
+              </div>
+            
+            
+              <div id="strana_4" class="row">
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_4_1" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="Spavam kao beba" data-goto="${page}">Spavam kao beba</button>
+                </div>
+              
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_4_2" type="button" class="btn_answer btn text-center" value="next" data-key="5" data-value="Cesto se budim nocu" data-goto="${page}">Često se budim noću</button>
+                </div>
+              
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_4_3" type="button" class="btn_answer btn text-center" value="next" data-key="5" data-value="Ne mogu da se uspavam dugo" data-goto="${page}">Dugo se uspavljujem</button>
+                </div>
+              </div>
+              <div class="btn_nav_div">
+                  <div class="row btn_nav_row">
+                    <div class="col-6 align-self-start text-left my-auto">
+                      <button id="prev" type="button" class="prev_btn" data-goto="${page}"> < nazad</button>
+                    </div>
+                  </div>
+                </div>
+            `,
         
-        3: `<div class="pitanjaDiv">
-              <h1 class="text-center">Fizička aktivnost</h1>
-              <div id="strana_2" class="row border border-primary">
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_1" type="button" class="btn_answer" value="next" data-key="4" data-value="Ne treniram" data-goto="${page}">Ne treniram</button>
+        5: `
+              <div class="row pitanje_row justify-content-center">
+                <h1 class="text-center pitanje">Krvni pritisak</h1>
+              </div>
+            
+            
+              <div id="strana_5" class="row">
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_5_1" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="Ne kontrolisem" data-goto="${page}">Ne kontrolišem</button>
                 </div>
               
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_2" type="button" class="btn_answer" value="next" data-key="0" data-value="Ponekad treniram" data-goto="${page}">Ponekad treniram</button>
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_5_2" type="button" class="btn_answer btn text-center" value="next" data-key="2" data-value="Normalan" data-goto="${page}">Normalan</button>
                 </div>
               
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_3_3" type="button" class="btn_answer" value="next" data-key="3" data-value="Redovno treniram" data-goto="${page}">Redovno treniram</button>
+                <div class="col-sm text-center px-1 py-2">
+                  <button id="btn_5_3" type="button" class="btn_answer btn text-center" value="next" data-key="1" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
                 </div>
               </div>
-              <button id="prev" type="button" class="btn_answer" data-goto="${page}">Nazad</button>
-            </div>`,
+                <div class="btn_nav_div">
+                  <div class="row btn_nav_row">
+                    <div class="col-6 align-self-start text-left my-auto">
+                      <button id="prev" type="button" class="prev_btn" data-goto="${page}"> < nazad</button>
+                    </div>
+                  </div>
+                </div>
+            `,
 
-        4: `<div class="pitanjaDiv">
-              <h1 class="text-center">Kakav Vam je san</h1>
-              <div id="strana_3" class="row border border-primary">
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_1" type="button" class="btn_answer" value="next" data-key="" data-value="Spavam kao beba" data-goto="${page}">Spavam kao beba</button>
-                </div>
-              
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_2" type="button" class="btn_answer" value="next" data-key="5" data-value="Cesto se budim nocu" data-goto="${page}">Često se budim noću</button>
-                </div>
-              
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_4_3" type="button" class="btn_answer" value="next" data-key="5" data-value="Ne mogu da se uspavam dugo" data-goto="${page}">Ne mogu da se uspavam dugo</button>
-                </div>
-              </div>
-              <button id="prev" type="button" class="btn_answer" data-goto="${page}">Nazad</button>
-            </div>`,
-        
-        5: `<div class="pitanjaDiv">
-              <h1 class="text-center">Kakav Vam je krvni pritisak</h1>
-              <div id="strana_4" class="row border border-primary">
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_5_1" type="button" class="btn_answer" value="next" data-key="" data-value="Ne kontrolisem" data-goto="${page}">Ne kontrolišem</button>
-                </div>
-              
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_5_2" type="button" class="btn_answer" value="next" data-key="2" data-value="Normalan ili ponekad povecan kada smo nervozni" data-goto="${page}">Normalan ili ponekad povećan kada smo nervozni</button>
-                </div>
-              
-                <div class="col-sm text-center border border-primary p-4">
-                  <button id="btn_5_3" type="button" class="btn_answer" value="next" data-key="1" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
-                </div>
-              </div>
-              <button id="prev" type="button" class="btn_answer" data-goto="${page}">Nazad</button>
-            </div>`,
-
-        /* 6: `<form class="checkboxForm" action="#">
-            <table class="table table-bordered">
-            <tbody>
-
-              <tr class="text-center border-primary">
-                <td class="text-center border-primary field" id="kontrola_stresa" data-check="6" onclick="selected(this)">
-                  <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
-                  <p>kontrola stresa</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="kontrola_stresa">
+        6: `  <div class="row pitanje_row justify-content-center">
+                <h1 class="text-center pitanje">Razlog</h1>
+              </div>  
+              <form>
+                
+                <div class="row text-center">
+                  <div class="col-4 text-center field" id="kontrola_stresa" data-check="6"  onmouseclick="active(this)">
+                    <img src="./img/magnall_ikonice/kontrola_stresa.png">
+                    <p>kontrola stresa</p>
+                    <div class="checkbox_overlay">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" data-value="kontrola_stresa">
+                      </div>
                     </div>
                   </div>
-                </td>
-
-                <td class="text-center border-primary field" id="srce" data-check="5" onclick="selected(this)">
-                  <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
-                  <p>srce</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input"data-value="srce">
+                  <div class="col-4 text-center field" id="srce" data-check="5" onmouseclick="active(this)">
+                    <img src="./img/magnall_ikonice/srce.png">
+                    <p>srce</p>
+                    <div class="checkbox_overlay">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input"data-value="srce">
+                      </div>
                     </div>
                   </div>
-                </td>
-
-                <td class="text-center border-primary field" id="imunitet" data-check="7" onclick="selected(this)">
-                  <img src="./img/karakteristike/imuno-ikona-imunitet.png">
-                  <p>imunitet </p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="imunitet">
-                    </div
-                  </div>
-                </td>
-              </tr>
-
-              <tr class="text-center border-primary">
-                <td class="text-center border-primary field" id="energija" data-check="0" onclick="selected(this)">
-                  <img src="./img/karakteristike/mineral-ikona-energija.png">
-                  <p>energija</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="energija">
-                    </div>
-                  </div
-                </td>
-
-                <td class="text-center border-primary field" id="dobar_san" data-check="8" onclick="selected(this)">
-                  <img src="./img/karakteristike/relax-ikona-kontrola-stresa.png">
-                  <p>dobar san</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="dobar_san">
-                    </div>
-                  </div>
-                </td>
-
-                <td class="text-center border-primary field" id="misici" data-check="1" onclick="selected(this)">
-                  <img src="./img/karakteristike/mineral-ikona-misici.png">
-                  <p>misici </p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="misici">
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr class="text-center ">
-                <td class="text-center border-primary field" id="nervni_sistem" data-check="2" onclick="selected(this)">
-                  <img src="./img/karakteristike/mineral-ikona-nervni-sistem.png">
-                  <p>nervni sistem</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="nervni_sistem">
-                    </div>
-                  </div>
-                </td>
-
-                <td class="text-center border-primary field" id="laka_primena" data-check="3" onclick="selected(this)">
-                  <img src="./img/karakteristike/direct-ikona-laka-upotreba.png">
-                  <p>laka primena</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="laka_primena">
-                    </div>
-                  </div>
-                </td>
-
-                <td class="text-center border-primary field" id="metabolizam" data-check="4" onclick="selected(this)">
-                  <img src="./img/karakteristike/sleep-ikona-metabolizam.png">
-                  <p>metabolizam</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="metabolizam">
-                    </div>
-                  </div>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
-          </br>
-          <div class="text-center">
-          <button id="submit" type="button" class="btn_answer" value="submit">Submit</button>
-          </div>
-          </form>`, */
-        
-        6: ` <form>
-              <div class="container checkboxForm">
-
-              <div class="row text-center">
-                <div class="col-4 text-center field" id="kontrola_stresa" data-check="6" onclick="selected(this)">
-                  <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
-                  <p>kontrola stresa</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="kontrola_stresa">
+                  <div class="col-4 text-center field" id="imunitet" data-check="7" onmouseclick="active(this)">
+                    <img src="./img/magnall_ikonice/imunitet.png">
+                    <p>imunitet </p>
+                    <div class="checkbox_overlay">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" data-value="imunitet">
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-4 text-center field" id="srce" data-check="5" onclick="selected(this)">
-                  <img src="./img/karakteristike/cardio-ikona-kontrola-stresa1.png">
-                  <p>srce</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input"data-value="srce">
+                
+                <div class="row text-center">
+                  <div class="col-4 text-center field" id="energija" data-check="0" onmouseclick="active(this)">
+                    <img src="./img/magnall_ikonice/energija.png">
+                    <p>energija</p>
+                    <div class="checkbox_overlay">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" data-value="energija">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 text-center field" id="dobar_san" data-check="8" onmouseclick="active(this)">
+                    <img src="./img/magnall_ikonice/dobar_san.png">
+                    <p>dobar san</p>
+                    <div class="checkbox_overlay">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" data-value="dobar_san">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 text-center field" id="misici" data-check="1" onmouseclick="active(this)">
+                    <img src="./img/magnall_ikonice/misici.png">
+                    <p>misici </p>
+                    <div class="checkbox_overlay">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" data-value="misici">
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-4 text-center field" id="imunitet" data-check="7" onclick="selected(this)">
-                  <img src="./img/karakteristike/imuno-ikona-imunitet.png">
-                  <p>imunitet </p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="imunitet">
+                
+                <div class="row text-center">
+                  <div class="col-4 text-center field" id="nervni_sistem" data-check="2" onmouseclick="active(this)">
+                    <img src="./img/magnall_ikonice/nervni_sistem.png">
+                    <p>nervni sistem</p>
+                    <div class="checkbox_overlay">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" data-value="nervni_sistem">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 text-center field" id="laka_primena" data-check="3" onmouseclick="active(this)">
+                    <img src="./img/magnall_ikonice/laka_primena.png">
+                    <p>laka primena</p>
+                    <div class="checkbox_overlay">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" data-value="laka_primena">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 text-center field" id="metabolizam" data-check="4" onmouseclick="active(this)">
+                    <img src="./img/magnall_ikonice/metabolizam.png">
+                    <p>metabolizam</p>
+                    <div class="checkbox_overlay">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" data-value="metabolizam">
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              <div class="row text-center">
-                <div class="col-4 text-center field" id="energija" data-check="0" onclick="selected(this)">
-                  <img src="./img/karakteristike/mineral-ikona-energija.png">
-                  <p>energija</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="energija">
+                <div class="btn_nav_div">
+                  <div class="row btn_nav_row">
+                    <div class="col-6 align-self-start text-left my-auto">
+                      <button id="prev" type="button" class="prev_btn" data-goto="${page}"> < nazad</button>
+                    </div>
+                    <div class="col-6 align-self-end text-right my-auto">
+                      <button id="submit" type="button" class="submit_btn" value="submit"><strong>izračunaj ></strong></button>
                     </div>
                   </div>
                 </div>
-                <div class="col-4 text-center field" id="dobar_san" data-check="8" onclick="selected(this)">
-                  <img src="./img/karakteristike/relax-ikona-kontrola-stresa.png">
-                  <p>dobar san</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="dobar_san">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4 text-center field" id="misici" data-check="1" onclick="selected(this)">
-                  <img src="./img/karakteristike/mineral-ikona-misici.png">
-                  <p>misici </p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="misici">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="row text-center">
-                <div class="col-4 text-center field" id="nervni_sistem" data-check="2" onclick="selected(this)">
-                  <img src="./img/karakteristike/mineral-ikona-nervni-sistem.png">
-                  <p>nervni sistem</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="nervni_sistem">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4 text-center field" id="laka_primena" data-check="3" onclick="selected(this)">
-                  <img src="./img/karakteristike/direct-ikona-laka-upotreba.png">
-                  <p>laka primena</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="laka_primena">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4 text-center field" id="metabolizam" data-check="4" onclick="selected(this)">
-                  <img src="./img/karakteristike/sleep-ikona-metabolizam.png">
-                  <p>metabolizam</p>
-                  <div class="checkbox_overlay">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" data-value="metabolizam">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="text-center">
-              <button id="submit" type="button" class="btn_answer" value="submit">Submit</button>
-            </div>
             </form>`,
-        direct: `<div id="direct" class="card col col-sm-4">
+        direct: `<div id="direct" class="card ">
                   <img class="card-img-top" src="./img/proizvodi/direct.jpg" alt="proizvod 1 slika">
                   <div class="card-body">
                     <h5 class="card-title">Proizvod 1</h5>
@@ -379,7 +311,7 @@
                     <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
-        cardio: `<div id="cardio" class="card col col-sm-4" >
+        cardio: `<div id="cardio" class="card " >
                   <img class="card-img-top" src="./img/proizvodi/cardio.jpg" alt="proizvod 2 slika">
                   <div class="card-body">
                     <h5 class="card-title">Proizvod 2</h5>
@@ -387,7 +319,7 @@
                     <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
-        relax: `<div id="relax" class="card col col-sm-4">
+        relax: `<div id="relax" class="card ">
                   <img class="card-img-top" src="./img/proizvodi/relax.jpg" alt="proizvod 3 slika">
                   <div class="card-body">
                     <h5 class="card-title">Proizvod 3</h5>
@@ -395,7 +327,7 @@
                     <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
-        immuno: `<div id="immuno" class="card col col-sm-4">
+        immuno: `<div id="immuno" class="card ">
                   <img class="card-img-top" src="./img/proizvodi/immuno.jpg" alt="proizvod 4 slika">
                   <div class="card-body">
                     <h5 class="card-title">Proizvod 4</h5>
@@ -403,7 +335,7 @@
                     <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
-        mineral: `<div id="mineral" class="card col col-sm-4">
+        mineral: `<div id="mineral" class="card ">
                     <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="proizvod 4 slika">
                     <div class="card-body">
                       <h5 class="card-title">Proizvod 5</h5>
@@ -411,7 +343,7 @@
                       <a href="#" class="btn_answer">Detaljnije</a>
                     </div>
                   </div>`,
-        sleep: `<div id="sleep" class="card col col-sm-4">
+        sleep: `<div id="sleep" class="card ">
                   <img class="card-img-top" src="./img/proizvodi/sleep.jpg" alt="proizvod 6 slika">
                   <div class="card-body">
                     <h5 class="card-title">Proizvod 6</h5>
@@ -549,50 +481,19 @@
 
 //******************************************UI****************************************************************************************
     function loadProgress() {
-      var progressBar = document.getElementById(`progress_${page - 1}`); 
-      var width = 1;
-      var id = setInterval(bar, 1);
-      function bar() {
-        if (width >= 100) {
-          clearInterval(id);
-        } else {
-          width++; 
-          progressBar.style.width = width + '%'; 
-        }
-      }
+      var currentProgressCircle = document.getElementById(`progress_${page}`); 
+      var prevProgressCircle = document.getElementById(`progress_${page - 1}`);
+      currentProgressCircle.classList.add('circle_background');
+      currentProgressCircle.classList.add('circle_shadow');
+      prevProgressCircle.classList.remove('circle_shadow');
     }
     function unloadProgress() {
-      var progressBar = document.getElementById(`progress_${page}`);
-      var width = 100;
-      var id = setInterval(bar, 1);
-      function bar() {
-        if (width <= 0) {
-          clearInterval(id);
-        } else {
-          width--; 
-          progressBar.style.width = width + '%'; 
-        }
-      }
-    }
-    function addGlowBorder() {
-      var currentBar = document.getElementById(`progressDiv_${page}`);
-      var barBefore = document.getElementById(`progressDiv_${page - 1}`);
-      var barNext = document.getElementById(`progressDiv_${page + 1}`);
-      var clear = setInterval(current, 350);
-
-      function current() {
-        if(currentBar) {
-          currentBar.classList.add('glowBorder');
-          clearInterval(clear);
-          barBefore.classList.remove('glowBorder');
-        }
-      }
-    }
-    function removeGlowBorder() {
-      var barNext = document.getElementById(`progressDiv_${page + 1}`);
-      var currentBar = document.getElementById(`progressDiv_${page}`);
-      barNext.classList.remove('glowBorder');
-      currentBar.classList.add('glowBorder');
+      var currentProgressCircle = document.getElementById(`progress_${page}`);
+      var prevProgressCircle = document.getElementById(`progress_${page + 1}`);
+      currentProgressCircle.classList.add('circle_background');
+      currentProgressCircle.classList.add('circle_shadow');
+      prevProgressCircle.classList.remove('circle_shadow');
+      prevProgressCircle.classList.remove('circle_background');
     }
     
     
@@ -620,7 +521,7 @@
 
     // adds checked answers to array //for showProduct function
     function saveCheckedValues() {
-      var form = event.target.form;
+      var form = event.target.closest('form');
       for (var i = 0; i < form.length; i++) {
         if (form[i].checked) {
           var checkedBoxName = form[i].dataset.value;
@@ -731,6 +632,51 @@
     function uncheckTheCheckbox(currentCheckbox) {
       currentCheckbox.checked = false;
     }
+    // add disabled icons
+    function addDisabledIcon(currentFieldNum) {
+      uncheckList[currentFieldNum].forEach(function (element) {
+        if (element != '') {
+          document.getElementById(element).firstElementChild.src = `./img/magnall_ikonice/${element}_disabled.png`;
+        }
+      })
+    }
+    // remove disabled icons
+    function removeDisabledIcon(currentFieldNum) {
+      uncheckList[currentFieldNum].forEach(function (element) {
+        if (element != '') {
+          if(!document.getElementById(element).classList.contains('disable')) {
+            document.getElementById(element).firstElementChild.src = `./img/magnall_ikonice/${element}.png`;
+          }
+        }
+      })
+    }
+    // toggle aktivna icon on click
+    function toggleActiveIcon() {
+      var field = event.target.closest('.field');
+      if (!field.classList.contains('aktivna') && !field.classList.contains('disable')) {
+        field.firstElementChild.src = `./img/magnall_ikonice/${field.id}_aktivna.png`;
+        field.classList.add('aktivna');
+      } else if (field.classList.contains('aktivna') && !field.classList.contains('disable')) {
+        field.firstElementChild.src = `./img/magnall_ikonice/${field.id}.png`;
+        field.classList.remove('aktivna');
+      }
+    }
+    // icon on mouseover
+    function hover() {
+      var field = event.target.closest('.field');
+        if (!field.classList.contains('aktivna') && !field.classList.contains('disable')) {
+          field.firstElementChild.src = `./img/magnall_ikonice/${field.id}_hover.png`;
+        }
+    }
+    // icon on mouseout
+    function unhover() {
+      var field = event.target.closest('.field');
+      if (!field.classList.contains('aktivna') && !field.classList.contains('disable')) {
+        field.firstElementChild.src = `./img/magnall_ikonice/${field.id}.png`;
+      }
+    }
+    
+    
 
 
     // manipulate checkboxes
@@ -742,12 +688,15 @@
       if(currentCheckbox.checked == false) {
         if(!currentField.classList.contains('disable')) {
           addDisableClass(currentFieldNum);
+          addDisabledIcon(currentFieldNum);
+          /* iconToActive(currentField); */
           checkTheCheckbox(currentCheckbox, currentField);
         } else {
-          return;
+          /* return; */
         }
       } else {
         removeDisableClass(currentFieldNum);
+        removeDisabledIcon(currentFieldNum);
         uncheckTheCheckbox(currentCheckbox);
       }
     }
@@ -837,7 +786,6 @@
         showNextPage();
         saveAnswer();
         loadProgress();
-        addGlowBorder();
         pushDataKey();
       }
       if (event.target.id == 'prev') {
@@ -845,33 +793,59 @@
         deleteAnswer(recommendedProducts);
         showPrevPage();
         unloadProgress();
-        removeGlowBorder();
       }
-      if(event.target.id == 'submit') {
+      if(event.target.closest('.submit_btn')) {
+        console.log(event.target.closest('.submit_btn'))
         page++;
         saveCheckedValues();
         pushMatchingAnswers(checkedValues, products.direct, products.cardio, products.relax, products.immuno, products.mineral, products.sleep);
         sortProducts();
         showProducts();
-        loadProgress();
         showRecommendedProducts();
         makeJson();
         postData();
       }
       if(event.target.closest('.field')) {
         manageCheckboxes(event);
+        toggleActiveIcon();
       }
 
     });
 
+    DOM.upitnik_wrapper.addEventListener('mouseover', function(event) {
+      if (event.target.closest('.field')) {
+        hover();
+      } 
+    })
+    DOM.upitnik_wrapper.addEventListener('mouseout', function (event) {
+      if (event.target.closest('.field')) {
+        unhover();
+      }
+    })
     
 //*****************************************
 };
 
-function selected(element) {
-    element.classList.toggle('selected');
+/* function selected(element) {
+    element.firstElementChild.src = `./img/magnall_ikonice/${element.id}_aktivna.png`;
+  } */
+  // change icon on hover
+  function hover(element) {
+      if(element.firstElementChild.src !== `./img/magnall_ikonice/${element.id}_aktivna.png`) {
+        element.firstElementChild.src = `./img/magnall_ikonice/${element.id}_hover.png`;
+      }
+      
   }
-
+  function unhover(element) {
+    if(element.firstElementChild.src !== `./img/magnall_ikonice/${element.id}_aktivna.png`) {
+      element.firstElementChild.src = `./img/magnall_ikonice/${element.id}.png`;
+    }
+    
+  }
+  //*******************************OVO NE RADI OVO NAPRAVI PRVO**********************************
+  function active(element) {
+    console.log(element.id);
+    }
 </script>
 
 </body>
