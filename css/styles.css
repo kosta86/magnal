@@ -269,27 +269,19 @@ i {
     border-style: solid;
     border-left: none;
     color: dimgrey;
-    width: 120px;
-    height: 40px;
+    width: 6rem;
+    height: 2.9;
     padding: 0;
 }
 .submit_btn {
     border-radius: 30px 0 0 30px;
     border-style: solid;
-    margin-right: -15px;
+    margin-right: -30px;
     height: 3.5rem;
-    width: 10rem;
+    /* width: 10rem; */
     font-size: 1.5rem;
     color: white;
     background-color: #019966;
-}
-.otherProductsDiv {
-    height: auto;
-    margin-top: 20px;
-}
-.other_products {
-    height: auto;
-    display: flex;
 }
 .progress_container {
     background-color: rgba(147, 249, 185, 0.1);
@@ -306,14 +298,16 @@ i {
 }
 .btn_nav_div {
     position: absolute;
-    bottom: 4.5rem!important;
+    height: 3.5rem;
+    bottom: 4.6rem!important;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
 }
 .btn_nav_row {
     max-width: 100%;
-    margin: 0!important;
+    /* margin: 0!important; */
+    height: 3.5rem;
 }
 .upitnik_wrapper {
     padding-bottom: 7rem;
@@ -323,9 +317,11 @@ i {
     padding-bottom: 7rem;
     width: 100%;
 }
-#strana_1 {
-    margin-top: auto;
-    margin-bottom: auto;
+#strana_1, #strana_2, #strana_3, #strana_4, #strana_5, #strana_6 {
+    padding-top: 10vh;
+}
+#strana_2 {
+    
 }
 
 .card h4 {

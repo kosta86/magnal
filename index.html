@@ -25,10 +25,10 @@
     </div>
 
     <div class="product_wrapper container hide">
-      <div class="products row justify-content-center">
+      <div class="products justify-content-center">
           
       </div>
-      <div class="other_products justify-content-center row">
+      <div class="other_products justify-content-center">
           
       </div>
     </div>
@@ -743,12 +743,33 @@
     }
 
     // shows products depending on button answers
-    function showRecommendedProducts() {
+    function showRecommendedProducts() { 
       recommendedProducts.forEach(function(element) {
         DOM.other_products.insertAdjacentHTML('afterbegin', HTML()[`ostali${element}`])
       })
     }
 
+    //remove duplicated products
+    function removeDuplicates() {
+      var duplicateProducts = [];
+      var mainProductsArr  = [].slice.call(DOM.product_wrapper.children[0].children);
+      var otherProductsArr = [].slice.call(DOM.product_wrapper.children[1].children);
+      var index;
+      var productsChildrenArr = document.querySelector('.product_wrapper').childNodes;
+      console.log(mainProductsArr);
+      console.log(otherProductsArr);
+      
+      otherProductsArr.forEach(function (element) {
+        if(mainProductsArr.includes(element)) {
+          duplicateProducts.push(element);
+        }
+      })
+      console.log(duplicateProducts);
+      /* duplicateProducts.forEach(function(element) {
+
+      }) */
+
+    }
 //*****************************************
 
 
@@ -802,6 +823,7 @@
         sortProducts();
         showProducts();
         showRecommendedProducts();
+        removeDuplicates();
         makeJson();
         postData();
       }
