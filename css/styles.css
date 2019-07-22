@@ -1,155 +1,22 @@
-
-/* .clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-.glowBorder {
-    outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 10px #4CAF50;
-    transition: box-shadow 0.1s linear;
-}
-.row {
-    width: 100%;
-    margin: 0!important;
-}
-.main_content {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 1100px;
-}
-.upitnik_wrapper {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 50%;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-.pitanjaDiv {
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 350px;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-.checkboxForm {
-    display: block;
-    height: auto;
-    margin-top: 100px;
-}
-.field {
-    cursor: pointer;	
-}
-.field:hover {
-    -webkit-box-shadow: 0px 0px 10px 0px #4CAF50;
-    -moz-box-shadow: 0px 0px 10px 0px #4CAF50;
-    box-shadow: 0px 0px 10px 0px #4CAF50;
-}
-.selected {
-    -webkit-box-shadow: 0px 0px 10px 0px #4CAF50;
-    -moz-box-shadow: 0px 0px 10px 0px #4CAF50;
-    box-shadow: 0px 0px 10px 0px #4CAF50;
-}
-.product_wrapper {
-    display: block!important;
-    position: absolute;
-    width: 100vw;
-    height: auto;
-    margin: 0;
-}
-.productsDiv {
-    top: 150px;
-}
-.products {
-    display: block;
-}
-.otherProductsDiv {
-    height: auto;
-    margin-top: 20px;
-}
-.other_products {
-    height: auto;
-    display: flex;
-}
-.block1 {
-    margin-top: 90px;
-    width: 100%; 
-}
-.block2 {
-    width: 100%;
-    margin-top: 90px;
-}
-.hide {
-    display: none!important;
-}
-.show {
-    display: block!important;
-}
-.disable {
-    opacity: 0.2;
-}
-.progressWrapper {
-    width: 100%;
-    display: block;
-    position: absolute;
-    top: 10px;
-}
-#progressDiv_1, #progressDiv_2, #progressDiv_3, #progressDiv_4, #progressDiv_5, #progressDiv_6 {
-display: inline-block;
-width: 10%;
-background-color: #ddd;
-border-radius: 30px;
-}
-#progress_1, #progress_2, #progress_3, #progress_4, #progress_5, #progress_6{
-width: 0%;
-height: 30px;
-background-color: #4CAF50;
-border-radius: 30px;
-}
-.checkbox_overlay {
-    z-index: 99999;
-    background-color: transparent;
-    pointer-events: none;
-}
-input[type='checkbox'] {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-} */
 * {
     box-sizing: border-box;
 }
 html, body{ 
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     padding: 0!important;
     margin: 0!important;
     min-height: 100%;
-}
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
 }
 body {
     font-family: Lato, Helvetica, Arial, sans-serif!important;
 }
 h1 {
     color:  #FFFFFF;
+}
+.heading {
+    display: none;
 }
 .pitanje {
     color:  #FFFFFF;
@@ -207,19 +74,11 @@ input[type='checkbox'] {
     height: 96px!important;
     width: 100%;
 }
-
 form p {
     font-size: 0.7rem;
 }
 form .row img {
     height: 3.9rem;
-}
-.progress1 {
-    background-color: rgba(147, 249, 185, 0.1);
-    border: solid #019966;
-    border-bottom: none;
-    border-radius: 50px 50px 0 0;
-    height: 100%č
 }
 .progressWrapper {
     width: 100%;
@@ -247,6 +106,7 @@ i {
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
+    background-color: white;
 }
 .progress_col {
     overflow: hidden;
@@ -276,9 +136,9 @@ i {
 .submit_btn {
     border-radius: 30px 0 0 30px;
     border-style: solid;
-    margin-right: -30px;
+    border-right: none;
+    margin-right: -15px;
     height: 3.5rem;
-    /* width: 10rem; */
     font-size: 1.5rem;
     color: white;
     background-color: #019966;
@@ -286,7 +146,7 @@ i {
 .progress_container {
     background-color: rgba(147, 249, 185, 0.1);
     height: 4.375rem;
-    border: solid #019966;
+    border: solid 3px #019966;
     border-bottom: none;
     border-radius: 50px 50px 0 0;
     max-width: 95%;
@@ -299,15 +159,8 @@ i {
 .btn_nav_div {
     position: absolute;
     height: 3.5rem;
-    bottom: 4.6rem!important;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.btn_nav_row {
-    max-width: 100%;
-    /* margin: 0!important; */
-    height: 3.5rem;
+    bottom: 5.3rem!important;
+    margin: -15px!important;
 }
 .upitnik_wrapper {
     padding-bottom: 7rem;
@@ -320,12 +173,179 @@ i {
 #strana_1, #strana_2, #strana_3, #strana_4, #strana_5, #strana_6 {
     padding-top: 10vh;
 }
-#strana_2 {
-    
-}
-
 .card h4 {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-weight: 400;
 }
+.progress {
+    position: absolute!important;
+    width: 71%!important;
+    top: 43%!important;
+    transform: translateX(-50%)!important;
+    height: 12px!important;
+    left: 50%;
+    background-image: url('../img/misc/progress_lines.png');
+    opacity: 0.8;
+}
+.progress-bar {
+    opacity: 0.52;
+    background-color: rgb(0,166,222)!important;
+}
+.bar_0 {
+    width: 0;
+}
+.bar_20 {
+    width: 20%;
+}
+.bar_40 {
+    width: 40%;
+}
+.bar_60 {
+    width: 60%;
+}
+.bar_80 {
+    width: 80%;
+}
+.bar_100 {
+    width: 100%;
+}
+@media (orientation: portrait) {
+    .upitnik_wrapper {
+        padding-bottom: 0;
+    } 
+}
+@media (min-width: 992px) {
+    .navigacija {
+        display: block!important;
+        background-color: #5f1ae6;
+        height: 91px!important;
+        width: 100%;
+    }
+    .upitnik_wrapper {
+        padding-bottom: 7rem;
+        max-width: 1140px!important;
+        min-height: 720px;
+
+    }
+    .progress_container {
+        background-color: rgba(147, 249, 185, 0.1);
+        height: 10rem;
+        border: solid 3px #019966;
+        border-radius: 40px 40px 0 0;
+        max-width: 95%;
+        display: block;
+        bottom: 35px!important;
+    }
+    .circle {
+        background-color:#fff;
+        border: 0.22rem solid rgb(0, 59, 150);    
+        height:60px;
+        width:60px;
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+    }
+    .circle_big {
+        border:0.20rem solid rgb(0, 59, 150);    
+        height:75px;
+        width:75px;
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        background-color: white;
+    }
+    .progress_col {
+        overflow: hidden;
+        display: inline;
+    }
+    .circle_shadow {
+        box-shadow: 0px 2px 4px rgba(0, 59, 158, 1);
+        -moz-box-shadow: 0px 2px 4px rgba(0, 59, 158, 1);
+        -webkit-box-shadow: 0px 2px 4px rgba(0, 59, 158, 1);
+        -o-box-shadow: 0px 2px 4px rgba(0, 59, 158, 1);
+    }
+    .circle_background {
+        background-color: rgb(0, 166, 222);
+    }
+    .progress {
+        position: absolute!important;
+        width: 81%!important;
+        top: 40%!important;
+        transform: translateX(-50%)!important;
+        height: 35px!important;
+        left: 50%;
+        background-image: url('../img/misc/progress_lines.png');
+        opacity: 0.8;
+    }
+    .progress-bar {
+        opacity: 0.52;
+        background-color: rgb(0,166,222)!important;
+    }
+    .prev_btn {
+        border-radius: 30px 30px 30px 30px;
+        border-color: rgb(250,167,37);
+        margin-left: -15px;
+        background-color: rgb(253,209,139);
+        border-style: solid;
+        color: dimgrey;
+        width: 8rem;
+        height: 3rem;
+        padding: 0;
+    }
+    .submit_btn {
+        border-radius: 30px 30px 30px 30px;
+        border-style: solid;
+        margin-right: -15px;
+        height: 3.5rem;
+        font-size: 1.5rem;
+        color: white;
+        background-color: #019966;
+    }
+    .btn_nav_div {
+        position: absolute;
+        height: 3.5rem;
+        bottom: 14rem!important;
+        transform: none!important;
+    }
+    .btn_answer {
+        color: #fff!important;
+        font-size: 2.4rem!important;
+        background-color: #019966!important;
+        border-color: #96dbc5!important;
+        border-style: solid!important;
+        border-radius: 3rem!important;
+        border-width: 2px!important;
+        background-image: linear-gradient(to top,#019966 5%, #FFFFFF 150%)!important;
+        width: 50%!important;
+        height: 5.5rem;
+    }
+    .heading {
+        display: block;
+        color: black;
+        height: 10rem;
+        background-image: url(../img/magnall_ikonice/kviz_header.jpg);
+        background-size: auto;
+    }
+    .heading h1 {
+        padding-top: 50px;
+    }
+    .pitanje_row {
+        padding: 1.5rem;
+        background-color: white;
+    }
+    .pitanje {
+        color: #545c5d;
+        font-size: 2.5rem;
+    }
+    #strana_1, #strana_2, #strana_3, #strana_4, #strana_5, #strana_6 {
+        padding-top: 0;
+    }
+    form .row img {
+        height: 5.5rem;
+    }
+    form p {
+        font-size: 1rem;
+    }
+}
+

@@ -16,11 +16,13 @@
 <body>
   <div class="main_content">
 
-    <div class="container navigacija">
+    <div class="container-fluid navigacija">
       <h1>NAVIGACIJA</h1>
     </div>
-
-    <div class="upitnik_wrapper container">
+    <div class="heading text-center">
+      <h1>Izaberi svoj Mg</h1>
+    </div>
+    <div class="upitnik_wrapper container-fluid">
       
     </div>
 
@@ -34,7 +36,9 @@
     </div>
 
       <div class="container progress_container text-center">
-    
+        <div class="progress">
+          <div class="progress-bar bar_0" role="progressbar"></div>
+        </div>
         <div class="row progress_circle_row justify-content-center h-100 px-4">
           <div class="col progress_col my-auto px-0 pt-2">
             <i id="progress_1" class="circle_big my-auto circle_shadow circle_background"></i>
@@ -54,7 +58,7 @@
           <div class="col progress_col my-auto px-0 pt-2">
             <i id="progress_6" class="circle_big my-auto"></i>
           </div>
-    
+      
         </div>
       </div>
     
@@ -71,16 +75,16 @@
       return {
         1: `
               <div class="row pitanje_row justify-content-center">
-                <h1 class="text-center pitanje">Pol</h1>
+                <h1 class="text-center pitanje"><strong>Pol</strong></h1>
               </div>
             
             
               <div id="strana_1" class="row">
-                <div class="col-sm text-center px-1 py-3">
+                <div class="col-sm col-lg-12 text-center px-1 py-3">
                   <button id="btn_1_1" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="Muski" data-goto="${page}">Muški</button>
                 </div>
 
-                <div class="col-sm text-center px-1 py-3">
+                <div class="col-sm col-lg-12 text-center px-1 py-3">
                   <button id="btn_1_2" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="Zenski" data-goto="${page}">Ženski</button>
                 </div>
               </div>
@@ -88,25 +92,25 @@
         
         2: `
               <div class="row pitanje_row justify-content-center">
-                <h1 class="text-center pitanje">Godine</h1>
+                <h1 class="text-center pitanje"><strong>Godine</strong></h1>
               </div>
             
             
               <div id="strana_2" class="row">
-                <div class="col-sm text-center px-1 py-2">
-                  <button id="btn_2_1" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="16-34" data-goto="${page}">16-34</button>
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
+                  <button id="btn_2_1" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="16-34" data-goto="${page}">16 - 34</button>
                 </div>
 
-                <div class="col-sm text-center px-1 py-2">
-                  <button id="btn_2_2" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="35-49" data-goto="${page}">35-49</button>
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
+                  <button id="btn_2_2" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="35-49" data-goto="${page}">35 - 49</button>
                 </div>
                   
-                <div id="3" class="col-sm text-center px-1 py-2">
+                <div id="3" class="col-sm col-lg-12 text-center px-1 py-2">
                   <button id="btn_2_3" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="50+" data-goto="${page}">50+</button>
                 </div>
               </div>
-              <div class="btn_nav_div">
-                  <div class="row btn_nav_row">
+              <div class="btn_nav_div container">
+                  <div class="row h-100">
                     <div class="col-6 align-self-start text-left my-auto">
                       <button id="prev" type="button" class="prev_btn" data-goto="${page}"> < nazad</button>
                     </div>
@@ -116,25 +120,25 @@
         
         3: `
               <div class="row pitanje_row justify-content-center">
-                <h1 class="text-center pitanje">Fizička aktivnost</h1>
+                <h1 class="text-center pitanje"><strong>Fizička aktivnost</strong></h1>
               </div>
             
             
               <div id="strana_3" class="row">
-                <div class="col-sm text-center px-1 py-2">
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
                   <button id="btn_3_1" type="button" class="btn_answer btn text-center" value="next" data-key="4" data-value="Ne treniram" data-goto="${page}">Ne treniram</button>
                 </div>
               
-                <div class="col-sm text-center px-1 py-2">
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
                   <button id="btn_3_2" type="button" class="btn_answer btn text-center" value="next" data-key="0" data-value="Ponekad treniram" data-goto="${page}">Ponekad treniram</button>
                 </div>
               
-                <div class="col-sm text-center px-1 py-2">
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
                   <button id="btn_3_3" type="button" class="btn_answer btn text-center" value="next" data-key="3" data-value="Redovno treniram" data-goto="${page}">Redovno treniram</button>
                 </div>
               </div>
-              <div class="btn_nav_div">
-                  <div class="row btn_nav_row">
+              <div class="btn_nav_div container">
+                  <div class="row h-100">
                     <div class="col-6 align-self-start text-left my-auto">
                       <button id="prev" type="button" class="prev_btn" data-goto="${page}"> < nazad</button>
                     </div>
@@ -144,25 +148,25 @@
 
         4: `
               <div class="row pitanje_row justify-content-center">
-                <h1 class="text-center pitanje">Kvalitet sna</h1>
+                <h1 class="text-center pitanje"><strong>Kvalitet sna</strong></h1>
               </div>
             
             
               <div id="strana_4" class="row">
-                <div class="col-sm text-center px-1 py-2">
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
                   <button id="btn_4_1" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="Spavam kao beba" data-goto="${page}">Spavam kao beba</button>
                 </div>
               
-                <div class="col-sm text-center px-1 py-2">
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
                   <button id="btn_4_2" type="button" class="btn_answer btn text-center" value="next" data-key="5" data-value="Cesto se budim nocu" data-goto="${page}">Često se budim noću</button>
                 </div>
               
-                <div class="col-sm text-center px-1 py-2">
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
                   <button id="btn_4_3" type="button" class="btn_answer btn text-center" value="next" data-key="5" data-value="Ne mogu da se uspavam dugo" data-goto="${page}">Dugo se uspavljujem</button>
                 </div>
               </div>
-              <div class="btn_nav_div">
-                  <div class="row btn_nav_row">
+              <div class="btn_nav_div container">
+                  <div class="row h-100">
                     <div class="col-6 align-self-start text-left my-auto">
                       <button id="prev" type="button" class="prev_btn" data-goto="${page}"> < nazad</button>
                     </div>
@@ -172,25 +176,25 @@
         
         5: `
               <div class="row pitanje_row justify-content-center">
-                <h1 class="text-center pitanje">Krvni pritisak</h1>
+                <h1 class="text-center pitanje"><strong>Krvni pritisak</strong></h1>
               </div>
             
             
               <div id="strana_5" class="row">
-                <div class="col-sm text-center px-1 py-2">
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
                   <button id="btn_5_1" type="button" class="btn_answer btn text-center" value="next" data-key="" data-value="Ne kontrolisem" data-goto="${page}">Ne kontrolišem</button>
                 </div>
               
-                <div class="col-sm text-center px-1 py-2">
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
                   <button id="btn_5_2" type="button" class="btn_answer btn text-center" value="next" data-key="2" data-value="Normalan" data-goto="${page}">Normalan</button>
                 </div>
               
-                <div class="col-sm text-center px-1 py-2">
+                <div class="col-sm col-lg-12 text-center px-1 py-2">
                   <button id="btn_5_3" type="button" class="btn_answer btn text-center" value="next" data-key="1" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
                 </div>
               </div>
-                <div class="btn_nav_div">
-                  <div class="row btn_nav_row">
+                <div class="btn_nav_div container">
+                  <div class="row h-100">
                     <div class="col-6 align-self-start text-left my-auto">
                       <button id="prev" type="button" class="prev_btn" data-goto="${page}"> < nazad</button>
                     </div>
@@ -199,12 +203,12 @@
             `,
 
         6: `  <div class="row pitanje_row justify-content-center">
-                <h1 class="text-center pitanje">Razlog</h1>
+                <h1 class="text-center pitanje"><strong>Razlog</strong></h1>
               </div>  
               <form>
                 
-                <div class="row text-center">
-                  <div class="col-4 text-center field" id="kontrola_stresa" data-check="6"  onmouseclick="active(this)">
+                <div class="row justify-content-center">
+                  <div class="col-4 col-lg-2 text-center field" id="kontrola_stresa" data-check="6"  onmouseclick="active(this)">
                     <img src="./img/magnall_ikonice/kontrola_stresa.png">
                     <p>kontrola stresa</p>
                     <div class="checkbox_overlay">
@@ -213,7 +217,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-4 text-center field" id="srce" data-check="5" onmouseclick="active(this)">
+                  <div class="col-4 col-lg-2 text-center field" id="srce" data-check="5" onmouseclick="active(this)">
                     <img src="./img/magnall_ikonice/srce.png">
                     <p>srce</p>
                     <div class="checkbox_overlay">
@@ -222,7 +226,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-4 text-center field" id="imunitet" data-check="7" onmouseclick="active(this)">
+                  <div class="col-4 col-lg-2 text-center field" id="imunitet" data-check="7" onmouseclick="active(this)">
                     <img src="./img/magnall_ikonice/imunitet.png">
                     <p>imunitet </p>
                     <div class="checkbox_overlay">
@@ -233,8 +237,8 @@
                   </div>
                 </div>
                 
-                <div class="row text-center">
-                  <div class="col-4 text-center field" id="energija" data-check="0" onmouseclick="active(this)">
+                <div class="row justify-content-center">
+                  <div class="col-4 col-lg-2 text-center field" id="energija" data-check="0" onmouseclick="active(this)">
                     <img src="./img/magnall_ikonice/energija.png">
                     <p>energija</p>
                     <div class="checkbox_overlay">
@@ -243,7 +247,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-4 text-center field" id="dobar_san" data-check="8" onmouseclick="active(this)">
+                  <div class="col-4 col-lg-2 text-center field" id="dobar_san" data-check="8" onmouseclick="active(this)">
                     <img src="./img/magnall_ikonice/dobar_san.png">
                     <p>dobar san</p>
                     <div class="checkbox_overlay">
@@ -252,7 +256,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-4 text-center field" id="misici" data-check="1" onmouseclick="active(this)">
+                  <div class="col-4 col-lg-2 text-center field" id="misici" data-check="1" onmouseclick="active(this)">
                     <img src="./img/magnall_ikonice/misici.png">
                     <p>misici </p>
                     <div class="checkbox_overlay">
@@ -263,8 +267,8 @@
                   </div>
                 </div>
                 
-                <div class="row text-center">
-                  <div class="col-4 text-center field" id="nervni_sistem" data-check="2" onmouseclick="active(this)">
+                <div class="row justify-content-center">
+                  <div class="col-4 col-lg-2 text-center field" id="nervni_sistem" data-check="2" onmouseclick="active(this)">
                     <img src="./img/magnall_ikonice/nervni_sistem.png">
                     <p>nervni sistem</p>
                     <div class="checkbox_overlay">
@@ -273,7 +277,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-4 text-center field" id="laka_primena" data-check="3" onmouseclick="active(this)">
+                  <div class="col-4 col-lg-2 text-center field" id="laka_primena" data-check="3" onmouseclick="active(this)">
                     <img src="./img/magnall_ikonice/laka_primena.png">
                     <p>laka primena</p>
                     <div class="checkbox_overlay">
@@ -282,7 +286,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-4 text-center field" id="metabolizam" data-check="4" onmouseclick="active(this)">
+                  <div class="col-4 col-lg-2 text-center field" id="metabolizam" data-check="4" onmouseclick="active(this)">
                     <img src="./img/magnall_ikonice/metabolizam.png">
                     <p>metabolizam</p>
                     <div class="checkbox_overlay">
@@ -292,8 +296,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="btn_nav_div">
-                  <div class="row btn_nav_row">
+                <div class="btn_nav_div container">
+                  <div class="row justify-content-center h-100">
                     <div class="col-6 align-self-start text-left my-auto">
                       <button id="prev" type="button" class="prev_btn" data-goto="${page}"> < nazad</button>
                     </div>
@@ -408,14 +412,16 @@
 //********************Initialization************************************************
     // DOM Elements
     var DOM = {
-      upitnik_wrapper : document.querySelector('.upitnik_wrapper'),
-      product_wrapper : document.querySelector('.product_wrapper'),
-      other_products : document.querySelector('.other_products'),
-      product : document.querySelector('.product'),
-      products : document.querySelector('.products'),
-      block1 : document.querySelector('.block1'),
-      block2: document.querySelector('.block2'),
-      checkboxField : document.querySelector('.field')
+      'upitnik_wrapper' : document.querySelector('.upitnik_wrapper'),
+      'product_wrapper' : document.querySelector('.product_wrapper'),
+      'other_products' : document.querySelector('.other_products'),
+      'product' : document.querySelector('.product'),
+      'products' : document.querySelector('.products'),
+      'block1' : document.querySelector('.block1'),
+      'block2': document.querySelector('.block2'),
+      'checkboxField' : document.querySelector('.field'),
+      'progress_container' : document.querySelector('.progress_container'),
+      'progress-bar' : document.querySelector('.progress-bar')
     };
 
     // Initialization
@@ -423,7 +429,10 @@
     var answersArr = [];
     var checkedValues = [];
     var recommendedProducts = [];
+    var finalArr = [];
     var jsonAnswers;
+    var currentBar = 0;
+    var nextBar = 0;
     var productListArr = ['direct','cardio','relax','immuno','mineral','sleep'];
     var products = {
       direct: ['energija', 'misici', 'nervni_sistem', 'laka_primena', 'metabolizam'],
@@ -495,7 +504,16 @@
       prevProgressCircle.classList.remove('circle_shadow');
       prevProgressCircle.classList.remove('circle_background');
     }
-    
+    function loadProgressBar() {
+      DOM['progress-bar'].classList.remove(`bar_${currentBar}`);
+      currentBar += 20;
+      DOM['progress-bar'].classList.add(`bar_${currentBar}`);
+    }
+    function unloadProgressBar() {
+      DOM['progress-bar'].classList.remove(`bar_${currentBar}`);
+      currentBar -= 20;
+      DOM['progress-bar'].classList.add(`bar_${currentBar}`);
+    }
     
 
 
@@ -544,11 +562,9 @@
         if(e1 === e2) {
           matchingProducts.direct.indexOf(e2) === -1 ? matchingProducts.direct.push(e2) : '';
         }
-
         if(e1 === e3) {
           matchingProducts.cardio.indexOf(e3) === -1 ? matchingProducts.cardio.push(e3) : '';
         }
-
         if(e1 === e4) {
           matchingProducts.relax.indexOf(e4) === -1 ? matchingProducts.relax.push(e4) : '';
         }
@@ -601,6 +617,9 @@
       return ans;
     }
 
+    function test() {
+      
+    }
 //*******************************
 
 
@@ -708,67 +727,46 @@
 //********************SHOW MATCHED PRODUCTS********************************************************************
     
 
-    // Show products depending on checkbox answers
+    // push to FinalArr depending on checkbox answers
     function showProducts() {
       DOM.upitnik_wrapper.outerHTML = "";
-      
-      DOM.product_wrapper.classList.add("show");
       DOM.product_wrapper.classList.remove("hide");
       
-      if (sortByLength['direct'] == closest(sortByLength, 10)) {
-        //insert into mian wrapper 
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().direct);
-        
+      if (sortByLength['direct'] == closest(sortByLength, 10)) { 
+        finalArr.push('direct');
       } 
       if (sortByLength['cardio'] == closest(sortByLength, 10)) {
-        //insert into main wrapper
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().cardio);
+        finalArr.push('cardio');
       } 
-      if (sortByLength['relax'] == closest(sortByLength, 10)) {
-        //insert into main wrapper 
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().relax);
+      if (sortByLength['relax'] == closest(sortByLength, 10)) { 
+        finalArr.push('relax');
       } 
-      if (sortByLength['immuno'] == closest(sortByLength, 10)) {
-        //insert into mian wrapper 
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().immuno);
+      if (sortByLength['immuno'] == closest(sortByLength, 10)) { 
+        finalArr.push('immuno');
       } 
-      if (sortByLength['mineral'] == closest(sortByLength, 10)) {
-        //insert into mian wrapper 
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().mineral);
+      if (sortByLength['mineral'] == closest(sortByLength, 10)) { 
+        finalArr.push('mineral');
       } 
-      if (sortByLength['sleep'] == closest(sortByLength, 10)) {
-        //insert into mian wrapper 
-        DOM.products.insertAdjacentHTML('afterbegin', HTML().sleep);
+      if (sortByLength['sleep'] == closest(sortByLength, 10)) { 
+        finalArr.push('sleep');
       } 
     }
-
-    // shows products depending on button answers
+    
+    // push to finalArr depending on button answers
     function showRecommendedProducts() { 
       recommendedProducts.forEach(function(element) {
-        DOM.other_products.insertAdjacentHTML('afterbegin', HTML()[`ostali${element}`])
-      })
-    }
-
-    //remove duplicated products
-    function removeDuplicates() {
-      var duplicateProducts = [];
-      var mainProductsArr  = [].slice.call(DOM.product_wrapper.children[0].children);
-      var otherProductsArr = [].slice.call(DOM.product_wrapper.children[1].children);
-      var index;
-      var productsChildrenArr = document.querySelector('.product_wrapper').childNodes;
-      console.log(mainProductsArr);
-      console.log(otherProductsArr);
-      
-      otherProductsArr.forEach(function (element) {
-        if(mainProductsArr.includes(element)) {
-          duplicateProducts.push(element);
+        if(finalArr.indexOf(element) == -1) {
+          finalArr.push(element);
         }
       })
-      console.log(duplicateProducts);
-      /* duplicateProducts.forEach(function(element) {
-
-      }) */
-
+    }
+    // show all recommended products
+    function showFinal(htmlObj) {
+      var html = htmlObj;
+      DOM.progress_container.classList.add('hide');
+      finalArr.forEach(function (element) {
+        DOM.products.insertAdjacentHTML('beforeend', html[element]);
+      })
     }
 //*****************************************
 
@@ -807,6 +805,7 @@
         showNextPage();
         saveAnswer();
         loadProgress();
+        loadProgressBar();
         pushDataKey();
       }
       if (event.target.id == 'prev') {
@@ -814,16 +813,16 @@
         deleteAnswer(recommendedProducts);
         showPrevPage();
         unloadProgress();
+        unloadProgressBar();
       }
       if(event.target.closest('.submit_btn')) {
-        console.log(event.target.closest('.submit_btn'))
         page++;
         saveCheckedValues();
         pushMatchingAnswers(checkedValues, products.direct, products.cardio, products.relax, products.immuno, products.mineral, products.sleep);
         sortProducts();
         showProducts();
         showRecommendedProducts();
-        removeDuplicates();
+        showFinal(HTML());
         makeJson();
         postData();
       }
