@@ -80,14 +80,7 @@ form p {
 form .row img {
     height: 3.9rem;
 }
-.progressWrapper {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: auto;
-}
-i {
+.progress_container i {
     display: inline-block;
 }
 .circle {
@@ -233,9 +226,10 @@ i {
         height: 10rem;
         border: solid 3px #019966;
         border-radius: 40px 40px 0 0;
-        max-width: 95%;
+        /* max-width: 95%; */
         display: block;
-        bottom: 35px!important;
+        bottom: 5rem!important;
+        max-width: 960px!important;
     }
     .circle {
         background-color:#fff;
@@ -301,24 +295,30 @@ i {
         font-size: 1.5rem;
         color: white;
         background-color: #019966;
+        padding: 0 1rem;
     }
     .btn_nav_div {
         position: absolute;
         height: 3.5rem;
-        bottom: 14rem!important;
+        bottom: 16rem!important;
         transform: none!important;
+        padding: 0 7rem 0 7rem!important;
+    }
+    .btn_answer_col {
+        padding: 0 30%!important;
     }
     .btn_answer {
         color: #fff!important;
-        font-size: 2.4rem!important;
+        font-size: 2rem!important;
         background-color: #019966!important;
         border-color: #96dbc5!important;
         border-style: solid!important;
         border-radius: 3rem!important;
         border-width: 2px!important;
         background-image: linear-gradient(to top,#019966 5%, #FFFFFF 150%)!important;
-        width: 50%!important;
-        height: 5.5rem;
+        width: 100%!important;
+        height: auto;
+       /*  height: 5.5rem; */
     }
     .heading {
         display: block;
