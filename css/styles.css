@@ -91,6 +91,7 @@ form .row img {
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
+    margin-top: 0.1rem!important;
 }
 .circle_big {
     border:0.22rem solid rgb(0, 59, 158);    
@@ -104,6 +105,7 @@ form .row img {
 .progress_col {
     overflow: hidden;
     display: inline;
+    padding-top: 1.4rem;
 }
 .circle_shadow {
     box-shadow: 0px 2px 4px rgba(0, 59, 158, 1);
@@ -173,7 +175,7 @@ form .row img {
 }
 .progress {
     position: absolute!important;
-    width: 71%!important;
+    width: 75%!important;
     top: 43%!important;
     transform: translateX(-50%)!important;
     height: 12px!important;
@@ -239,6 +241,7 @@ form .row img {
         border-radius:50%;
         -moz-border-radius:50%;
         -webkit-border-radius:50%;
+        margin-top: 0.5rem!important;
     }
     .circle_big {
         border:0.20rem solid rgb(0, 59, 150);    
@@ -347,5 +350,66 @@ form .row img {
     form p {
         font-size: 1rem;
     }
+    .progress_col {
+        overflow: hidden;
+        display: inline;
+        padding-top: 2.5rem;
+    }
+    #progress_1::before {
+        content: 'Pol';
+        display: block;
+        color: black;
+        position: absolute;
+        top: 0.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #progress_2::before {
+        content: 'Godine';
+        display: block;
+        color: black;
+        position: absolute;
+        top: 0.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #progress_3::before {
+        content: 'Aktivnost';
+        display: block;
+        color: black;
+        position: absolute;
+        top: 0.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #progress_4::before {
+        content: 'San';
+        display: block;
+        color: black;
+        position: absolute;
+        top: 0.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #progress_5::before {
+        content: 'Krvni pritisak';
+        display: block;
+        color: black;
+        position: absolute;
+        top: 0.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+    #progress_6::before {
+        content: 'Razlog';
+        display: block;
+        color: black;
+        position: absolute;
+        top: 0.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
 }
 
