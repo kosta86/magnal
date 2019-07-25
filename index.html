@@ -36,10 +36,15 @@
     </div>
 
       <div class="container progress_container text-center">
-        <div class="progress container">
+        <div class="progress pr_1 container">
           <div class="progress-bar bar_0" role="progressbar"></div>
+         <!--  <div class="progress-bar-two bar_20"></div> -->
         </div>
-        <div class="row progress_circle_row justify-content-center h-100 px-4">
+        <div class="progress pr_2 container">
+          <div class="progress-bar-two bar_20" role="progressbar"></div>
+         <!--  <div class="progress-bar-two bar_20"></div> -->
+        </div>
+        <div class="row progress_circle_row justify-content-center h-100">
           <div class="col progress_col px-0">
             <i id="progress_1" class="circle_big circle_shadow circle_background"></i>
           </div>
@@ -421,7 +426,8 @@
       'block2': document.querySelector('.block2'),
       'checkboxField' : document.querySelector('.field'),
       'progress_container' : document.querySelector('.progress_container'),
-      'progress-bar' : document.querySelector('.progress-bar')
+      'progress-bar' : document.querySelector('.progress-bar'),
+      'progress-bar-two' : document.querySelector('.progress-bar-two'),
     };
 
     // Initialization
@@ -505,14 +511,18 @@
       prevProgressCircle.classList.remove('circle_background');
     }
     function loadProgressBar() {
-      DOM['progress-bar'].classList.remove(`bar_${currentBar}`);
-      currentBar += 20;
-      DOM['progress-bar'].classList.add(`bar_${currentBar}`);
+        DOM['progress-bar'].classList.remove(`bar_${currentBar}`);
+        DOM['progress-bar-two'].classList.remove(`bar_${currentBar + 20}`);
+        currentBar += 20;
+        DOM['progress-bar'].classList.add(`bar_${currentBar}`);
+        DOM['progress-bar-two'].classList.add(`bar_${currentBar + 20}`);
     }
     function unloadProgressBar() {
-      DOM['progress-bar'].classList.remove(`bar_${currentBar}`);
-      currentBar -= 20;
-      DOM['progress-bar'].classList.add(`bar_${currentBar}`);
+        DOM['progress-bar'].classList.remove(`bar_${currentBar}`);
+        DOM['progress-bar-two'].classList.remove(`bar_${currentBar + 20}`);
+        currentBar -= 20;
+        DOM['progress-bar'].classList.add(`bar_${currentBar}`);
+        DOM['progress-bar-two'].classList.add(`bar_${currentBar + 20}`);
     }
     
 
@@ -846,27 +856,6 @@
     
 //*****************************************
 };
-
-/* function selected(element) {
-    element.firstElementChild.src = `./img/magnall_ikonice/${element.id}_aktivna.png`;
-  } */
-  // change icon on hover
-  function hover(element) {
-      if(element.firstElementChild.src !== `./img/magnall_ikonice/${element.id}_aktivna.png`) {
-        element.firstElementChild.src = `./img/magnall_ikonice/${element.id}_hover.png`;
-      }
-      
-  }
-  function unhover(element) {
-    if(element.firstElementChild.src !== `./img/magnall_ikonice/${element.id}_aktivna.png`) {
-      element.firstElementChild.src = `./img/magnall_ikonice/${element.id}.png`;
-    }
-    
-  }
-  //*******************************OVO NE RADI OVO NAPRAVI PRVO**********************************
-  function active(element) {
-    console.log(element.id);
-    }
 </script>
 
 </body>

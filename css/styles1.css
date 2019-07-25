@@ -85,18 +85,18 @@ form .row img {
 }
 .circle {
     background-color:#fff;
-    border: 0.18rem solid rgb(0, 59, 158);    
-    height:25px;
-    width:25px;
+    border: 0.22rem solid rgb(0, 59, 158);    
+    height:22px;
+    width:22px;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
     margin-top: 0.1rem!important;
 }
 .circle_big {
-    border:0.18rem solid rgb(0, 59, 158);    
-    height:30px;
-    width:30px;
+    border:0.22rem solid rgb(0, 59, 158);    
+    height:27px;
+    width:27px;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
@@ -105,8 +105,7 @@ form .row img {
 .progress_col {
     overflow: hidden;
     display: inline;
-    padding-top: 1.3rem;
-    z-index: 10;
+    padding-top: 1.4rem;
 }
 .circle_shadow {
     box-shadow: 0px 2px 4px rgba(0, 59, 158, 1);
@@ -157,7 +156,6 @@ form .row img {
     height: 3.5rem;
     bottom: 5.3rem!important;
     margin: -15px!important;
-    min-width: 100%;
 }
 .upitnik_wrapper {
     padding-bottom: 7rem;
@@ -177,62 +175,18 @@ form .row img {
 }
 .progress {
     position: absolute!important;
-    width: 85%!important;
+    width: 75%!important;
     top: 43%!important;
     transform: translateX(-50%)!important;
     height: 12px!important;
     left: 50%;
-    background-image: url('../img/misc/line.png');
-    opacity: 1;
-    padding: 0!important;
-    background-color: transparent!important;
-    z-index: 0.1;
-}
-.pr_1 {
-    z-index: 2;
-    background-image: none!important;
-    background-color: transparent!important;
-}
-.pr_2 {
-    z-index: 1;
-    
-}
-/* .progress_two {
-    position: absolute!important;
-    width: 85%!important;
-    top: 43%!important;
-    transform: translateX(-50%)!important;
-    height: 12px!important;
-    left: 50%;
-    background-image: url('../img/misc/line.png');
-    opacity: 1;
-    padding: 0!important;
-} ne postoji trenutno */
-.progress-bar-two {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    transition:none;
-    background-image: url('../img/misc/vertical_lines.png')!important;
-    background-color: white!important;
-    z-index: 3;
+    background-image: url('../img/misc/progress_lines.png');
+    opacity: 0.8;
 }
 .progress-bar {
-    transition:none!important;
-    background-image: url('../img/misc/vertical_lines.png');
-    transition-duration:1ms;
-    z-index: 4;
+    opacity: 0.52;
+    background-color: rgb(0,166,222)!important;
 }
-/* .progress_circle_row {
-    padding: 0!important;
-    margin: 0!important;
-} */
 .bar_0 {
     width: 0;
 }
@@ -250,9 +204,6 @@ form .row img {
 }
 .bar_100 {
     width: 100%;
-}
-.bar_120 {
-    display: none;
 }
 @media (orientation: portrait) {
     .upitnik_wrapper {
@@ -274,24 +225,13 @@ form .row img {
     }
     .progress_container {
         background-color: rgba(147, 249, 185, 0.1);
-        height: 4.375rem;
-        border: solid 3px #019966;
-        border-bottom: none;
-        border-radius: 50px 50px 0 0;
-        max-width: 95%;
-        display: block;
-        position: absolute;
-        bottom: 0!important;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .progress_container {
-        background-color: rgba(147, 249, 185, 0.1);
         height: 10rem;
         border: solid 3px #019966;
         border-radius: 40px 40px 0 0;
+        /* max-width: 95%; */
         display: block;
         bottom: 5rem!important;
+        max-width: 960px!important;
     }
     .circle {
         background-color:#fff;
@@ -332,20 +272,12 @@ form .row img {
         transform: translateX(-50%)!important;
         height: 35px!important;
         left: 50%;
-        background-image: url('../img/misc/line.png');
-        background-position-x: 50%;
-        background-position-y: 50%;
-        background-repeat: repeat-x;
-    }
-    .progress-bar-two {
-        transition:none;
-        background-image: url('../img/misc/vertical_lines.png')!important;
-        background-color: white!important;
+        background-image: url('../img/misc/progress_lines.png');
+        opacity: 0.8;
     }
     .progress-bar {
-        transition:none!important;
-        background-image: url('../img/misc/vertical_lines.png');
-        background-repeat: repeat-x;
+        opacity: 0.52;
+        background-color: rgb(0,166,222)!important;
     }
     .prev_btn {
         border-radius: 30px 30px 30px 30px;
@@ -374,7 +306,6 @@ form .row img {
         bottom: 16rem!important;
         transform: none!important;
         padding: 0 7rem 0 7rem!important;
-        /* min-width: inherit; */
     }
     .btn_answer_col {
         padding: 0 30%!important;
@@ -480,9 +411,4 @@ form .row img {
         transform: translateX(-50%);
     }
     
-}
-@media (min-width: 1200px) {
-    .btn_nav_div {
-        min-width: inherit;
-    }
 }
