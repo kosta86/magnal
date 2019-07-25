@@ -85,9 +85,9 @@ form .row img {
 }
 .circle {
     background-color:#fff;
-    border: 0.22rem solid rgb(0, 59, 158);
-    height:22px;
-    width:22px;
+    border: 0.18rem solid rgb(0, 59, 158);
+    height:25px;
+    width:25px;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
@@ -102,9 +102,9 @@ form .row img {
     z-index: 999999;
 } */
 .circle_big {
-    border:0.22rem solid rgb(0, 59, 158);    
-    height:27px;
-    width:27px;
+    border:0.18rem solid rgb(0, 59, 158);    
+    height:30px;
+    width:30px;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
@@ -113,6 +113,7 @@ form .row img {
 .progress_col {
     overflow: visible;
     display: inline;
+    z-index: 5;
 }
 .progress_col::before {
     content: 'Pol';
@@ -196,12 +197,20 @@ form .row img {
     transform: translateX(-50%)!important;
     height: 12px!important;
     left: 50%;
-    background-image: url('../img/misc/progress_lines.png');
+    background-image: url('../img/misc/line.png');
     opacity: 0.8;
 }
+.progress-bar-two {
+    transition:none;
+    background-image: url('../img/misc/vertical_lines.png') no-repeat !important;
+    background-color: white!important;
+}
 .progress-bar {
-    opacity: 0.52;
-    background-color: rgb(0,166,222)!important;
+    transition:none!important;
+    /* opacity: 0.52; */
+    /* background-color: rgb(0,166,222)!important; */
+    background-image: url('../img/misc/vertical_lines.png');
+    transition-duration:1ms;
 }
 .bar_0 {
     width: 0;
@@ -287,12 +296,13 @@ form .row img {
         transform: translateX(-50%)!important;
         height: 35px!important;
         left: 50%;
-        background-image: url('../img/misc/progress_lines.png');
-        opacity: 0.8;
+        background-image: url('../img/misc/line.png');
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-repeat: repeat-x;
     }
     .progress-bar {
-        opacity: 0.52;
-        background-color: rgb(0,166,222)!important;
+        background-image: url('../img/misc/vertical_lines.png');
     }
     .prev_btn {
         border-radius: 30px 30px 30px 30px;
@@ -315,13 +325,13 @@ form .row img {
         background-color: #019966;
         padding: 0 1rem;
     }
-    .btn_nav_div {
+    /* .progress_container{
         position: absolute;
         height: 3.5rem;
         bottom: 16rem!important;
         transform: none!important;
         padding: 0 7rem 0 7rem!important;
-    }
+    } */
     .btn_answer_col {
         padding: 0 30%!important;
     }
