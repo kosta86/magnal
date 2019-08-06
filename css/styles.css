@@ -254,6 +254,16 @@ form .row img {
 .bar_120 {
     display: none;
 }
+@media (max-width: 480px) {
+    .card-text {
+        display: none;
+    }
+}
+@media (min-width: 481px) {
+    .mobile_text {
+        display: none;
+    }
+}
 @media (orientation: portrait) {
     .upitnik_wrapper {
         padding-bottom: 0;

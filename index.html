@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -196,7 +196,7 @@
               
                 <div class="btn_answer_col col-sm col-lg-12 text-center py-2">
                   <button id="btn_5_3" type="button" class="btn_answer btn text-center" value="next" data-key="1" data-value="Imam hipertenziju" data-goto="${page}">Imam hipertenziju</button>
-                </div>
+                </div>=
               </div>
                 <div class="btn_nav_div container">
                   <div class="row h-100">
@@ -317,6 +317,7 @@
                   <div class="card-body">
                     <h4 class="card-title"><strong>ŠTA JE MAGNALL® DIRECT?</strong></h4>
                     <p class="card-text">Magnall® Direct u samo 1 kesici i praktičnom primenom obezbeđuje preporučene dnevne potrebe za magnezijumom (375 mg).</p>
+                    <p class="mobile_text">${limitOpisLength('Magnall® Direct u samo 1 kesici i praktičnom primenom obezbeđuje preporučene dnevne potrebe za magnezijumom (375 mg).', 100)}</p>
                     <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
@@ -325,6 +326,7 @@
                   <div class="card-body">
                     <h4 class="card-title">ŠTA JE MAGNALL® CARDIO?</h4>
                     <p class="card-text">Magnall® Cardio je formulacija magnezijuma, vitamina B6 i vitamina K2, koja pruža podršku vašem srcu i krvnim sudovima u obavljanju fizioloških funkcija.</p>
+                    <p class="mobile_text">${limitOpisLength('Magnall® Cardio je formulacija magnezijuma, vitamina B6 i vitamina K2, koja pruža podršku vašem srcu i krvnim sudovima u obavljanju fizioloških funkcija.', 100)}</p>
                     <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
@@ -333,6 +335,7 @@
                   <div class="card-body">
                     <h4 class="card-title">ŠTA JE MAGNALL® RELAX?</h4>
                     <p class="card-text">Magnall® Relax je jedinstvena formulacija magnezijuma i kompleksa vitamina B u visokim dozama, koji na prirodan i siguran način pomaže da ostanete mirni, opušteni i u dobrom raspoloženju (psihički i fizički).</p>
+                    <p class="mobile_text">${limitOpisLength('Magnall® Relax je jedinstvena formulacija magnezijuma i kompleksa vitamina B u visokim dozama, koji na prirodan i siguran način pomaže da ostanete mirni, opušteni i u dobrom raspoloženju (psihički i fizički).', 100)}</p>
                     <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
@@ -341,14 +344,16 @@
                   <div class="card-body">
                     <h4 class="card-title">ŠTA JE MAGNALL® IMMUNO?</h4>
                     <p class="card-text">Magnall® Immuno kao formulacija magnezijuma i cinka, pomaže organizmu u održavanju normalne funkcije imunog sistema, održavanju zdrave funkcije mišića, u periodu oporavka od bolesti, kod teške fizičke aktivnosti, omogućava proizvodnju energije kako bi vašem organizmu obezbedilo normalno funkcionisanje.</p>
+                    <p class="mobile_text">${limitOpisLength('Magnall® Immuno kao formulacija magnezijuma i cinka, pomaže organizmu u održavanju normalne funkcije imunog sistema, održavanju zdrave funkcije mišića, u periodu oporavka od bolesti, kod teške fizičke aktivnosti, omogućava proizvodnju energije kako bi vašem organizmu obezbedilo normalno funkcionisanje.', 100)}</p>
                     <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
         mineral: `<div id="mineral" class="card ">
-                    <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="ŠTA JE MAGNALL® IMMUNO? slika">
+                    <img class="card-img-top" src="./img/proizvodi/mineral.jpg" alt="Šta je Marine Mineral? slika">
                     <div class="card-body">
                       <h4 class="card-title">ŠTA JE MARINE MINERAL?</h4>
                       <p class="card-text">Magnall® Marine Mineral predstavlja jedinstveni mineralno-vitaminski kompleks, koji sadrži prečišćeni prirodni ekstrakt magnezijuma obogaćen vitaminom B6.</p>
+                      <p class="mobile_text">${limitOpisLength('Magnall® Marine Mineral predstavlja jedinstveni mineralno-vitaminski kompleks, koji sadrži prečišćeni prirodni ekstrakt magnezijuma obogaćen vitaminom B6.', 100)}</p>
                       <a href="#" class="btn_answer">Detaljnije</a>
                     </div>
                   </div>`,
@@ -357,6 +362,7 @@
                   <div class="card-body">
                     <h4 class="card-title">ŠTA JE MAGNALL® SLEEP?</h4>
                     <p class="card-text">Magnall® Sleep je jedinstvena formulacija magnezijuma sa melatoninom, aktivnim oblikom folne kiseline i vitaminima B6 i B12, i pomaže da se eliminišu simptomi nesanice i poremećaja spavanja.</p>
+                    <p class="mobile_text">${limitOpisLength('Magnall® Sleep je jedinstvena formulacija magnezijuma sa melatoninom, aktivnim oblikom folne kiseline i vitaminima B6 i B12, i pomaže da se eliminišu simptomi nesanice i poremećaja spavanja.', 100)}</p>
                     <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
@@ -524,7 +530,17 @@
         DOM['progress-bar'].classList.add(`bar_${currentBar}`);
         DOM['progress-bar-two'].classList.add(`bar_${currentBar + 20}`);
     }
-    
+    function limitOpisLength (title, limit = 17) {          
+      if(title.length > limit) {                           // Checking if length is greater than limit...
+          for(let i = limit; i > 0; i--) {                // 'i' starts decrementing from the limit(default 17)
+              if(title.charAt(i) === ' ') {               // Checking if there is a empty string
+                  let newTitle = `${title.substring(0, i)} ...`; // If 'true' substring the title starting from char num at position 0 to char num at position 'i'
+                  return newTitle;
+                  break;                                  // 'break' to stop looping
+              }
+          }
+      } else return title;
+      }
 
 
 //********************************
@@ -534,10 +550,8 @@
 //***************************SAVE, DELETE, PUSH, MATCH********************************
     // save answer on user input
     function saveAnswer() {
-      /* var answer = event.target.id.split('_')[2]; */
       var answer = event.target.dataset.value;
       answersArr.push(answer);
-      
     }
 
     // delete last answer on prev button
@@ -785,8 +799,10 @@
 //***********************************************SEND DATA TO PHP FOR STATS***************************************************************
     // make jsonObj for postData
     function makeJson() {
-      var answersObj = { ...answersArr };
+      var checkedValuesStr = checkedValues.toString();
+      var answersObj = { ...answersArr, checkedValuesStr};
       jsonAnswers = JSON.stringify(answersObj);
+      console.log(jsonAnswers);
     }
 
     //sends answers to php script
