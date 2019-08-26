@@ -11,12 +11,15 @@ $san = $recived_array[3];
 $pritisak = $recived_array[4];
 $checked_answers = $recived_array["checkedValuesStr"];
 
+date_default_timezone_set("Europe/Belgrade");
+$vreme_unosa = date("d/m/Y H:i");
+
 //PDO prepared statement to send to database
 try {
 
     $pdo = new PDO($dsn, $username, $password, $options);
 
-    $query = "INSERT INTO magnal_kviz_odgovori(Pol,Godine,Fizicka_aktivnost,Kakav_vam_je_san,Kakav_vam_je_krvni_pritisak,checked_answers) VALUES(:pol,:godine,:fizicka_aktivnost,:san,:pritisak,:checked_answers)";
+    $query = "INSERT INTO magnal_kviz_odgovori(Pol,Godine,Fizicka_aktivnost,Kakav_vam_je_san,Kakav_vam_je_krvni_pritisak,checked_answers,vreme_unosa) VALUES(:pol,:godine,:fizicka_aktivnost,:san,:pritisak,:checked_answers,:vreme_unosa)";
 
     $statement = $pdo->prepare($query);
 
@@ -26,10 +29,10 @@ try {
     $statement->bindParam(':san', $san, PDO::PARAM_STR);
     $statement->bindParam(':pritisak', $pritisak, PDO::PARAM_STR);
     $statement->bindParam(':checked_answers', $checked_answers, PDO::PARAM_STR);
+    $statement->bindParam(':vreme_unosa', $vreme_unosa, PDO::PARAM_STR);
 
     $statement->execute();
 
-    $result = $statement->fetchAll();
 
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
