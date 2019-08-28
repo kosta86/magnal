@@ -15,7 +15,21 @@ $checked_answers = $recived_array["checkedValuesStr"];
 date_default_timezone_set("Europe/Belgrade");
 $vreme_unosa = date("d/m/Y H:i");
 
-$data = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=' . $_SERVER['REMOTE_ADDR']));
+function getRealIpAddr()
+{
+    if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
+    {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check ip is pass from proxy
+    {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
+}
+
+$data = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=' . getRealIpAddr()));
 
 $lokacija = $data['geoplugin_city'] . ',' . $data['geoplugin_countryName'];
 
