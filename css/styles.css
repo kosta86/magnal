@@ -496,3 +496,30 @@ form .row img {
         min-width: inherit;
     }
 }
+.slide-from-left {
+    animation: slide-in 1s forwards;
+}
+@keyframes slide-in {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    };
+}
+
+.slide-from-right {
+    animation: slide-out 1s forwards;
+}
+@keyframes slide-out {
+    0% {
+        transform: translateX(+200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    };
+}

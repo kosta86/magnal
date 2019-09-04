@@ -15,6 +15,9 @@ $checked_answers = $recived_array["checkedValuesStr"];
 date_default_timezone_set("Europe/Belgrade");
 $vreme_unosa = date("d/m/Y H:i");
 
+
+
+// Function to get the client ip address // server
 function getRealIpAddr()
 {
     if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
@@ -28,6 +31,7 @@ function getRealIpAddr()
     }
     return $ip;
 }
+echo ('getrealipaddr ' . getRealIpAddr());
 
 $data = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=' . getRealIpAddr()));
 

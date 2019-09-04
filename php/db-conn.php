@@ -1,10 +1,10 @@
 <?php
 
-$host = 'localhost';
+$host = '157.230.121.178';
 $dbname = 'MagnalKviz';
 $charset = 'utf8mb4';
 
-$username = 'kosta';
+$username = 'root';
 $password = 'kosta1986';
 $options = [
 			PDO::ATTR_ERRMODE 			 => PDO::ERRMODE_EXCEPTION,

@@ -1,83 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/9479635e2b.js"></script>
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  
-  <title></title>
-</head>
-<body>
-  <div class="main_content">
-
-    <div class="container-fluid navigacija">
-      <h1>NAVIGACIJA</h1>
-    </div>
-    <div class="heading text-center">
-      <h1>Izaberi svoj Mg</h1>
-    </div>
-    <div class="upitnik_wrapper container-fluid">
-      
-    </div>
-
-    <div class="product_wrapper container hide">
-      <div class="products justify-content-center">
-          
-      </div>
-      <div class="other_products justify-content-center row">
-          
-      </div>
-    </div>
-
-      <div class="container progress_container text-center">
-        <div class="progress pr_1 container">
-          <div class="progress-bar bar_0" role="progressbar"></div>
-         <!--  <div class="progress-bar-two bar_20"></div> -->
-        </div>
-        <div class="progress pr_2 container">
-          <div class="progress-bar-two bar_20" role="progressbar"></div>
-         <!--  <div class="progress-bar-two bar_20"></div> -->
-        </div>
-        <div class="row progress_circle_row justify-content-center h-100">
-          <div class="col progress_col px-0">
-            <i id="progress_1" class="circle_big circle_shadow circle_background"></i>
-          </div>
-          <div class="col progress_col px-0">
-            <i id="progress_2" class="circle"></i>
-          </div>
-          <div class="col progress_col px-0">
-            <i id="progress_3" class="circle"></i>
-          </div>
-          <div class="col progress_col px-0">
-            <i id="progress_4" class="circle"></i>
-          </div>
-          <div class="col progress_col px-0">
-            <i id="progress_5" class="circle"></i>
-          </div>
-          <div class="col progress_col px-0">
-            <i id="progress_6" class="circle_big"></i>
-          </div>
-      
-        </div>
-      </div>
-    
-  </div>
-  
-
-
-<script type="application/javascript">
-
-
-
-//****************************************************************HTML STRINGS***************************************************************************************************
-    var HTML = function () {
-      return {
+// promenjena funkcija od linije 292 pa nadalje...
+var HTML = function () {
+    return {
         1: `
               <div class="row pitanje_row justify-content-center">
                 <h1 class="text-center pitanje"><strong>Pol</strong></h1>
@@ -94,7 +17,7 @@
                 </div>
               </div>
             `,
-        
+
         2: `
               <div class="row pitanje_row justify-content-center">
                 <h1 class="text-center pitanje"><strong>Godine</strong></h1>
@@ -122,7 +45,7 @@
                   </div>
                 </div>
             `,
-        
+
         3: `
               <div class="row pitanje_row justify-content-center">
                 <h1 class="text-center pitanje"><strong>Fizička aktivnost</strong></h1>
@@ -178,7 +101,7 @@
                   </div>
                 </div>
             `,
-        
+
         5: `
               <div class="row pitanje_row justify-content-center">
                 <h1 class="text-center pitanje"><strong>Krvni pritisak</strong></h1>
@@ -414,512 +337,42 @@
                     <a href="#" class="btn_answer">Detaljnije</a>
                   </div>
                 </div>`,
-      }
     }
-//***********************************
-
-
-
-//********************Initialization************************************************
-    // DOM Elements
-    var DOM = {
-      'upitnik_wrapper' : document.querySelector('.upitnik_wrapper'),
-      'product_wrapper' : document.querySelector('.product_wrapper'),
-      'other_products' : document.querySelector('.other_products'),
-      'product' : document.querySelector('.product'),
-      'products' : document.querySelector('.products'),
-      'block1' : document.querySelector('.block1'),
-      'block2': document.querySelector('.block2'),
-      'checkboxField' : document.querySelector('.field'),
-      'progress_container' : document.querySelector('.progress_container'),
-      'progress-bar' : document.querySelector('.progress-bar'),
-      'progress-bar-two' : document.querySelector('.progress-bar-two'),
-    };
-
-    // Initialization
-    var page = 1;
-    var answersArr = [];
-    var checkedValues = [];
-    var recommendedProducts = [];
-    var finalArr = [];
-    var jsonAnswers;
-    var currentBar = 0;
-    var nextBar = 0;
-    var productListArr = ['direct','cardio','relax','immuno','mineral','sleep'];
-    var products = {
-      direct: ['energija', 'misici', 'nervni_sistem', 'laka_primena', 'metabolizam'],
-      cardio: ['energija', 'misici', 'srce'],
-      relax: ['nervni_sistem', 'kontrola_stresa', 'energija', 'misici'],
-      immuno: ['imunitet', 'energija', 'misici', 'nervni_sistem'],
-      mineral: ['energija', 'misici', 'metabolizam', 'nervni_sistem'],
-      sleep: ['energija', 'misici', 'nervni_sistem', 'dobar_san'],
-    }
-    var uncheckList = [
-      [''], //energija
-      [''], //misici
-      ['srce'], //nervni_sisiem
-      ['srce', 'kontrola_stresa', 'imunitet', 'dobar_san'], // laka_primena
-      ['srce', 'kontrola_stresa', 'imunitet', 'dobar_san'], // metabolizam
-      ['nervni_sistem', 'laka_primena', 'metabolizam', 'kontrola_stresa', 'imunitet', 'dobar_san'], // srce
-      ['laka_primena', 'metabolizam', 'srce', 'imunitet', 'dobar_san'], // kontrola_stresa
-      ['laka_primena', 'metabolizam', 'srce', 'kontrola_stresa', 'dobar_san'], // imunitet
-      ['laka_primena', 'metabolizam', 'srce', 'kontrola_stresa', 'imunitet',] // dobar_san
-    ]
-    var matchingProducts = {
-        direct : [],
-        cardio : [],
-        relax : [],
-        immuno: [],
-        mineral: [],
-        sleep: [],
-      };
-    var sortByLength = new Array;
-
-//********************************
-
-
-
-//************************RENDER PAGES************************************************
-    // on load show first page
-    DOM.upitnik_wrapper.innerHTML = HTML()[page];
-
-    // show next page
-    function showNextPage() {
-        page++;
-        DOM.upitnik_wrapper.innerHTML = HTML()[page];
-    }
-
-    // show previous page
-    function showPrevPage() {
-      page--;
-      DOM.upitnik_wrapper.innerHTML = HTML()[page];
-    }
-
-
-//********************************
-
-
-
-//******************************************UI****************************************************************************************
-    function loadProgress() {
-      var currentProgressCircle = document.getElementById(`progress_${page}`); 
-      var prevProgressCircle = document.getElementById(`progress_${page - 1}`);
-      currentProgressCircle.classList.add('circle_background');
-      currentProgressCircle.classList.add('circle_shadow');
-      prevProgressCircle.classList.remove('circle_shadow');
-    }
-    function unloadProgress() {
-      var currentProgressCircle = document.getElementById(`progress_${page}`);
-      var prevProgressCircle = document.getElementById(`progress_${page + 1}`);
-      currentProgressCircle.classList.add('circle_background');
-      currentProgressCircle.classList.add('circle_shadow');
-      prevProgressCircle.classList.remove('circle_shadow');
-      prevProgressCircle.classList.remove('circle_background');
-    }
-    function loadProgressBar() {
-        DOM['progress-bar'].classList.remove(`bar_${currentBar}`);
-        DOM['progress-bar-two'].classList.remove(`bar_${currentBar + 20}`);
-        currentBar += 20;
-        DOM['progress-bar'].classList.add(`bar_${currentBar}`);
-        DOM['progress-bar-two'].classList.add(`bar_${currentBar + 20}`);
-    }
-    function unloadProgressBar() {
-        DOM['progress-bar'].classList.remove(`bar_${currentBar}`);
-        DOM['progress-bar-two'].classList.remove(`bar_${currentBar + 20}`);
-        currentBar -= 20;
-        DOM['progress-bar'].classList.add(`bar_${currentBar}`);
-        DOM['progress-bar-two'].classList.add(`bar_${currentBar + 20}`);
-    }
-    function limitOpisLength (title, limit = 17) {          
-      if(title.length > limit) {                           // Checking if length is greater than limit...
-          for(let i = limit; i > 0; i--) {                // 'i' starts decrementing from the limit(default 17)
-              if(title.charAt(i) === ' ') {               // Checking if there is a empty string
-                  let newTitle = `${title.substring(0, i)} ...`; // If 'true' substring the title starting from char num at position 0 to char num at position 'i'
-                  return newTitle;
-                  break;                                  // 'break' to stop looping
-              }
-          }
-      } else return title;
-      }
-      
-
-
-
-//********************************
-
-    
-
-//***************************SAVE, DELETE, PUSH, MATCH********************************
-    // save answer on user input
-    function saveAnswer() {
-      var answer = event.target.dataset.value;
-      answersArr.push(answer);
-    }
-
-    // delete last answer on prev button
-    function deleteAnswer(arr) {
-      if(arr.length !== 0) {
-        arr.pop();
-      }
-    }
-
-    // adds checked answers to array //for showProduct function
-    function saveCheckedValues() {
-      var form = event.target.closest('form');
-      for (var i = 0; i < form.length; i++) {
-        if (form[i].checked) {
-          var checkedBoxName = form[i].dataset.value;
-          checkedValues.push(checkedBoxName);
-        }
-      }
-    }
-    
-    //pushes data-key values to recommendedProducts = [] to be shown as recommended products 
-    function pushDataKey() {
-      var dataKey = event.target.dataset.key;
-      if(dataKey !== '') {
-        recommendedProducts.push(productListArr[dataKey]);
-      }
-    }
-
-    // Push matching answers to matchingProducts
-    function pushMatchingAnswers(checkedAnswersArr, proizvod1Arr, proizvod2Arr, proizvod3Arr, proizvod4Arr, proizvod5Arr, proizvod6Arr) {
-      checkedAnswersArr.forEach( (e1) => proizvod1Arr.forEach( (e2) => proizvod2Arr.forEach((e3) => proizvod3Arr.forEach((e4) => proizvod4Arr.forEach((e5) => proizvod5Arr.forEach((e6) => proizvod6Arr.forEach((e7) => {
-        if(e1 === e2) {
-          matchingProducts.direct.indexOf(e2) === -1 ? matchingProducts.direct.push(e2) : '';
-        }
-        if(e1 === e3) {
-          matchingProducts.cardio.indexOf(e3) === -1 ? matchingProducts.cardio.push(e3) : '';
-        }
-        if(e1 === e4) {
-          matchingProducts.relax.indexOf(e4) === -1 ? matchingProducts.relax.push(e4) : '';
-        }
-        if (e1 === e5) {
-          matchingProducts.immuno.indexOf(e5) === -1 ? matchingProducts.immuno.push(e5) : '';
-        }
-        if (e1 === e6) {
-          matchingProducts.mineral.indexOf(e6) === -1 ? matchingProducts.mineral.push(e6) : '';
-        }
-        if (e1 === e7) {
-          matchingProducts.sleep.indexOf(e7) === -1 ? matchingProducts.sleep.push(e7) : '';
-        }
-
-      } )))))));
-    }
-      
-    // Push matched answers from user input
-    function sortProducts() {
-      var proizvod1Length = matchingProducts.direct.length;
-      var proizvod2Length = matchingProducts.cardio.length;
-      var proizvod3Length = matchingProducts.relax.length;
-      var proizvod4Length = matchingProducts.immuno.length;
-      var proizvod5Length = matchingProducts.mineral.length;
-      var proizvod6Length = matchingProducts.sleep.length;
+}
 
 
 
 
-      sortByLength['direct'] = proizvod1Length;
-      sortByLength['cardio'] = proizvod2Length;
-      sortByLength['relax'] = proizvod3Length;
-      sortByLength['immuno'] = proizvod4Length;
-      sortByLength['mineral'] = proizvod5Length;
-      sortByLength['sleep'] = proizvod6Length;
-    }
 
-    // Find best match for the given answers
-    function closest(array, num) {
-      var i = 0;
-      var minDiff = 1000;
-      var ans;
-      for (i in array) {
-        var m = Math.abs(num - array[i]);
-        if (m < minDiff) {
-          minDiff = m;
-          ans = array[i];
-        }
-      }
-
-      return ans;
-    }
-
-    function test() {
-      
-    }
-//*******************************
-
-
-
-//************************DISABLE CHECKBOXES******************************************************************
-    // add disabled className to non matching characteristics
-    function addDisableClass(currentFieldNum) {
-      uncheckList[currentFieldNum].forEach(function(element) {
-        if (element != '') {
-          document.getElementById(element).className += ' disable';
-        }
-      })
-    }
-    // remove disabled className to non matching characteristics
-    function removeDisableClass(currentFieldNum) {
-      uncheckList[currentFieldNum].forEach(function (element) {
-        if (element != '') {
-          var classNames = document.getElementById(element).className;
-          var classNamesToAppend = classNames.slice(0, -7);
-          document.getElementById(element).className = classNamesToAppend;
-        }
-      })
-    }
-    // check current checkbox
-    function checkTheCheckbox(currentCheckbox, currentField) {
-        currentCheckbox.checked = true;
-    }
-    // uncheck current checkbox
-    function uncheckTheCheckbox(currentCheckbox) {
-      currentCheckbox.checked = false;
-    }
-    // add disabled icons
-    function addDisabledIcon(currentFieldNum) {
-      uncheckList[currentFieldNum].forEach(function (element) {
-        if (element != '') {
-          document.getElementById(element).firstElementChild.src = `./img/magnall_ikonice/${element}_disabled.png`;
-        }
-      })
-    }
-    // remove disabled icons
-    function removeDisabledIcon(currentFieldNum) {
-      uncheckList[currentFieldNum].forEach(function (element) {
-        if (element != '') {
-          if(!document.getElementById(element).classList.contains('disable')) {
-            document.getElementById(element).firstElementChild.src = `./img/magnall_ikonice/${element}.png`;
-          }
-        }
-      })
-    }
-    // toggle aktivna icon on click
-    function toggleActiveIcon() {
-      var field = event.target.closest('.field');
-      if (!field.classList.contains('aktivna') && !field.classList.contains('disable')) {
-        field.firstElementChild.src = `./img/magnall_ikonice/${field.id}_aktivna.png`;
-        field.classList.add('aktivna');
-      } else if (field.classList.contains('aktivna') && !field.classList.contains('disable')) {
-        field.firstElementChild.src = `./img/magnall_ikonice/${field.id}.png`;
-        field.classList.remove('aktivna');
-      }
-    }
-    // icon on mouseover
-    function hover() {
-      var field = event.target.closest('.field');
-        if (!field.classList.contains('aktivna') && !field.classList.contains('disable')) {
-          field.firstElementChild.src = `./img/magnall_ikonice/${field.id}_hover.png`;
-        }
-    }
-    // icon on mouseout
-    function unhover() {
-      var field = event.target.closest('.field');
-      if (!field.classList.contains('aktivna') && !field.classList.contains('disable')) {
-        field.firstElementChild.src = `./img/magnall_ikonice/${field.id}.png`;
-      }
-    }
-    
-    
-
-
-    // manipulate checkboxes
-    function manageCheckboxes(event) {
-      var currentField = event.target.closest('.field');
-      var currentCheckbox = currentField.querySelector('.form-check-input');
-      var currentFieldNum = parseInt(currentField.dataset.check);
-      
-      if(currentCheckbox.checked == false) {
-        if(!currentField.classList.contains('disable')) {
-          addDisableClass(currentFieldNum);
-          addDisabledIcon(currentFieldNum);
-          checkTheCheckbox(currentCheckbox, currentField);
-        } 
-      } else {
-        removeDisableClass(currentFieldNum);
-        removeDisabledIcon(currentFieldNum);
-        uncheckTheCheckbox(currentCheckbox);
-      }
-    }
-
-
-//*************************************************************************************************************
-
-
-//********************SHOW MATCHED PRODUCTS********************************************************************
-    
-
-    // push to FinalArr depending on checkbox answers
-    function showProducts() {
-      DOM.upitnik_wrapper.outerHTML = "";
-      DOM.product_wrapper.classList.remove("hide");
-      
-      if (sortByLength['direct'] == closest(sortByLength, 10)) { 
-        finalArr.push('direct');
-      } 
-      if (sortByLength['cardio'] == closest(sortByLength, 10)) {
-        finalArr.push('cardio');
-      } 
-      if (sortByLength['relax'] == closest(sortByLength, 10)) { 
-        finalArr.push('relax');
-      } 
-      if (sortByLength['immuno'] == closest(sortByLength, 10)) { 
-        finalArr.push('immuno');
-      } 
-      if (sortByLength['mineral'] == closest(sortByLength, 10)) { 
-        finalArr.push('mineral');
-      } 
-      if (sortByLength['sleep'] == closest(sortByLength, 10)) { 
-        finalArr.push('sleep');
-      } 
-      
-    }
-    
-    // push to finalArr depending on button answers
-    function showRecommendedProducts() { 
-      recommendedProducts.forEach(function(element) {
-        if(finalArr.indexOf(element) == -1) {
-          finalArr.push(element);
-        }
-      })
-    }
-    // show all recommended products
-    function showFinal(htmlObj) {
-      var html = htmlObj;
-      DOM.progress_container.classList.add('hide');
-      finalArr.forEach(function(element, index) {
-        if(index === 0) {
-          DOM.products.insertAdjacentHTML('beforeend', html[element]);
+// ovo je prepravljena stara funkcija showFinal -- samo je prekopiraj preko stare
+function showFinal(htmlObj) {
+    var html = htmlObj;
+    DOM.progress_container.classList.add('hide');
+    finalArr.forEach(function (element, index) {
+        if (index === 0) {
+            DOM.products.insertAdjacentHTML('beforeend', html[element]);
         } else {
-          DOM.other_products.insertAdjacentHTML('beforeend', html['ostali' + element]);
+            DOM.other_products.insertAdjacentHTML('beforeend', html['ostali' + element]);
         }
-      })
-    }
-    // odredjivanje sirine jedne kolone za prikaz ostalih preporucenih proizvoda
-    function otherProductsColWidth() {
-      var finalProductsLength = finalArr.length;
-      if(finalProductsLength === 2) { // slucaj kada je jedan glavni proizvod i jedan ostali proizvod
-        return 6; // sirina kolone za bootstrap
-      }
-      if(finalProductsLength === 3) { // slucaj kada je jedan glavni proizvod i dva ostala proizvoda
-        return 6; // sirina kolone za bootstrap
-      }
-      if(finalProductsLength === 4) { // slucaj kada je jedan glavni proizvod i tri ostala proizvoda
-        return 6; // sirina kolone za bootstrap
-      } 
-    }
-//*****************************************
-
-
-
-//***********************************************SEND DATA TO PHP FOR STATS***************************************************************
-    // make jsonObj for postData
-    /* function makeJson() {
-      var checkedValuesStr = checkedValues.toString();
-      var answersObj = { ...answersArr, checkedValuesStr,};
-      jsonAnswers = JSON.stringify(answersObj);
-    }
-
-    //sends answers to php script
-    function postData() {
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", "./php/user_input.php", true);
-      xhr.setRequestHeader('Content-Type', 'application/json');
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-          var responce = xhr.responseText;
-        }
-      }
-      xhr.send(jsonAnswers);
-    } */
-
-    function getIp() {
-      
-      fetch('./php/get_user_ip.php')
-        .then(function(responce) {
-          return responce.text();
-        })
-        .then(function(text) {
-
-          (function makeJson(global, ip) {
-            console.log(global.checkedValues);
-            var checkedValuesStr = global.checkedValues.toString();
-            var answersObj = { ...global.answersArr, checkedValuesStr, ip};
-            global.jsonAnswers = JSON.stringify(answersObj);
-          })(window, text);
-
-          //sends answers to php script
-          (function postData(global) {
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "./php/user_input.php", true);
-            xhr.setRequestHeader('Content-Type', 'application/json');
-
-            xhr.onreadystatechange = function () {
-              if (xhr.readyState == 4 && xhr.status == 200) {
-                var responce = xhr.responseText;
-                console.log(responce);
-              }
-            }
-            xhr.send(global.jsonAnswers);
-          })(window);
-
-        })
- 
-    }
-//*****************************************
-
-
-
-//**********************************************iNPUT LISTENER*******************************************************
-    // user input listener
-    DOM.upitnik_wrapper.addEventListener('click', function(event) {
-      if (event.target.value == 'next') {
-        showNextPage();
-        saveAnswer();
-        loadProgress();
-        loadProgressBar();
-        pushDataKey();
-      }
-      if (event.target.id == 'prev') {
-        deleteAnswer(answersArr);
-        deleteAnswer(recommendedProducts);
-        showPrevPage();
-        unloadProgress();
-        unloadProgressBar();
-      }
-      if(event.target.closest('.submit_btn')) {
-        page++;
-        saveCheckedValues();
-        pushMatchingAnswers(checkedValues, products.direct, products.cardio, products.relax, products.immuno, products.mineral, products.sleep);
-        sortProducts();
-        showProducts();
-        showRecommendedProducts();
-        showFinal(HTML());
-        getIp();
-      }
-      if(event.target.closest('.field')) {
-        manageCheckboxes(event);
-        toggleActiveIcon();
-      }
-
     });
+}
 
-    DOM.upitnik_wrapper.addEventListener('mouseover', function(event) {
-      if (event.target.closest('.field')) {
-        hover();
-      } 
-    })
-    DOM.upitnik_wrapper.addEventListener('mouseout', function (event) {
-      if (event.target.closest('.field')) {
-        unhover();
-      }
-    })
-    
-//*****************************************
 
-</script>
+//************** ovo je nova funkcija, nju mozes a i ne moras da ubacis*******************//
+// odredjivanje sirine jedne kolone za prikaz ostalih preporucenih proizvoda
+function otherProductsColWidth() {
+    var finalProductsLength = finalArr.length;
+    if (finalProductsLength === 2) { // slucaj kada je jedan glavni proizvod i jedan ostali proizvod
+        return 6; // sirina kolone za bootstrap
+    }
+    if (finalProductsLength === 3) { // slucaj kada je jedan glavni proizvod i dva ostala proizvoda
+        return 6; // sirina kolone za bootstrap
+    }
+    if (finalProductsLength === 4) { // slucaj kada je jedan glavni proizvod i tri ostala proizvoda
+        return 4; // sirina kolone za bootstrap
+    }
+    if (finalProductsLength === 5) { // slucaj kada je jedan glavni proizvod i cetiri ostala proizvoda
+        return 6; // sirina kolone za bootstrap
+    }
+}
 
-</body>
-</html>
